@@ -73,6 +73,8 @@ def validate():
                 continue
             raw = path.read_bytes()
             text = raw.decode('utf-8')
+            if record.get('mode') == '100755' and not path.stat().st_mode & 0o111:
+                errors.append(f'Missing executable permission: {path.relative_to(ROOT)}')
             if sha256(raw) != record['sha256']:
                 errors.append(f'Imported checksum mismatch: {path.relative_to(ROOT)}')
             reverse = {change['to']: change['from'] for change in record['link_rewrites']}
@@ -113,7 +115,7 @@ def validate():
 
     # Only explicit Markdown links are checked; prose mentions are documented in README.
     catalog_links = set()
-    for path in [ROOT / 'README.md', ROOT / 'third-party-notices.md', *sorted((ROOT / 'skills').rglob('*.md'))]:
+    for path in [*sorted(ROOT.glob('*.md')), *sorted((ROOT / 'skills').rglob('*.md'))]:
         for match in LINK.finditer(path.read_text()):
             target = urlsplit(match.group(1))
             if target.scheme or target.netloc or not target.path:

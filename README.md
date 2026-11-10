@@ -2,7 +2,7 @@
 
 A personal library of skills for clear communication, deliberate engineering, and polished interfaces.
 
-The library contains **33 skills**: 22 from pstack, 10 from Emil Kowalski, and 1 from Matt Pocock. The first 24 preserve upstream workflows; the next 9 have focused integration changes recorded in [adaptations.md](adaptations.md). The full selection remains in [skill-selection.txt](skill-selection.txt).
+The library contains **55 skills**: 40 from pstack, 11 from Emil Kowalski, and 4 from Matt Pocock. The first 24 preserve upstream workflows; the following 9 have light integration changes, and 22 have tuned workflows. See [adaptations.md](adaptations.md) for the changes and [skill-selection.txt](skill-selection.txt) for the full selection. Impeccable extraction and the combined security review remain later stages.
 
 ## Organization
 
@@ -10,111 +10,134 @@ The library contains **33 skills**: 22 from pstack, 10 from Emil Kowalski, and 1
 skills/
   <upstream-skill-name>/
     SKILL.md                 Skill entry point
-    RECIPES.md / ...          Supporting files, where provided upstream
-    references/upstream/     Referenced principles outside this batch, where needed
-scripts/
-  validate-skills.py         Check the catalog, source integrity, and local links
-upstream.json                Pinned sources and file-level provenance
+    references/ or *.md       Supporting material where needed
+    scripts/                 Executable helpers where needed
+    agents/                  Upstream metadata where provided
+scripts/validate-skills.py    Library integrity checks
+upstream.json                Pinned sources and reversible edits
 third-party-notices.md        Consolidated upstream notices
 ```
 
-Skill folders share one level so upstream sibling links continue to work. The catalog below groups them by purpose. Original skill names, including pstack's `principle-` prefix, are preserved.
+Folders share one level so sibling links work. Original skill names, including pstack's `principle-` prefix, are preserved. References are loaded as needed, not as extra skill entry points.
 
-## Communication and handoffs · 6
-
-| Skill | Purpose |
-| --- | --- |
-| [bro](skills/bro/SKILL.md) | Restate the last response in plain language. |
-| [in-your-own-words](skills/in-your-own-words/SKILL.md) | Restate the user's goal and underlying problem. |
-| [sharpen](skills/sharpen/SKILL.md) | Refine a task without expanding its scope. |
-| [unslop](skills/unslop/SKILL.md) | Remove formulaic language while preserving meaning. |
-| [ketchup](skills/ketchup/SKILL.md) | Catch up on work and decisions using available visualization tools. |
-| [handoff](skills/handoff/SKILL.md) | Prepare a portable handoff in the OS temporary directory. |
-
-## Testing and measurement · 2
+## Communication and understanding · 9
 
 | Skill | Purpose |
 | --- | --- |
-| [tdd](skills/tdd/SKILL.md) | Establish a practical failing regression check before fixing a bug. |
-| [benchmark-checklist](skills/benchmark-checklist/SKILL.md) | Validate measurements before reporting a performance result. |
+| [bro](skills/bro/SKILL.md) | Restate the last message in plain human language, with no jargon. |
+| [in-your-own-words](skills/in-your-own-words/SKILL.md) | Restate in your own words what you think the user's goals are and what problem they're trying to solve. Use for /in-your-own-words. |
+| [sharpen](skills/sharpen/SKILL.md) | Make a task deeper, not bigger, then rewrite the prompt. Use for /sharpen. |
+| [unslop](skills/unslop/SKILL.md) | Cut AI tells from any writing. |
+| [ketchup](skills/ketchup/SKILL.md) | Catch the user up on what changed in this chat since their last message, in plain words and small visuals. List every item waiting on them with what they need to decide it from the reply alone. Use for /ketchup. |
+| [handoff](skills/handoff/SKILL.md) | Compact the current conversation into a handoff document for another agent to pick up. |
+| [how](skills/how/SKILL.md) | Explain runtime behavior, architecture, ownership, and where a change belongs by tracing the relevant code. |
+| [why](skills/why/SKILL.md) | Investigate the reasons behind a design or decision using relevant history and available sources, separating evidence from inference. |
+| [teach](skills/teach/SKILL.md) | Teach a system or body of work in plain language at the requested depth, combining behavior and rationale when useful. |
+
+## Planning and execution · 4
+
+| Skill | Purpose |
+| --- | --- |
+| [architect](skills/architect/SKILL.md) | Sketch types, interfaces, and module boundaries before a substantial change; implement only when the request includes implementation. |
+| [figure-it-out](skills/figure-it-out/SKILL.md) | Plan and execute a substantial task with no narrower workflow, using explicit scope, verifiable stages, and a proportionate decision trail. |
+| [show-me-your-work](skills/show-me-your-work/SKILL.md) | Keep a concise evidence-backed decision log for long-running or unattended work, in a location appropriate to the project. |
+| [improve-codebase-architecture](skills/improve-codebase-architecture/SKILL.md) | Survey architectural friction and propose evidence-backed improvements without automatically refactoring or modifying project decision records. |
+
+## Review, debugging, and measurement · 8
+
+| Skill | Purpose |
+| --- | --- |
+| [tdd](skills/tdd/SKILL.md) | Use only when the user explicitly asks for TDD, a failing test, or a regression test, OR when the bug has an obvious cheap local test target. Skip when the test path is unclear, expensive, integration-heavy, or not requested. |
+| [benchmark-checklist](skills/benchmark-checklist/SKILL.md) | Vet a perf measurement (limiter, tuning, limits, errors, repeatability, relevance, and whether the work happened) before you report or act on it. Use when you run a benchmark or report a speedup or regression you measured. |
+| [blast-radius](skills/blast-radius/SKILL.md) | Investigate what a change could break beyond its diff and test the assumptions on which its safety depends. |
+| [correct](skills/correct/SKILL.md) | Turn demonstrated recurring mistakes into proportionate structural checks, types, lint rules, or behavioral tests within the requested scope. |
+| [interrogate](skills/interrogate/SKILL.md) | Run an adversarial review of a change or design and report only findings demonstrated against its intended behavior. |
+| [no-comments](skills/no-comments/SKILL.md) | Review comments for accuracy and usefulness, remove redundant or stale comments, and preserve rationale and important constraints. |
+| [diagnosing-bugs](skills/diagnosing-bugs/SKILL.md) | Diagnose difficult bugs or performance regressions using reproducible evidence, ranked hypotheses, and targeted checks, with honest handling of intermittent failures. |
+| [code-review](skills/code-review/SKILL.md) | Review a diff against requirements and repository standards with one agent, prioritizing actionable, evidence-backed findings. |
 
 ## TypeScript · 1
 
 | Skill | Purpose |
 | --- | --- |
-| [typescript-best-practices](skills/typescript-best-practices/SKILL.md) | Apply TypeScript guidance within repository conventions, with [patterns](skills/typescript-best-practices/references/patterns.md). |
+| [typescript-best-practices](skills/typescript-best-practices/SKILL.md) | TypeScript best practices. Use when reading or editing any .ts or .tsx file. |
 
-## Engineering principles · 14
+## Engineering principles · 21
 
-The links use the selection's shorter labels; each folder and frontmatter name retains the upstream `principle-` prefix.
-
-| Principle | Purpose |
+| Skill | Purpose |
 | --- | --- |
-| [attack-the-premise](skills/principle-attack-the-premise/SKILL.md) | Test the assumption shared by repeated failed fixes. |
-| [exhaust-the-design-space](skills/principle-exhaust-the-design-space/SKILL.md) | Compare competing prototypes for unfamiliar decisions. |
-| [experience-first](skills/principle-experience-first/SKILL.md) | Prioritize the experience of the people using the work. |
-| [explain-the-number](skills/principle-explain-the-number/SKILL.md) | Establish what a measurement captures before trusting it. |
-| [foundational-thinking](skills/principle-foundational-thinking/SKILL.md) | Choose data structures and sequence foundational work deliberately. |
-| [laziness-protocol](skills/principle-laziness-protocol/SKILL.md) | Make the smallest effective change and avoid unnecessary abstraction. |
-| [make-operations-idempotent](skills/principle-make-operations-idempotent/SKILL.md) | Make retries and partial runs converge safely. |
-| [minimize-reader-load](skills/principle-minimize-reader-load/SKILL.md) | Reduce indirection and hidden state. |
-| [model-the-domain](skills/principle-model-the-domain/SKILL.md) | Represent domain concepts and valid states explicitly. |
-| [prove-it-works](skills/principle-prove-it-works/SKILL.md) | Verify the actual result before declaring completion. |
-| [separate-before-serializing-shared-state](skills/principle-separate-before-serializing-shared-state/SKILL.md) | Eliminate unnecessary shared mutation before adding coordination. |
-| [subtract-before-you-add](skills/principle-subtract-before-you-add/SKILL.md) | Remove obsolete complexity before building on it. |
-| [test-behavior-not-implementation](skills/principle-test-behavior-not-implementation/SKILL.md) | Test observable contracts rather than internal structure. |
-| [type-system-discipline](skills/principle-type-system-discipline/SKILL.md) | Model valid states using the language and repository's established types. |
+| [attack-the-premise](skills/principle-attack-the-premise/SKILL.md) | Apply when two or more fixes that share one premise have failed the same gate. Write the premise down and test it directly before you write another fix that assumes it. |
+| [boundary-discipline](skills/principle-boundary-discipline/SKILL.md) | Concentrate external-data validation at trust boundaries and rely on established internal invariants without redundant checks. |
+| [build-the-lever](skills/principle-build-the-lever/SKILL.md) | Build a small reusable tool when repetition or verification makes it more valuable than manual work. |
+| [exhaust-the-design-space](skills/principle-exhaust-the-design-space/SKILL.md) | Apply when facing a novel UI interaction or architectural decision with no precedent in the codebase. Build 2-3 competing prototypes and compare side by side before committing. |
+| [experience-first](skills/principle-experience-first/SKILL.md) | Apply when product, UX, or feature-scope tradeoffs come up. Choose user delight over implementation convenience; ship fewer polished features over more rough ones. |
+| [explain-the-number](skills/principle-explain-the-number/SKILL.md) | Apply before you measure, and before you trust, report, or act on a number you measured: a speedup, a regression, a throughput, a latency, or an eval result. Find what limits it, and rule out that it measured something other than the work you think. |
+| [fix-root-causes](skills/principle-fix-root-causes/SKILL.md) | Trace a failure to the first incorrect behavior and fix it within scope, preserving legitimate guards and documented workarounds. |
+| [foundational-thinking](skills/principle-foundational-thinking/SKILL.md) | Apply before writing logic: choosing core types and data structures, sequencing scaffold-vs-feature work, asking what concurrent actors share. Get the data structures right so downstream code becomes obvious. |
+| [guard-the-context-window](skills/principle-guard-the-context-window/SKILL.md) | Keep investigations focused with bounded reads, concise evidence summaries, and optional authorized delegation. |
+| [laziness-protocol](skills/principle-laziness-protocol/SKILL.md) | Apply when refactoring, evaluating diff size, or tempted to add abstractions, layers, or signal threading. Bias toward deletion and the smallest change that solves the problem. |
+| [make-operations-idempotent](skills/principle-make-operations-idempotent/SKILL.md) | Apply when designing commands, lifecycle steps, or processing loops that run amid crashes, restarts, and retries. Converge to the same end state regardless of partial prior runs. |
+| [minimize-reader-load](skills/principle-minimize-reader-load/SKILL.md) | Apply when reviewing or shaping code that's hard to trace. Count layers between question and answer, and hidden state in the reader's head; collapse one-caller wrappers and shrink mutable scope. |
+| [model-the-domain](skills/principle-model-the-domain/SKILL.md) | Apply when writing stateful logic, or when code branches a lot or repeats a shape assumption across files. |
+| [never-block-on-the-human](skills/principle-never-block-on-the-human/SKILL.md) | Proceed with authorized work and reasonable implementation decisions while asking only for material missing input or new authorization. |
+| [prove-it-works](skills/principle-prove-it-works/SKILL.md) | Apply after completing a task, before declaring done. Verify against the real artifact (run the feature, read the actual value, inspect the diff), not a proxy, self-report, or 'it compiles.' |
+| [redesign-from-first-principles](skills/principle-redesign-from-first-principles/SKILL.md) | Reconsider a design around new constraints, then choose the smallest coherent change that meets the authorized requirement. |
+| [separate-before-serializing-shared-state](skills/principle-separate-before-serializing-shared-state/SKILL.md) | Apply when concurrent actors might write to the same file, branch, key, or state object. Eliminate the sharing first; serialize structurally only when one shared writer is a real invariant. |
+| [sequence-verifiable-units](skills/principle-sequence-verifiable-units/SKILL.md) | Sequence substantial work into independently checkable stages using the actual baseline and the repository delivery workflow. |
+| [subtract-before-you-add](skills/principle-subtract-before-you-add/SKILL.md) | Apply when sequencing an addition, refactor, or rewrite. Remove dead code, redundant validators, and stub references first, then build on the simpler base. |
+| [test-behavior-not-implementation](skills/principle-test-behavior-not-implementation/SKILL.md) | Apply when you write, change, or keep a test. Assert what the code's users can observe, so that the test fails when that behavior breaks and keeps passing when only the internals change. |
+| [type-system-discipline](skills/principle-type-system-discipline/SKILL.md) | Apply when designing types, reviewing a function signature, or writing code in any statically-typed language. Make illegal states unrepresentable, brand semantic primitives, parse external data at boundaries, exhaust variants, derive from authoritative schemas. |
 
-## Animation and interaction · 9
+## Animation and interaction · 10
 
-| Skill | Purpose | Bundled reference |
-| --- | --- | --- |
-| [animate-expo](skills/animate-expo/SKILL.md) | Implement animation and gestures for React Native and Expo. | [Recipes](skills/animate-expo/RECIPES.md) |
-| [review-animations](skills/review-animations/SKILL.md) | Review motion against Emil Kowalski's standards. | [Standards](skills/review-animations/STANDARDS.md) |
-| [find-animation-opportunities](skills/find-animation-opportunities/SKILL.md) | Identify useful motion opportunities without implementing them. | Included in the entry point |
-| [animation-vocabulary](skills/animation-vocabulary/SKILL.md) | Find the name for a described motion effect. | Glossary in the entry point |
-| [choreograph](skills/choreograph/SKILL.md) | Coordinate timing and relationships between moving elements. | [Recipes](skills/choreograph/RECIPES.md) |
-| [animate](skills/animate/SKILL.md) | Build web motion using the existing component stack. | [Recipes](skills/animate/RECIPES.md) |
-| [gestures](skills/gestures/SKILL.md) | Build interruptible drag, swipe, and sheet interactions. | Included in the entry point |
-| [remove-animations](skills/remove-animations/SKILL.md) | Remove unnecessary motion and perform authorized cleanup. | Included in the entry point |
-| [animation-performance](skills/animation-performance/SKILL.md) | Diagnose stutter and apply fixes when requested. | Included in the entry point |
+| Skill | Purpose |
+| --- | --- |
+| [animate](skills/animate/SKILL.md) | Build purposeful web animation with the existing component stack. |
+| [animate-expo](skills/animate-expo/SKILL.md) | Build animation and gestures for React Native and Expo. |
+| [review-animations](skills/review-animations/SKILL.md) | Reviews animation and motion code against a high craft bar derived from Emil Kowalski's design engineering philosophy. Default to flagging; approval is earned. |
+| [improve-animations](skills/improve-animations/SKILL.md) | Audit motion across a codebase and produce prioritized implementation plans without editing application source. |
+| [find-animation-opportunities](skills/find-animation-opportunities/SKILL.md) | Find useful motion opportunities without implementing them. |
+| [remove-animations](skills/remove-animations/SKILL.md) | Find the animations an interface doesn't need and remove them — motion on keyboard actions, high-frequency surfaces, functional data, and decoration with no purpose — then clean up what they leave behind. Edits code, but only to subtract; it never adds or retunes motion. Use when the user says the app "feels slow", "has too much animation", "feels over-animated", wants to "tone down the motion", or asks what animations to remove. For finding places that should animate, use find-animation-opportunities; for fixing animations that should stay, use improve-animations or review-animations. |
+| [animation-performance](skills/animation-performance/SKILL.md) | Diagnose frame drops and apply scoped fixes when requested. |
+| [animation-vocabulary](skills/animation-vocabulary/SKILL.md) | Name a motion effect from its description. |
+| [choreograph](skills/choreograph/SKILL.md) | Coordinate timing and relationships between moving elements. |
+| [gestures](skills/gestures/SKILL.md) | Build interruptible drag, swipe, and sheet interactions. |
 
 ## UI stress testing · 1
 
-| Skill | Purpose | Bundled reference |
-| --- | --- | --- |
-| [break-ui](skills/break-ui/SKILL.md) | Exercise a component with realistic difficult data and report failures. | [Worst-case catalog](skills/break-ui/CATALOG.md) |
+| Skill | Purpose |
+| --- | --- |
+| [break-ui](skills/break-ui/SKILL.md) | Stress-test UI with realistic difficult data. |
+
+## Formal state models · 1
+
+| Skill | Purpose |
+| --- | --- |
+| [statechart](skills/statechart/SKILL.md) | Check a TLA+ model of a system that moves between states, such as a product flow, a protocol, or a service, and draw it as a Mermaid statechart. The report gives the shortest path to each state that breaks a rule. Use for /statechart, or to show a bug as a path through states. |
 
 ## Upstream sources
 
-| Source | Pinned commit | License |
+| Source | Pinned commit | Notice |
 | --- | --- | --- |
-| [pstack](https://github.com/cursor/plugins/tree/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack) | `de8ee15dd1194627d21eb5fcd41cb1873208dabb` | [MIT, Lauren Tan](third-party-notices.md#pstack) |
-| [Emil Kowalski's skills](https://github.com/emilkowalski/skills/tree/715c1807e08c497cfd1dc4feb450a2a3300ef2a9) | `715c1807e08c497cfd1dc4feb450a2a3300ef2a9` | [MIT, Emil Kowalski](third-party-notices.md#emil-kowalski) |
-| [Matt Pocock's skills](https://github.com/mattpocock/skills/tree/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d) | `4ae2317ddb22b046e26455e4f9c9b3aaaf62212d` | [MIT, Matt Pocock](third-party-notices.md#matt-pocock) |
+| [pstack](https://github.com/cursor/plugins/tree/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack) | `de8ee15dd1194627d21eb5fcd41cb1873208dabb` | [Lauren Tan, MIT](third-party-notices.md#pstack) |
+| [Emil Kowalski](https://github.com/emilkowalski/skills/tree/715c1807e08c497cfd1dc4feb450a2a3300ef2a9) | `715c1807e08c497cfd1dc4feb450a2a3300ef2a9` | [Emil Kowalski, MIT](third-party-notices.md#emil-kowalski) |
+| [Matt Pocock](https://github.com/mattpocock/skills/tree/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d) | `4ae2317ddb22b046e26455e4f9c9b3aaaf62212d` | [Matt Pocock, MIT](third-party-notices.md#matt-pocock) |
 
-These are the versions reviewed for the imports. The first batch preserves upstream text and frontmatter except for local link destinations. The second batch records its targeted text edits alongside link changes in [upstream.json](upstream.json); validation reverses those edits to recover the original upstream bytes. The manifest records each file's upstream path, Git blob ID, original SHA-256, imported SHA-256, and any link rewrites. Original upstream notices are consolidated in [third-party-notices.md](third-party-notices.md); include the relevant notice when redistributing skill folders.
+The manifest records each imported file's upstream path, Git blob ID, original SHA-256, local SHA-256, and reversible changes. Validation recovers the original upstream bytes from the local files and recorded edits. Notices are consolidated at the root; include the relevant notice when redistributing folders.
 
-### References outside the first batch
+## Supporting resources
 
-Two selected skills have relative links to unselected skills. Their referenced documents are bundled locally, with their own links resolved recursively:
+Animation recipes, review standards, the worst-case UI catalog, and TypeScript examples remain alongside their entry points. Architecture and explanation guides, the history-investigation playbooks, motion audit/plan templates, an optional architecture HTML scaffold, and decision-log/debugging helpers support the tuned workflows.
 
-| Selected skill | Supporting upstream documents |
-| --- | --- |
-| `principle-attack-the-premise` | `principle-build-the-lever`, `principle-fix-root-causes`, `principle-redesign-from-first-principles`, and the transitively referenced `principle-encode-lessons-in-structure` |
-| `principle-minimize-reader-load` | `principle-guard-the-context-window` |
+First-batch reference snapshots now resolve to canonical imported skills. The duplicate copies were removed. Upstream mentions of `prototype` and `emil-design-eng` remain informational; those skills are outside this selection and are not installed.
 
-These five documents live under the owning skill's `references/upstream/`, with `.md` filenames rather than `SKILL.md`. They are supporting snapshots, not additional skill entry points or tuned versions. The original advice in them is retained.
-
-The measurement principle now links directly to the adapted `benchmark-checklist`; its old reference snapshot was removed. Upstream still names companion workflows in prose: `show-me-your-work` and `improve-animations` are pending later batches, while `prototype` and `emil-design-eng` are outside the current selection. These mentions do not mean those workflows are installed or available.
+Statechart includes the upstream production TypeScript modules and launcher. The upstream test corpus and test-only npm dependencies are not bundled. The runtime package needs no npm dependencies. The launcher selects a supported Node, Bun, or Deno runtime; its subprocess handling also requires a POSIX shell. Provide Java 11+ and a verified TLC jar through `JAVA` and `TLA2TOOLS`, or provision the pinned mise tools explicitly. Missing dependencies produce an error without automatic installation. Rendering uses available Mermaid tooling; Pele is optional. See the [statechart instructions](skills/statechart/SKILL.md).
 
 ## Using and maintaining the library
 
-This repository stores the library; it does not install or enable skills in an agent. Keep the collection together when consuming it because some principles link to sibling skills. Individual folders with sibling links are not standalone distributions.
+This repository stores the library; it does not install or enable skills in an agent. Keep the collection together because some skills link to siblings. Individual folders with sibling links are not standalone distributions.
 
-Invocation settings are preserved as supplied upstream. In particular, all 22 pstack entry points, `review-animations`, and `handoff` retain `disable-model-invocation: true`. Provider-specific installation or metadata conversion can be added separately without changing these source imports.
-
-The bundled Codex skill-creator validator rejects upstream metadata in these 24 files (`disable-model-invocation`, and `argument-hint` for handoff); the other 9 entry points pass it. The library validator below accepts and type-checks this retained field. This import does not claim Codex-specific packaging validation.
+Invocation policies are retained from upstream. The bundled Codex skill-creator validator rejects the upstream `disable-model-invocation` and `argument-hint` fields; the library validator accepts the retained invocation field and checks its type. This is source-library validation, not a claim of provider-specific packaging compatibility.
 
 Validate with Python 3 and PyYAML installed:
 
@@ -122,6 +145,6 @@ Validate with Python 3 and PyYAML installed:
 python scripts/validate-skills.py
 ```
 
-The check verifies skill names and descriptions, manifest coverage, source notices, relative Markdown links, imported checksums, and reconstruction of the original upstream Git blobs. It does not execute recipes or prove agent behavior, library API compatibility, or provider-specific skill discovery.
+The check covers names, catalog coverage, source notices, local Markdown links, checksums, and recovery of upstream Git blobs. It does not prove agent behavior or animation library API compatibility. Script smoke checks and their limits are recorded in [adaptations.md](adaptations.md).
 
-For an update, review the new upstream commit first, bring across the full supporting files, record any intentional local changes, update the source metadata, and rerun validation. Do not refresh from a moving branch without updating the pinned provenance.
+For an update, review the new upstream commit, include required supporting files, record intentional local changes, and rerun validation. Do not refresh from a moving branch without updating pinned provenance.
