@@ -57,3 +57,35 @@ The five first-batch reference snapshots were removed. Their consumers now link 
 - Shell syntax was checked for the statechart launcher, decision logger, and debugging loop template.
 
 These are focused smoke checks, not the upstream statechart regression suite. The upstream test corpus and test-only dependency were intentionally omitted from the runtime skill package. Animation recipes, interactive debugging sessions, and agent behavior have not been exercised by this import.
+
+## Fourth batch: Impeccable command extraction
+
+This batch adds the 17 selected commands as individual skills, bringing the library to 72. All are adapted from Impeccable commit `ec229b48547f24685ffb22aa51c462c5ae27908c`; none is presented as an unchanged upstream skill. Each changed file identifies its pinned source and links here. The full Apache-2.0 notice is consolidated in [third-party-notices.md](third-party-notices.md#impeccable).
+
+The upstream files are command fragments, so extraction requires more than frontmatter. The local workflows replace template placeholders, mandatory command-runner calls, live controls, detector and snapshot storage, required interviews, and unavailable companion commands. They use available project tools and evidence directly. The command runner and its scripts, platform-specific iOS/Android references, and their third-party-derived content are not bundled.
+
+| Skill | Extraction and tuning |
+| --- | --- |
+| [bolder](skills/bolder/SKILL.md) | Preserve scoped amplification within the existing brand; remove direction-round and command-handoff dependencies. |
+| [quieter](skills/quieter/SKILL.md) | Retain visual and motion restraint without fixed saturation percentages, accent quotas, or blanket easing prohibitions. Preserve contrast and hierarchy. |
+| [distill](skills/distill/SKILL.md) | Simplify presentation and steps while preserving capabilities; replace universal font/option/layout quotas with task-based decisions. |
+| [colorize](skills/colorize/SKILL.md) | Keep semantic color strategy, themes, and measured contrast; remove live-mode parameters and link primary accessibility criteria with their scope and exceptions. |
+| [typeset](skills/typeset/SKILL.md) | Keep role hierarchy, reading, wrapping, and delivery checks; replace the detector and live-mode controls with available source/browser evidence. |
+| [layout](skills/layout/SKILL.md) | Keep grouping, rhythm, adaptation, and input-order checks; use the project's spacing system rather than prescribing a new base unit. |
+| [overdrive](skills/overdrive/SKILL.md) | Retain technical ambition, progressive enhancement, cleanup, and runtime verification. Remove the scripted banner and stale browser-support matrix; use an already settled direction without repeat approval. |
+| [critique](skills/critique/SKILL.md) | Provide a complete single-agent review with design assessment before mechanical checks. Retain evidence-based scoring and user perspectives in two focused references; distinguish inapplicable from unverified criteria and expose the denominator. Remove mandatory agents, overlays, snapshots, and closing questions. |
+| [audit](skills/audit/SKILL.md) | Keep five technical dimensions and a report-only contract. Tie defects to requirements and observed consequences; absence of memoization, dark mode, or tokens is not itself a failure. Scores do not certify compliance. |
+| [polish](skills/polish/SKILL.md) | Keep whole-path triage and verification; consume relevant existing findings without requiring snapshot storage or hooks. No implicit redesign, commit, or publishing. |
+| [harden](skills/harden/SKILL.md) | Keep realistic adverse states, localization, gesture cancellation, recovery, and lifecycle checks. Use controlled fixtures, preserve meaningful text, avoid raw backend messages and unsafe retries, and keep backend expansion outside incidental UI work. |
+| [adapt](skills/adapt/SKILL.md) | Keep context-specific adaptation and a responsive reference. Remove compulsory breakpoints, table-to-card conversion, and desktop-first rewrites; distinguish emulation from physical input evidence. |
+| [optimize](skills/optimize/SKILL.md) | Retain measured bottleneck diagnosis and comparable verification. Remove automatic memoization, architectural substitutions, static support assumptions, and optimization recipes with no demonstrated cause. |
+| [onboard](skills/onboard/SKILL.md) | Keep first value, distinct empty states, skip/replay, and account-aware progress. Reuse components and analytics conventions; remove mandatory illustrations, tour libraries, and invented success metrics. |
+| [shape](skills/shape/SKILL.md) | Return a brief with relevant states, boundaries, and decisions. Replace mandatory interview/confirmation rounds and missing workshop dependency with evidence-led planning. A standalone planning request stops at the brief; a larger authorized task may continue. |
+| [init](skills/init/SKILL.md) | Write or update the actual product authority using a focused outline. Remove compulsory interviews, web defaults, schema markers, image-workflow questions, and hidden runtime/live configuration. |
+| [document](skills/document/SKILL.md) | Capture the observed design system using a focused outline. Preserve actual token names and useful existing documentation; remove mandatory metaphors, sidecars, seed workshops, and unverified external-format compatibility claims. |
+
+### Validation and limits
+
+The new entry points use standard `name` and `description` metadata. Five supporting references are adapted from the same pinned command sources; the manifest records their separate provenance and reversible edits. Source integrity checks recover each original file and compare both SHA-256 and Git blob IDs. The existing library validator also checks names, catalog coverage, notices, and local links.
+
+These are instruction packages with no new executable helpers. Static validation and review of task boundaries do not demonstrate their behavior in a live design session. Runtime scripts and the upstream Impeccable detector were not imported or executed. The earlier provider-specific metadata limitation remains for older batches; the new 17 entry points pass the bundled skill-creator validator.

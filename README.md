@@ -2,7 +2,7 @@
 
 A personal library of skills for clear communication, deliberate engineering, and polished interfaces.
 
-The library contains **55 skills**: 40 from pstack, 11 from Emil Kowalski, and 4 from Matt Pocock. The first 24 preserve upstream workflows; the following 9 have light integration changes, and 22 have tuned workflows. See [adaptations.md](adaptations.md) for the changes and [skill-selection.txt](skill-selection.txt) for the full selection. Impeccable extraction and the combined security review remain later stages.
+The library contains **72 skills**: 40 from pstack, 11 from Emil Kowalski, 4 from Matt Pocock, and 17 extracted from Impeccable. The first 24 preserve upstream workflows; the following 9 have light integration changes, 22 have tuned workflows, and the 17 Impeccable commands have been adapted into individual skills. See [adaptations.md](adaptations.md) for the changes and [skill-selection.txt](skill-selection.txt) for the full selection. The combined Trail of Bits security review remains the final content stage.
 
 ## Organization
 
@@ -115,6 +115,38 @@ Folders share one level so sibling links work. Original skill names, including p
 | --- | --- |
 | [statechart](skills/statechart/SKILL.md) | Check a TLA+ model of a system that moves between states, such as a product flow, a protocol, or a service, and draw it as a Mermaid statechart. The report gives the shortest path to each state that breaks a rule. Use for /statechart, or to show a bug as a path through states. |
 
+## Design direction · 7
+
+| Skill | Purpose |
+| --- | --- |
+| [bolder](skills/bolder/SKILL.md) | Make an existing interface or section more expressive while preserving its brand, functionality, and requested scope. |
+| [quieter](skills/quieter/SKILL.md) | Reduce visual intensity and distracting motion in an interface while retaining hierarchy, readability, and personality. |
+| [distill](skills/distill/SKILL.md) | Simplify a cluttered interface by removing redundant presentation and interaction steps while preserving required capabilities. |
+| [colorize](skills/colorize/SKILL.md) | Add purposeful color to a muted interface using stable semantic roles, existing brand constraints, and verified contrast. |
+| [typeset](skills/typeset/SKILL.md) | Improve interface typography, hierarchy, wrapping, and font delivery within the established design system. |
+| [layout](skills/layout/SKILL.md) | Improve interface spacing, grouping, density, and responsive structure while preserving task order and accessibility. |
+| [overdrive](skills/overdrive/SKILL.md) | Build ambitious browser effects or unusually responsive interactions when explicitly requested, with measured performance and usable fallbacks. |
+
+## Interface review and finishing · 7
+
+| Skill | Purpose |
+| --- | --- |
+| [critique](skills/critique/SKILL.md) | Produce an evidence-backed, scored UX and visual design critique of a specific interface without editing the application. |
+| [audit](skills/audit/SKILL.md) | Audit a web interface for accessibility, performance, theming, responsiveness, and implementation defects; report findings without applying fixes. |
+| [polish](skills/polish/SKILL.md) | Apply a final quality pass to an existing interface, fixing scoped interaction, visual, content, and state inconsistencies without redesigning it. |
+| [harden](skills/harden/SKILL.md) | Make an interface resilient to realistic content extremes, failures, localization, and interrupted interactions within the existing product scope. |
+| [adapt](skills/adapt/SKILL.md) | Adapt an existing interface to requested screens, containers, input methods, or output contexts while preserving its core tasks and identity. |
+| [optimize](skills/optimize/SKILL.md) | Measure and improve a web interface bottleneck in loading, rendering, interaction, or resource use without sacrificing functionality. |
+| [onboard](skills/onboard/SKILL.md) | Design or improve first-run flows, contextual guidance, and empty states that help users reach their first meaningful result. |
+
+## Product and design planning · 3
+
+| Skill | Purpose |
+| --- | --- |
+| [shape](skills/shape/SKILL.md) | Plan the user experience for a feature or surface and return a concise design brief before implementation. |
+| [init](skills/init/SKILL.md) | Establish or refresh durable product context in PRODUCT.md, including users, purpose, constraints, and available evidence; not project scaffolding. |
+| [document](skills/document/SKILL.md) | Capture an existing interface design system in DESIGN.md from observed tokens, components, and rendered behavior; not generic document creation. |
+
 ## Upstream sources
 
 | Source | Pinned commit | Notice |
@@ -122,12 +154,15 @@ Folders share one level so sibling links work. Original skill names, including p
 | [pstack](https://github.com/cursor/plugins/tree/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack) | `de8ee15dd1194627d21eb5fcd41cb1873208dabb` | [Lauren Tan, MIT](third-party-notices.md#pstack) |
 | [Emil Kowalski](https://github.com/emilkowalski/skills/tree/715c1807e08c497cfd1dc4feb450a2a3300ef2a9) | `715c1807e08c497cfd1dc4feb450a2a3300ef2a9` | [Emil Kowalski, MIT](third-party-notices.md#emil-kowalski) |
 | [Matt Pocock](https://github.com/mattpocock/skills/tree/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d) | `4ae2317ddb22b046e26455e4f9c9b3aaaf62212d` | [Matt Pocock, MIT](third-party-notices.md#matt-pocock) |
+| [Impeccable](https://github.com/pbakaus/impeccable/tree/ec229b48547f24685ffb22aa51c462c5ae27908c) | `ec229b48547f24685ffb22aa51c462c5ae27908c` | [Paul Bakaus, Apache-2.0](third-party-notices.md#impeccable) |
 
 The manifest records each imported file's upstream path, Git blob ID, original SHA-256, local SHA-256, and reversible changes. Validation recovers the original upstream bytes from the local files and recorded edits. Notices are consolidated at the root; include the relevant notice when redistributing folders.
 
 ## Supporting resources
 
 Animation recipes, review standards, the worst-case UI catalog, and TypeScript examples remain alongside their entry points. Architecture and explanation guides, the history-investigation playbooks, motion audit/plan templates, an optional architecture HTML scaffold, and decision-log/debugging helpers support the tuned workflows.
+
+Impeccable commands are individual entry points with no bundled command runner, detector, live overlay, or hidden state store. Five focused references support critique scoring and perspectives, responsive implementation, PRODUCT.md, and DESIGN.md. Modified files link directly to their pinned upstream source and adaptation notes. Platform-specific iOS/Android reference files are not included.
 
 First-batch reference snapshots now resolve to canonical imported skills. The duplicate copies were removed. Upstream mentions of `prototype` and `emil-design-eng` remain informational; those skills are outside this selection and are not installed.
 
@@ -137,7 +172,7 @@ Statechart includes the upstream production TypeScript modules and launcher. The
 
 This repository stores the library; it does not install or enable skills in an agent. Keep the collection together because some skills link to siblings. Individual folders with sibling links are not standalone distributions.
 
-Invocation policies are retained from upstream. The bundled Codex skill-creator validator rejects the upstream `disable-model-invocation` and `argument-hint` fields; the library validator accepts the retained invocation field and checks its type. This is source-library validation, not a claim of provider-specific packaging compatibility.
+Invocation policies are retained for upstream skills that supplied them. Impeccable command extracts use standard name/description metadata and normal automatic discovery; their descriptions distinguish UI audit, design documentation, and product initialization from unrelated tasks. The bundled Codex skill-creator validator rejects the upstream `disable-model-invocation` and `argument-hint` fields; the library validator accepts the retained invocation field and checks its type. This is source-library validation, not a claim of provider-specific packaging compatibility.
 
 Validate with Python 3 and PyYAML installed:
 
