@@ -29,4 +29,4 @@ Use `n/a` with a reason when a criterion genuinely does not apply. Use `unverifi
 
 Report issue severity separately: P0 blocks completion, P1 creates major difficulty, P2 is a smaller problem with a workaround, and P3 is optional refinement. Cite the exact state, observed behavior, and consequence. Avoid universal cutoffs for option counts, response times, or decorative density without task evidence.
 
-> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/critique.md) (Paul Bakaus, Apache-2.0). Modified for this library; see [adaptations](../../../adaptations.md).
+> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/critique.md) (Paul Bakaus, Apache-2.0).

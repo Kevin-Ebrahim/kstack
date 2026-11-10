@@ -10,4 +10,4 @@ Choose perspectives grounded in the actual audience. These are prompts for a wal
 
 Use product documentation to add a role these prompts miss. Walk a concrete task for each selected perspective and report only specific observed problems or clearly marked hypotheses. A control near the top of the screen, several visible options, or an absent bulk action is not automatically a defect.
 
-> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/critique.md) (Paul Bakaus, Apache-2.0). Modified for this library; see [adaptations](../../../adaptations.md).
+> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/critique.md) (Paul Bakaus, Apache-2.0).

@@ -27,4 +27,4 @@ For each finding provide severity, location, evidence or reproduction, user impa
 
 Recommend fixes in a useful order without applying them or writing reports automatically. Save only to a requested or established artifact destination. This web checklist does not claim native-platform coverage; a native audit needs the appropriate platform methods. Use [critique](../critique/SKILL.md) for visual and UX judgment.
 
-> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/audit.md) (Paul Bakaus, Apache-2.0). Modified for this library; see [adaptations](../../adaptations.md).
+> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/audit.md) (Paul Bakaus, Apache-2.0).

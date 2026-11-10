@@ -32,4 +32,4 @@ Use available project checks and browser tools; no Impeccable detector is requir
 
 Inspect the rendered result with realistic content, zoom, fallback fonts, and supported themes. Check loading and reflow as well as static screenshots. Report the changed roles and evidence; source inspection alone cannot prove reading comfort or font-loading behavior. Use [layout](../layout/SKILL.md) if the underlying problem is spatial structure.
 
-> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/typeset.md) (Paul Bakaus, Apache-2.0). Modified for this library; see [adaptations](../../adaptations.md).
+> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/typeset.md) (Paul Bakaus, Apache-2.0).

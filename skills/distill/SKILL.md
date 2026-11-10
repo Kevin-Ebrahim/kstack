@@ -28,4 +28,4 @@ Do not delete product capabilities or silently change defaults under a presentat
 
 Walk the important tasks before and after, including keyboard use, narrow layout, and realistic content. Confirm that required actions remain available and understandable. Describe what was removed or moved and where any displaced action is now found; do not claim faster completion without measurement.
 
-> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/distill.md) (Paul Bakaus, Apache-2.0). Modified for this library; see [adaptations](../../adaptations.md).
+> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/distill.md) (Paul Bakaus, Apache-2.0).

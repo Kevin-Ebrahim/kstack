@@ -25,4 +25,4 @@ Do not lower text or control contrast to achieve a quieter appearance. The stron
 
 Inspect the rendered target at representative sizes and themes. Exercise primary actions and keyboard navigation. Compare reading comfort, hierarchy, and brand continuity with the baseline; distinguish observed improvements from subjective judgments. For a motion-specific pass, use [remove-animations](../remove-animations/SKILL.md).
 
-> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/quieter.md) (Paul Bakaus, Apache-2.0). Modified for this library; see [adaptations](../../adaptations.md).
+> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/quieter.md) (Paul Bakaus, Apache-2.0).

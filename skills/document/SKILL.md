@@ -29,4 +29,4 @@ If there is no implementation or authoritative design reference, explain that th
 
 Check recorded values against their actual sources and sampled renders, verify local evidence paths, and review the diff for accidental rule changes. Summarize coverage, conflicts, and unknowns. Do not claim a visual inspection occurred when only source files were available.
 
-> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/document.md) (Paul Bakaus, Apache-2.0). Modified for this library; see [adaptations](../../adaptations.md).
+> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/document.md) (Paul Bakaus, Apache-2.0).

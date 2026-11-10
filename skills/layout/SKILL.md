@@ -29,4 +29,4 @@ State the primary reading or task path, relationships that should group or separ
 
 Walk the primary task at supported sizes and with keyboard input. Check overflow, sticky occlusion, content extremes, zoom, and usable targets. A device-sized screenshot verifies layout, not touch behavior. Keep the existing brand and unrelated sections intact; report any unavailable device or interaction checks.
 
-> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/layout.md) (Paul Bakaus, Apache-2.0). Modified for this library; see [adaptations](../../adaptations.md).
+> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/layout.md) (Paul Bakaus, Apache-2.0).

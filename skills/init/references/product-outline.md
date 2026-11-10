@@ -16,4 +16,4 @@ Use only sections that carry actual information. Preserve an existing useful str
 
 Do not fill absent sections with boilerplate. Keep session workflow settings, image-generation preferences, and page-specific composition choices out of this durable record.
 
-> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/init.md) (Paul Bakaus, Apache-2.0). Modified for this library; see [adaptations](../../../adaptations.md).
+> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/init.md) (Paul Bakaus, Apache-2.0).

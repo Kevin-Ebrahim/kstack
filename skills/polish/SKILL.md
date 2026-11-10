@@ -31,4 +31,4 @@ Walk the full path again with available relevant input methods. Check narrow, in
 
 Review the source diff for accidental churn and temporary artifacts. Report fixes and remaining gaps, including any underlying design problem that needs a separate decision. Do not claim a feature is ready merely because a detector is clean, and do not publish or commit as a side effect of polish.
 
-> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/polish.md) (Paul Bakaus, Apache-2.0). Modified for this library; see [adaptations](../../adaptations.md).
+> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/polish.md) (Paul Bakaus, Apache-2.0).

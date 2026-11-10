@@ -27,4 +27,4 @@ Client validation improves feedback; the trusted boundary still owns authorizati
 
 Reproduce each confirmed failure, apply the fix, and repeat the same condition. Add a focused regression when it protects behavior and the project can exercise it meaningfully. Report device/engine/input evidence separately from viewport screenshots and name untested conditions. [break-ui](../break-ui/SKILL.md) offers a broader catalog of stress cases.
 
-> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/harden.md) (Paul Bakaus, Apache-2.0). Modified for this library; see [adaptations](../../adaptations.md).
+> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/harden.md) (Paul Bakaus, Apache-2.0).

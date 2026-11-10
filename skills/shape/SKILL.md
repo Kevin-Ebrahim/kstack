@@ -34,4 +34,4 @@ Scale the detail to the task. Cover the relevant parts of:
 
 Deliver in the requested location or in chat. Ask for a decision only when one remains necessary; never label an unconfirmed brief as approved. Stop after planning unless the overall request already includes implementation, in which case use the settled brief to continue the authorized work.
 
-> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/shape.md) (Paul Bakaus, Apache-2.0). Modified for this library; see [adaptations](../../adaptations.md).
+> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/shape.md) (Paul Bakaus, Apache-2.0).

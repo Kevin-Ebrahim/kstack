@@ -30,4 +30,4 @@ For web work, consult [responsive examples](references/responsive.md) when handl
 
 Inspect narrow, intermediate, and wide states and test meaningful transitions between them. Exercise keyboard and available touch input, navigation, overlays, long content, and zoom. Report precisely which environments were exercised; emulation does not establish real-device performance or touch reliability. Compare the adapted result with the original task and brand intent.
 
-> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/adapt.md) (Paul Bakaus, Apache-2.0). Modified for this library; see [adaptations](../../adaptations.md).
+> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/adapt.md) (Paul Bakaus, Apache-2.0).

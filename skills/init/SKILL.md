@@ -29,4 +29,4 @@ Keep palettes, component styling, session-specific page strategy, and tooling pr
 
 Read the result back, check source paths and factual claims, and inspect the diff for lost context. Summarize what was captured and what remains undecided. When this was a step in a larger authorized task, continue using the record; do not request approval again for settled work.
 
-> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/init.md) (Paul Bakaus, Apache-2.0). Modified for this library; see [adaptations](../../adaptations.md).
+> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/init.md) (Paul Bakaus, Apache-2.0).

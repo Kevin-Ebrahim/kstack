@@ -28,4 +28,4 @@ Measure the computed pairs rather than judging by eye. WCAG AA text contrast is 
 
 Check relevant themes and hover, focus, selection, error, and disabled states. Confirm that the intended task remains prominent and non-color cues work. Report what was measured and what remains unverified.
 
-> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/colorize.md) (Paul Bakaus, Apache-2.0). Modified for this library; see [adaptations](../../adaptations.md).
+> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/colorize.md) (Paul Bakaus, Apache-2.0).

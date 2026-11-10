@@ -53,4 +53,4 @@ Tables may need horizontal scrolling, selected columns, or another presentation;
 
 Emulation helps inspect layout but does not reproduce all physical touch, CPU/memory limits, browser chrome, fonts, or network behavior. Exercise real target devices when available and report the exact limits when they are not.
 
-> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/adapt.md) (Paul Bakaus, Apache-2.0). Modified for this library; see [adaptations](../../../adaptations.md).
+> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/adapt.md) (Paul Bakaus, Apache-2.0).

@@ -35,4 +35,4 @@ Reuse accessible project components for popovers, dialogs, and guidance. Preserv
 
 Walk first use, skip, replay, partial completion, interruption, returning use, and account switching as relevant. Check that the user can reach actual value and continue afterward. Report usability hypotheses separately from measured completion or research results.
 
-> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/onboard.md) (Paul Bakaus, Apache-2.0). Modified for this library; see [adaptations](../../adaptations.md).
+> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/onboard.md) (Paul Bakaus, Apache-2.0).

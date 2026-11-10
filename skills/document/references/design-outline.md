@@ -36,4 +36,4 @@ Record only established constraints and confirmed practices. Do not promote a lo
 
 If optional YAML tokens are needed for an integration, verify that integration's current schema and validate the result. Never invent schema markers or hidden sidecars to simulate compatibility.
 
-> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/document.md) (Paul Bakaus, Apache-2.0). Modified for this library; see [adaptations](../../../adaptations.md).
+> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/document.md) (Paul Bakaus, Apache-2.0).

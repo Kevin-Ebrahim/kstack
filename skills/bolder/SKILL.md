@@ -27,4 +27,4 @@ Keep changes inside the named scope. If a new system primitive or identity chang
 
 Compare before and after at relevant widths and states. Check that the focal point is clearer, the result still belongs to the same product, surrounding sections remain intact, and controls, keyboard focus, contrast, and motion preferences still work. Report the change and any untested states. Use [polish](../polish/SKILL.md) for a final pass when included in the task.
 
-> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/bolder.md) (Paul Bakaus, Apache-2.0). Modified for this library; see [adaptations](../../adaptations.md).
+> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/bolder.md) (Paul Bakaus, Apache-2.0).

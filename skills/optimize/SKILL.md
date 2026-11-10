@@ -29,4 +29,4 @@ Keep current functionality, accessibility, supported languages, and error recove
 
 Repeat the baseline scenario under comparable conditions, including variation across runs where relevant. Exercise the affected feature for regressions. Report before/after values, their units and conditions, the causal explanation, and limits. If runtime evidence is unavailable, label the change as an unmeasured improvement hypothesis rather than a verified speedup.
 
-> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/optimize.md) (Paul Bakaus, Apache-2.0). Modified for this library; see [adaptations](../../adaptations.md).
+> Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/optimize.md) (Paul Bakaus, Apache-2.0).
