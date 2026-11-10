@@ -1,12 +1,14 @@
 # kstack
 
-73 skills for communication, engineering, interface design, animation, and security review.
+74 skills for communication, engineering, interface design, animation, and security review.
 
 ## Usage
 
 Choose a skill below and ask your agent to follow its `SKILL.md`, for example:
 
 > Use skills/code-review/SKILL.md to review this diff.
+
+For help choosing, use [skill-index](skills/skill-index/SKILL.md). It maps tasks to skills and explains which combinations fit. Once installed, invoke it with `$skill-index`, or let the agent select it when choosing a workflow.
 
 Keep each skill's supporting files with it. Some skills link to siblings, so keep the collection together. The repository itself does not install or enable skills in your agent.
 
