@@ -1,0 +1,125 @@
+# Selected skills
+
+## pstack
+
+### Planning, understanding and communication
+
+- [architect](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/architect/SKILL.md) — Sketch the types, interfaces and module structure before implementing a substantial change.
+- [how](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/how/SKILL.md) — Explain how a system works, how its pieces fit together and where a change belongs.
+- [why](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/why/SKILL.md) — Investigate the reasons behind a design or decision, using available evidence such as history and issue discussions.
+- [teach](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/teach/SKILL.md) — Combine how and why into a plain-language explanation of a system or body of work.
+- [bro](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/bro/SKILL.md) — Restate the last message in plain language without jargon.
+- [in-your-own-words](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/in-your-own-words/SKILL.md) — Restate your understanding of the user’s goal and underlying problem.
+- [sharpen](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/sharpen/SKILL.md) — Refine a task or prompt to make it more thoughtful without expanding its scope.
+- [unslop](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/unslop/SKILL.md) — Remove formulaic AI-sounding language from writing.
+- [ketchup](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/ketchup/SKILL.md) — Catch the user up on what happened since their last message and identify decisions waiting on them.
+
+### Building, testing and review
+
+- [blast-radius](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/blast-radius/SKILL.md) — Investigate what a change could break outside the visible diff and verify the key safety assumption.
+- [benchmark-checklist](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/benchmark-checklist/SKILL.md) — Check whether a performance measurement is meaningful and repeatable before reporting it.
+- [correct](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/correct/SKILL.md) — Turn recurring mistakes into structural checks, types, lint rules or tests that prevent them from recurring.
+- [figure-it-out](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/figure-it-out/SKILL.md) — Create and follow an auditable approach for a large or unusual task that has no narrower workflow.
+- [interrogate](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/interrogate/SKILL.md) — Run an adversarial review of a change or design and keep findings that can be demonstrated.
+- [tdd](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/tdd/SKILL.md) — Use a test-first or regression-test workflow when explicitly requested or when a cheap local test is appropriate.
+- [typescript-best-practices](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/typescript-best-practices/SKILL.md) — Apply TypeScript-specific guidance when reading or editing TypeScript.
+- [statechart](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/statechart/SKILL.md) — Model a stateful system with TLA+ and produce a Mermaid statechart and paths to broken properties.
+- [show-me-your-work](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/show-me-your-work/SKILL.md) — Keep a reviewable decision log for long-running or unattended work.
+- [no-comments](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/no-comments/SKILL.md) — Review code comments, address accepted findings and consider expressing important constraints in code or checks.
+
+### Engineering principles
+
+- [attack-the-premise](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/principle-attack-the-premise/SKILL.md) — After repeated failed fixes, question and test the assumption they share.
+- [boundary-discipline](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/principle-boundary-discipline/SKILL.md) — Validate external input at system boundaries and keep internal logic focused.
+- [build-the-lever](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/principle-build-the-lever/SKILL.md) — Build a reusable tool or script to perform or verify substantial work.
+- [exhaust-the-design-space](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/principle-exhaust-the-design-space/SKILL.md) — Compare multiple prototypes for unfamiliar UI or architecture decisions.
+- [experience-first](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/principle-experience-first/SKILL.md) — Favor a polished user experience when making product trade-offs.
+- [explain-the-number](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/principle-explain-the-number/SKILL.md) — Check what a measurement actually captures before trusting or reporting it.
+- [fix-root-causes](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/principle-fix-root-causes/SKILL.md) — Trace symptoms to their source and address the underlying problem.
+- [foundational-thinking](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/principle-foundational-thinking/SKILL.md) — Choose sound data structures, types and sequencing before building logic.
+- [guard-the-context-window](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/principle-guard-the-context-window/SKILL.md) — Keep large outputs and investigations from overwhelming the main conversation.
+- [laziness-protocol](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/principle-laziness-protocol/SKILL.md) — Prefer deletion and the smallest effective solution over extra abstractions.
+- [make-operations-idempotent](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/principle-make-operations-idempotent/SKILL.md) — Make repeated operations converge safely after retries or partial failures.
+- [minimize-reader-load](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/principle-minimize-reader-load/SKILL.md) — Make code easier to follow by reducing indirection and hidden state.
+- [model-the-domain](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/principle-model-the-domain/SKILL.md) — Represent domain concepts and valid states explicitly in stateful or branch-heavy code.
+- [never-block-on-the-human](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/principle-never-block-on-the-human/SKILL.md) — Continue autonomously on reversible work instead of asking unnecessary permission.
+- [prove-it-works](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/principle-prove-it-works/SKILL.md) — Verify the actual result before declaring a task complete.
+- [redesign-from-first-principles](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/principle-redesign-from-first-principles/SKILL.md) — Reconsider the overall design when integrating a new requirement.
+- [separate-before-serializing-shared-state](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/principle-separate-before-serializing-shared-state/SKILL.md) — Avoid shared mutable state where possible before adding coordination around it.
+- [sequence-verifiable-units](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/principle-sequence-verifiable-units/SKILL.md) — Break multi-step work into independently verifiable stages.
+- [subtract-before-you-add](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/principle-subtract-before-you-add/SKILL.md) — Remove obsolete or redundant pieces before introducing new ones.
+- [test-behavior-not-implementation](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/principle-test-behavior-not-implementation/SKILL.md) — Test externally observable behavior rather than internal implementation details.
+- [type-system-discipline](https://github.com/cursor/plugins/blob/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack/skills/principle-type-system-discipline/SKILL.md) — Use types and validation to represent valid states and prevent invalid ones.
+
+## Emil Kowalski’s skills
+
+### Animation and interaction
+
+- [animate](https://github.com/emilkowalski/skills/blob/main/skills/animate/SKILL.md) — Design and implement a web animation, including timing, easing, interruption and reduced motion.
+- [animate-expo](https://github.com/emilkowalski/skills/blob/main/skills/animate-expo/SKILL.md) — Build animations and gestures for React Native and Expo.
+- [review-animations](https://github.com/emilkowalski/skills/blob/main/skills/review-animations/SKILL.md) — Critically review existing animation against Emil’s motion principles.
+- [improve-animations](https://github.com/emilkowalski/skills/blob/main/skills/improve-animations/SKILL.md) — Audit motion across a codebase and produce prioritized implementation plans; it does not apply them.
+- [find-animation-opportunities](https://github.com/emilkowalski/skills/blob/main/skills/find-animation-opportunities/SKILL.md) — Identify where motion would help and where it should be avoided; it does not implement changes.
+- [remove-animations](https://github.com/emilkowalski/skills/blob/main/skills/remove-animations/SKILL.md) — Remove unnecessary motion and clean up what it leaves behind.
+- [animation-performance](https://github.com/emilkowalski/skills/blob/main/skills/animation-performance/SKILL.md) — Diagnose and improve animations that stutter or drop frames.
+- [animation-vocabulary](https://github.com/emilkowalski/skills/blob/main/skills/animation-vocabulary/SKILL.md) — Find the proper name for a motion effect you can describe but don’t know how to name.
+- [choreograph](https://github.com/emilkowalski/skills/blob/main/skills/choreograph/SKILL.md) — Coordinate several moving elements so their timing and sequence feel intentional.
+- [gestures](https://github.com/emilkowalski/skills/blob/main/skills/gestures/SKILL.md) — Build or refine responsive drag, swipe, sheet and other gesture-driven interactions.
+
+### Edge cases
+
+- [break-ui](https://github.com/emilkowalski/skills/blob/main/skills/break-ui/SKILL.md) — Stress-test a component or screen with difficult but realistic data.
+
+## Impeccable
+
+These are commands within the Impeccable skill.
+
+### Design direction
+
+- [bolder](https://github.com/pbakaus/impeccable/blob/main/skill/reference/bolder.md) — Make a safe or restrained design more visually expressive.
+- [quieter](https://github.com/pbakaus/impeccable/blob/main/skill/reference/quieter.md) — Tone down a design that feels too loud.
+- [distill](https://github.com/pbakaus/impeccable/blob/main/skill/reference/distill.md) — Remove unnecessary elements and simplify the interface.
+- [colorize](https://github.com/pbakaus/impeccable/blob/main/skill/reference/colorize.md) — Introduce purposeful color to a muted interface.
+- [typeset](https://github.com/pbakaus/impeccable/blob/main/skill/reference/typeset.md) — Improve typography, hierarchy and sizing.
+- [layout](https://github.com/pbakaus/impeccable/blob/main/skill/reference/layout.md) — Improve spacing, arrangement and visual rhythm.
+- [overdrive](https://github.com/pbakaus/impeccable/blob/main/skill/reference/overdrive.md) — Add ambitious effects such as shaders, spring physics or scroll-driven motion.
+
+### Review and finishing
+
+- [critique](https://github.com/pbakaus/impeccable/blob/main/skill/reference/critique.md) — Produce a scored UX and design critique.
+- [audit](https://github.com/pbakaus/impeccable/blob/main/skill/reference/audit.md) — Produce a technical quality report covering areas such as accessibility, responsiveness and performance.
+- [polish](https://github.com/pbakaus/impeccable/blob/main/skill/reference/polish.md) — Make a final quality pass before shipping.
+- [harden](https://github.com/pbakaus/impeccable/blob/main/skill/reference/harden.md) — Address errors, internationalization, overflow and edge cases.
+- [adapt](https://github.com/pbakaus/impeccable/blob/main/skill/reference/adapt.md) — Adjust an interface for different screens and devices.
+- [optimize](https://github.com/pbakaus/impeccable/blob/main/skill/reference/optimize.md) — Improve loading and rendering performance.
+- [onboard](https://github.com/pbakaus/impeccable/blob/main/skill/reference/onboard.md) — Design first-run experiences and empty states.
+
+### Planning and iteration
+
+- [shape](https://github.com/pbakaus/impeccable/blob/main/skill/reference/shape.md) — Plan the user experience before implementation.
+- [init](https://github.com/pbakaus/impeccable/blob/main/skill/reference/init.md) — Establish product context and write PRODUCT.md for the project.
+- [document](https://github.com/pbakaus/impeccable/blob/main/skill/reference/document.md) — Capture the existing visual system in DESIGN.md.
+
+## Matt Pocock
+
+### Debugging
+
+- [diagnosing-bugs](https://github.com/mattpocock/skills/blob/main/skills/engineering/diagnosing-bugs/SKILL.md) — Structured debugging for difficult bugs and performance regressions.
+- [code-review](https://github.com/mattpocock/skills/blob/main/skills/engineering/code-review/SKILL.md) — Review changes against requirements and standards; work with one agent and prioritize actionable findings.
+
+### Handoffs
+
+- [handoff](https://github.com/mattpocock/skills/blob/main/skills/productivity/handoff/SKILL.md) — Prepare a concise handoff document so another agent/teammate can resume the work.
+
+### Codebase
+
+- [improve-codebase-architecture](https://github.com/mattpocock/skills/blob/main/skills/engineering/improve-codebase-architecture/SKILL.md) — Survey the codebase for architectural improvements.
+
+## Trail of Bits
+
+### Security
+
+Create one general security-review skill drawing on:
+  - [sharp-edges](https://github.com/trailofbits/skills/blob/main/plugins/sharp-edges/skills/sharp-edges/SKILL.md) — Look for APIs and designs that make insecure use easy.
+  - [insecure-defaults](https://github.com/trailofbits/skills/blob/main/plugins/insecure-defaults/commands/audit.md) — Review defaults and fallback behavior for security problems.
+  - [supply-chain-risk-auditor](https://github.com/trailofbits/skills/blob/main/plugins/supply-chain-risk-auditor/skills/supply-chain-risk-auditor/SKILL.md) — Assess dependency and supply-chain risks.

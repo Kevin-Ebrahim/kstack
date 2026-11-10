@@ -1,0 +1,620 @@
+{
+  "schema_version": 1,
+  "imported_on": "2026-11-10",
+  "sources": {
+    "pstack": {
+      "repository": "https://github.com/cursor/plugins",
+      "commit": "de8ee15dd1194627d21eb5fcd41cb1873208dabb",
+      "license": "MIT",
+      "license_path": "pstack/LICENSE"
+    },
+    "emil-kowalski": {
+      "repository": "https://github.com/emilkowalski/skills",
+      "commit": "715c1807e08c497cfd1dc4feb450a2a3300ef2a9",
+      "license": "MIT",
+      "license_path": "LICENSE"
+    }
+  },
+  "skills": [
+    {
+      "name": "bro",
+      "selection_name": "bro",
+      "category": "communication",
+      "directory": "skills/bro",
+      "source": "pstack",
+      "upstream_directory": "pstack/skills/bro",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "role": "entrypoint",
+          "upstream_path": "pstack/skills/bro/SKILL.md",
+          "upstream_git_blob": "b1701b778639c08bfc306291d70170c525c66a68",
+          "upstream_sha256": "aa329d0ceeeecb6822a7174ad76bb07a7826a3c52ceb6a588dec4138815084bb",
+          "sha256": "aa329d0ceeeecb6822a7174ad76bb07a7826a3c52ceb6a588dec4138815084bb",
+          "link_rewrites": []
+        }
+      ]
+    },
+    {
+      "name": "in-your-own-words",
+      "selection_name": "in-your-own-words",
+      "category": "communication",
+      "directory": "skills/in-your-own-words",
+      "source": "pstack",
+      "upstream_directory": "pstack/skills/in-your-own-words",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "role": "entrypoint",
+          "upstream_path": "pstack/skills/in-your-own-words/SKILL.md",
+          "upstream_git_blob": "4b2a476a9017863032c8dba9d12f0a2026943292",
+          "upstream_sha256": "fa8ba74e27d7be371dc270ec78bbf816411477d0dfab185356c861ac8dd413ad",
+          "sha256": "fa8ba74e27d7be371dc270ec78bbf816411477d0dfab185356c861ac8dd413ad",
+          "link_rewrites": []
+        }
+      ]
+    },
+    {
+      "name": "sharpen",
+      "selection_name": "sharpen",
+      "category": "communication",
+      "directory": "skills/sharpen",
+      "source": "pstack",
+      "upstream_directory": "pstack/skills/sharpen",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "role": "entrypoint",
+          "upstream_path": "pstack/skills/sharpen/SKILL.md",
+          "upstream_git_blob": "5b4a7b104e709f8cded1726541be42431c334164",
+          "upstream_sha256": "563dfc460c605d311e650726288e2f1cbd61eab817db178d6e7e29643e07e7a2",
+          "sha256": "563dfc460c605d311e650726288e2f1cbd61eab817db178d6e7e29643e07e7a2",
+          "link_rewrites": []
+        }
+      ]
+    },
+    {
+      "name": "unslop",
+      "selection_name": "unslop",
+      "category": "communication",
+      "directory": "skills/unslop",
+      "source": "pstack",
+      "upstream_directory": "pstack/skills/unslop",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "role": "entrypoint",
+          "upstream_path": "pstack/skills/unslop/SKILL.md",
+          "upstream_git_blob": "97f5b6412148fa5b2a2fe478836fe8923ffa5cbb",
+          "upstream_sha256": "ccab208e315ce05e2fab8eeee2f7879f1289b5c6844840b2d307adf31c79144f",
+          "sha256": "ccab208e315ce05e2fab8eeee2f7879f1289b5c6844840b2d307adf31c79144f",
+          "link_rewrites": []
+        }
+      ]
+    },
+    {
+      "name": "tdd",
+      "selection_name": "tdd",
+      "category": "testing",
+      "directory": "skills/tdd",
+      "source": "pstack",
+      "upstream_directory": "pstack/skills/tdd",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "role": "entrypoint",
+          "upstream_path": "pstack/skills/tdd/SKILL.md",
+          "upstream_git_blob": "ca6f24c963001d9d518db2936dfe3d12f29b4e94",
+          "upstream_sha256": "eeb868e2dfebee528d730a67d7b17498fac4bb85dec2e38bc5c5176aca4d5d2f",
+          "sha256": "eeb868e2dfebee528d730a67d7b17498fac4bb85dec2e38bc5c5176aca4d5d2f",
+          "link_rewrites": []
+        }
+      ]
+    },
+    {
+      "name": "principle-attack-the-premise",
+      "selection_name": "attack-the-premise",
+      "category": "principles",
+      "directory": "skills/principle-attack-the-premise",
+      "source": "pstack",
+      "upstream_directory": "pstack/skills/principle-attack-the-premise",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "role": "entrypoint",
+          "upstream_path": "pstack/skills/principle-attack-the-premise/SKILL.md",
+          "upstream_git_blob": "e9a6d499606992edd9963b80f8f8f57feaccb221",
+          "upstream_sha256": "6a932884daad4aa189e9b5d1665226bbc75621d4d2a398fd4003bebd382f4599",
+          "sha256": "e2c0672471755dd5d5adb1285b76dfd174b2942793627eb121b0e9ee0205ae92",
+          "link_rewrites": [
+            {
+              "from": "../principle-build-the-lever/SKILL.md",
+              "to": "references/upstream/principle-build-the-lever.md"
+            },
+            {
+              "from": "../principle-fix-root-causes/SKILL.md",
+              "to": "references/upstream/principle-fix-root-causes.md"
+            },
+            {
+              "from": "../principle-redesign-from-first-principles/SKILL.md",
+              "to": "references/upstream/principle-redesign-from-first-principles.md"
+            }
+          ]
+        },
+        {
+          "path": "references/upstream/principle-build-the-lever.md",
+          "role": "upstream-reference",
+          "upstream_path": "pstack/skills/principle-build-the-lever/SKILL.md",
+          "upstream_git_blob": "cbf003850489d95fea78e64198fd972c35b1aad3",
+          "upstream_sha256": "3434b0ad0c640c6f1d7960be7a8986c3bcdc14e26060360dec29903df60074ff",
+          "sha256": "b0bd02e8e735d3f684a61de89b9289b7bd79ee72ca2887708d5be32ded2fb842",
+          "link_rewrites": [
+            {
+              "from": "../principle-laziness-protocol/SKILL.md",
+              "to": "../../../principle-laziness-protocol/SKILL.md"
+            },
+            {
+              "from": "../principle-encode-lessons-in-structure/SKILL.md",
+              "to": "principle-encode-lessons-in-structure.md"
+            },
+            {
+              "from": "../principle-prove-it-works/SKILL.md",
+              "to": "../../../principle-prove-it-works/SKILL.md"
+            }
+          ]
+        },
+        {
+          "path": "references/upstream/principle-fix-root-causes.md",
+          "role": "upstream-reference",
+          "upstream_path": "pstack/skills/principle-fix-root-causes/SKILL.md",
+          "upstream_git_blob": "14fc189fa1ec3fb1614b0a3c75557f92943d8f13",
+          "upstream_sha256": "8df3c8c3fe57eb0055a5c8efab8ab144557fdf301da70b1cdc77a3a3ef3f3052",
+          "sha256": "8df3c8c3fe57eb0055a5c8efab8ab144557fdf301da70b1cdc77a3a3ef3f3052",
+          "link_rewrites": []
+        },
+        {
+          "path": "references/upstream/principle-redesign-from-first-principles.md",
+          "role": "upstream-reference",
+          "upstream_path": "pstack/skills/principle-redesign-from-first-principles/SKILL.md",
+          "upstream_git_blob": "5ca5246cbb0fa08884ce17b0d22c117ae1ad67b8",
+          "upstream_sha256": "170e0a658783e43fee8ec5a8c2422a4abb8f69cef621dd1819a95910b8207034",
+          "sha256": "170e0a658783e43fee8ec5a8c2422a4abb8f69cef621dd1819a95910b8207034",
+          "link_rewrites": []
+        },
+        {
+          "path": "references/upstream/principle-encode-lessons-in-structure.md",
+          "role": "upstream-reference",
+          "upstream_path": "pstack/skills/principle-encode-lessons-in-structure/SKILL.md",
+          "upstream_git_blob": "4a96f77fe70e36cb030f9c5efa142f66877bf58a",
+          "upstream_sha256": "228963799189f481827d6f28065f278bc2008ffa37030b1234cbd5814d36b9e9",
+          "sha256": "228963799189f481827d6f28065f278bc2008ffa37030b1234cbd5814d36b9e9",
+          "link_rewrites": []
+        }
+      ]
+    },
+    {
+      "name": "principle-exhaust-the-design-space",
+      "selection_name": "exhaust-the-design-space",
+      "category": "principles",
+      "directory": "skills/principle-exhaust-the-design-space",
+      "source": "pstack",
+      "upstream_directory": "pstack/skills/principle-exhaust-the-design-space",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "role": "entrypoint",
+          "upstream_path": "pstack/skills/principle-exhaust-the-design-space/SKILL.md",
+          "upstream_git_blob": "395a0839126bb231430a9c9da02ebab5422557d5",
+          "upstream_sha256": "2de83d99f93f60ec6313455b0bc9aa9f0bfb93dd59f414f403691322db00d4db",
+          "sha256": "2de83d99f93f60ec6313455b0bc9aa9f0bfb93dd59f414f403691322db00d4db",
+          "link_rewrites": []
+        }
+      ]
+    },
+    {
+      "name": "principle-experience-first",
+      "selection_name": "experience-first",
+      "category": "principles",
+      "directory": "skills/principle-experience-first",
+      "source": "pstack",
+      "upstream_directory": "pstack/skills/principle-experience-first",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "role": "entrypoint",
+          "upstream_path": "pstack/skills/principle-experience-first/SKILL.md",
+          "upstream_git_blob": "5ea51741302cf3af4cc0b90ec70815bd3208dbf2",
+          "upstream_sha256": "58903529d733b1c1a7c9ccf127d45ef3c7d0d9f0b81164a4dc6b80efe6f2912b",
+          "sha256": "58903529d733b1c1a7c9ccf127d45ef3c7d0d9f0b81164a4dc6b80efe6f2912b",
+          "link_rewrites": []
+        }
+      ]
+    },
+    {
+      "name": "principle-explain-the-number",
+      "selection_name": "explain-the-number",
+      "category": "principles",
+      "directory": "skills/principle-explain-the-number",
+      "source": "pstack",
+      "upstream_directory": "pstack/skills/principle-explain-the-number",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "role": "entrypoint",
+          "upstream_path": "pstack/skills/principle-explain-the-number/SKILL.md",
+          "upstream_git_blob": "3948ad34092437918f366e2cbb270e9ae31977fb",
+          "upstream_sha256": "3c84fbf9a7d9842abcfcd134010782b32092ac3d3fb4aaf9ed5732dca83aa58c",
+          "sha256": "9702064abd300cb520cb69fc2f2107225239c0bef57787ba09ac22d8194e3dfd",
+          "link_rewrites": [
+            {
+              "from": "../benchmark-checklist/SKILL.md",
+              "to": "references/upstream/benchmark-checklist.md"
+            }
+          ]
+        },
+        {
+          "path": "references/upstream/benchmark-checklist.md",
+          "role": "upstream-reference",
+          "upstream_path": "pstack/skills/benchmark-checklist/SKILL.md",
+          "upstream_git_blob": "e901d1fdbc9ffce53e94d6514be7d9a22e771a1a",
+          "upstream_sha256": "ba109e96c8f6c1c391baccf19e5d11e14370df7b3f2605e1572cd565a6c0fca0",
+          "sha256": "ba109e96c8f6c1c391baccf19e5d11e14370df7b3f2605e1572cd565a6c0fca0",
+          "link_rewrites": []
+        }
+      ]
+    },
+    {
+      "name": "principle-foundational-thinking",
+      "selection_name": "foundational-thinking",
+      "category": "principles",
+      "directory": "skills/principle-foundational-thinking",
+      "source": "pstack",
+      "upstream_directory": "pstack/skills/principle-foundational-thinking",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "role": "entrypoint",
+          "upstream_path": "pstack/skills/principle-foundational-thinking/SKILL.md",
+          "upstream_git_blob": "19cc6c0eaa6fcbc2863fb73d1d25ca196c6a46e0",
+          "upstream_sha256": "864b827e8199d946ce58beca0f89c4ed4099ed6e426fb698a3aaa45de2a9eea2",
+          "sha256": "864b827e8199d946ce58beca0f89c4ed4099ed6e426fb698a3aaa45de2a9eea2",
+          "link_rewrites": []
+        }
+      ]
+    },
+    {
+      "name": "principle-laziness-protocol",
+      "selection_name": "laziness-protocol",
+      "category": "principles",
+      "directory": "skills/principle-laziness-protocol",
+      "source": "pstack",
+      "upstream_directory": "pstack/skills/principle-laziness-protocol",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "role": "entrypoint",
+          "upstream_path": "pstack/skills/principle-laziness-protocol/SKILL.md",
+          "upstream_git_blob": "016c3c7c8dfffd995c1a02135a62248e6625879b",
+          "upstream_sha256": "1be6e7a435f26a75a76eb848b9c3d611b9977d0f5822361753244da25ca3ca45",
+          "sha256": "1be6e7a435f26a75a76eb848b9c3d611b9977d0f5822361753244da25ca3ca45",
+          "link_rewrites": []
+        }
+      ]
+    },
+    {
+      "name": "principle-make-operations-idempotent",
+      "selection_name": "make-operations-idempotent",
+      "category": "principles",
+      "directory": "skills/principle-make-operations-idempotent",
+      "source": "pstack",
+      "upstream_directory": "pstack/skills/principle-make-operations-idempotent",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "role": "entrypoint",
+          "upstream_path": "pstack/skills/principle-make-operations-idempotent/SKILL.md",
+          "upstream_git_blob": "c93f323d694a4d310515ea27165a093d399bc55e",
+          "upstream_sha256": "7aa9327cf1f1aa057e95d47a0a78bd88a8f9d556b608866fee939d455a53a019",
+          "sha256": "7aa9327cf1f1aa057e95d47a0a78bd88a8f9d556b608866fee939d455a53a019",
+          "link_rewrites": []
+        }
+      ]
+    },
+    {
+      "name": "principle-minimize-reader-load",
+      "selection_name": "minimize-reader-load",
+      "category": "principles",
+      "directory": "skills/principle-minimize-reader-load",
+      "source": "pstack",
+      "upstream_directory": "pstack/skills/principle-minimize-reader-load",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "role": "entrypoint",
+          "upstream_path": "pstack/skills/principle-minimize-reader-load/SKILL.md",
+          "upstream_git_blob": "628999088c5d05c1c546b3a3ca89da553cd3f3b2",
+          "upstream_sha256": "1ea2b7fef2391cae5844c4efdbd59031f775e8a52d06b7495d707229a200dcca",
+          "sha256": "b9bd923655b06caba0040b742534e8f3cac09eb97a54fcff945bf9ae84af0722",
+          "link_rewrites": [
+            {
+              "from": "../principle-guard-the-context-window/SKILL.md",
+              "to": "references/upstream/principle-guard-the-context-window.md"
+            }
+          ]
+        },
+        {
+          "path": "references/upstream/principle-guard-the-context-window.md",
+          "role": "upstream-reference",
+          "upstream_path": "pstack/skills/principle-guard-the-context-window/SKILL.md",
+          "upstream_git_blob": "0a1d3cfcf4539fe048887174000fecbf2fa40e81",
+          "upstream_sha256": "af0b9dd70b43628ce4a59a4d332e9d9ad055084e460f430e7a757495c627e81a",
+          "sha256": "af0b9dd70b43628ce4a59a4d332e9d9ad055084e460f430e7a757495c627e81a",
+          "link_rewrites": []
+        }
+      ]
+    },
+    {
+      "name": "principle-model-the-domain",
+      "selection_name": "model-the-domain",
+      "category": "principles",
+      "directory": "skills/principle-model-the-domain",
+      "source": "pstack",
+      "upstream_directory": "pstack/skills/principle-model-the-domain",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "role": "entrypoint",
+          "upstream_path": "pstack/skills/principle-model-the-domain/SKILL.md",
+          "upstream_git_blob": "09b7c739955facf03f08f66e1e329745d2f8880e",
+          "upstream_sha256": "52c0d85e0c3827c41c18299b642657d7b47eaf77b7b31609e42e0df42b84c75f",
+          "sha256": "52c0d85e0c3827c41c18299b642657d7b47eaf77b7b31609e42e0df42b84c75f",
+          "link_rewrites": []
+        }
+      ]
+    },
+    {
+      "name": "principle-prove-it-works",
+      "selection_name": "prove-it-works",
+      "category": "principles",
+      "directory": "skills/principle-prove-it-works",
+      "source": "pstack",
+      "upstream_directory": "pstack/skills/principle-prove-it-works",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "role": "entrypoint",
+          "upstream_path": "pstack/skills/principle-prove-it-works/SKILL.md",
+          "upstream_git_blob": "5dc14a3b06f9d579e5c17cd8a7242f432ddb3125",
+          "upstream_sha256": "ec79a15025bac8d33d62011c54f3b612733fd2a024e623b531b3637aa75070e2",
+          "sha256": "ec79a15025bac8d33d62011c54f3b612733fd2a024e623b531b3637aa75070e2",
+          "link_rewrites": []
+        }
+      ]
+    },
+    {
+      "name": "principle-separate-before-serializing-shared-state",
+      "selection_name": "separate-before-serializing-shared-state",
+      "category": "principles",
+      "directory": "skills/principle-separate-before-serializing-shared-state",
+      "source": "pstack",
+      "upstream_directory": "pstack/skills/principle-separate-before-serializing-shared-state",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "role": "entrypoint",
+          "upstream_path": "pstack/skills/principle-separate-before-serializing-shared-state/SKILL.md",
+          "upstream_git_blob": "ff93b4a2032c08e2232992a9a24f2891ee14e58f",
+          "upstream_sha256": "05294b40448e927c5da1c7b6f5c6b9fed3744637e3833d2d948b9154a9dd00bb",
+          "sha256": "05294b40448e927c5da1c7b6f5c6b9fed3744637e3833d2d948b9154a9dd00bb",
+          "link_rewrites": []
+        }
+      ]
+    },
+    {
+      "name": "principle-subtract-before-you-add",
+      "selection_name": "subtract-before-you-add",
+      "category": "principles",
+      "directory": "skills/principle-subtract-before-you-add",
+      "source": "pstack",
+      "upstream_directory": "pstack/skills/principle-subtract-before-you-add",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "role": "entrypoint",
+          "upstream_path": "pstack/skills/principle-subtract-before-you-add/SKILL.md",
+          "upstream_git_blob": "b8740ba6f06922d8e7ef3b23f9fb16e0fc4a876f",
+          "upstream_sha256": "8c93bb9d1a7f38e2ef37655d93f0e790fa59903105af3d500cc8a663ebe45f3f",
+          "sha256": "8c93bb9d1a7f38e2ef37655d93f0e790fa59903105af3d500cc8a663ebe45f3f",
+          "link_rewrites": []
+        }
+      ]
+    },
+    {
+      "name": "principle-test-behavior-not-implementation",
+      "selection_name": "test-behavior-not-implementation",
+      "category": "principles",
+      "directory": "skills/principle-test-behavior-not-implementation",
+      "source": "pstack",
+      "upstream_directory": "pstack/skills/principle-test-behavior-not-implementation",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "role": "entrypoint",
+          "upstream_path": "pstack/skills/principle-test-behavior-not-implementation/SKILL.md",
+          "upstream_git_blob": "78c9389bfe707d6d56485ade32c59150958228f9",
+          "upstream_sha256": "f7223698623b6a26fea49c751e466b38e6691b1f32ce841d3983e7ffbe2b74a6",
+          "sha256": "f7223698623b6a26fea49c751e466b38e6691b1f32ce841d3983e7ffbe2b74a6",
+          "link_rewrites": []
+        }
+      ]
+    },
+    {
+      "name": "animate-expo",
+      "selection_name": "animate-expo",
+      "category": "motion",
+      "directory": "skills/animate-expo",
+      "source": "emil-kowalski",
+      "upstream_directory": "skills/animate-expo",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "role": "entrypoint",
+          "upstream_path": "skills/animate-expo/SKILL.md",
+          "upstream_git_blob": "78b39e1d22e8c3c15be96ccebe04bf39792f3455",
+          "upstream_sha256": "9a01a91701e6563c67677dde6b66ab30f066a5341d42c21a90ba51d99679274a",
+          "sha256": "9a01a91701e6563c67677dde6b66ab30f066a5341d42c21a90ba51d99679274a",
+          "link_rewrites": []
+        },
+        {
+          "path": "RECIPES.md",
+          "role": "reference",
+          "upstream_path": "skills/animate-expo/RECIPES.md",
+          "upstream_git_blob": "a02e6b80f9dec86f196590f2f7a4fe3310ea1cb4",
+          "upstream_sha256": "1193cb71334da2e2341778dd92bec9ac79d989cb07fd55d661f324ed5871e718",
+          "sha256": "1193cb71334da2e2341778dd92bec9ac79d989cb07fd55d661f324ed5871e718",
+          "link_rewrites": []
+        }
+      ]
+    },
+    {
+      "name": "review-animations",
+      "selection_name": "review-animations",
+      "category": "motion",
+      "directory": "skills/review-animations",
+      "source": "emil-kowalski",
+      "upstream_directory": "skills/review-animations",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "role": "entrypoint",
+          "upstream_path": "skills/review-animations/SKILL.md",
+          "upstream_git_blob": "591397b5308266f76671dacc3e44830a3e3e535f",
+          "upstream_sha256": "5f9fb98b69cace7107af8b393a4196fd42fa42d98bce0e5afc1f866ff3b8a41c",
+          "sha256": "5f9fb98b69cace7107af8b393a4196fd42fa42d98bce0e5afc1f866ff3b8a41c",
+          "link_rewrites": []
+        },
+        {
+          "path": "STANDARDS.md",
+          "role": "reference",
+          "upstream_path": "skills/review-animations/STANDARDS.md",
+          "upstream_git_blob": "67b6edb5ed45aeafe7e3706bb76e27f3bd209a92",
+          "upstream_sha256": "8f5fe3f5a04537556dd4e6a37f7a8d6f616d840eb80f2f68b5b594febb170657",
+          "sha256": "8f5fe3f5a04537556dd4e6a37f7a8d6f616d840eb80f2f68b5b594febb170657",
+          "link_rewrites": []
+        }
+      ]
+    },
+    {
+      "name": "find-animation-opportunities",
+      "selection_name": "find-animation-opportunities",
+      "category": "motion",
+      "directory": "skills/find-animation-opportunities",
+      "source": "emil-kowalski",
+      "upstream_directory": "skills/find-animation-opportunities",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "role": "entrypoint",
+          "upstream_path": "skills/find-animation-opportunities/SKILL.md",
+          "upstream_git_blob": "d3b030fbca9abad9220a032f72d425c6b7fa2de8",
+          "upstream_sha256": "d52a377819b84a71930f0c822cfe2849f40301605a2d5c7eccbfa3b257700df2",
+          "sha256": "d52a377819b84a71930f0c822cfe2849f40301605a2d5c7eccbfa3b257700df2",
+          "link_rewrites": []
+        }
+      ]
+    },
+    {
+      "name": "animation-vocabulary",
+      "selection_name": "animation-vocabulary",
+      "category": "motion",
+      "directory": "skills/animation-vocabulary",
+      "source": "emil-kowalski",
+      "upstream_directory": "skills/animation-vocabulary",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "role": "entrypoint",
+          "upstream_path": "skills/animation-vocabulary/SKILL.md",
+          "upstream_git_blob": "5ab2976514c74a194ebf069506d95ff3a5a0084f",
+          "upstream_sha256": "40d2b27adfdfeb0570a9f20e7d0255109d9233c50603878bcd0dcd04c923fd94",
+          "sha256": "40d2b27adfdfeb0570a9f20e7d0255109d9233c50603878bcd0dcd04c923fd94",
+          "link_rewrites": []
+        }
+      ]
+    },
+    {
+      "name": "choreograph",
+      "selection_name": "choreograph",
+      "category": "motion",
+      "directory": "skills/choreograph",
+      "source": "emil-kowalski",
+      "upstream_directory": "skills/choreograph",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "role": "entrypoint",
+          "upstream_path": "skills/choreograph/SKILL.md",
+          "upstream_git_blob": "9fef0048d260be7bc05a909a03b52627bb3ccf37",
+          "upstream_sha256": "815c7d889230bafc72c03bb0769087aeede310130e8795c7949b3e3a1684e464",
+          "sha256": "815c7d889230bafc72c03bb0769087aeede310130e8795c7949b3e3a1684e464",
+          "link_rewrites": []
+        },
+        {
+          "path": "RECIPES.md",
+          "role": "reference",
+          "upstream_path": "skills/choreograph/RECIPES.md",
+          "upstream_git_blob": "17936a9cfc3e26224c5b4555f5a239758718815c",
+          "upstream_sha256": "b61f03b5c47398cf71ce9db4157cc919617228981b1d74a72d6a5fa27e4aaad2",
+          "sha256": "b61f03b5c47398cf71ce9db4157cc919617228981b1d74a72d6a5fa27e4aaad2",
+          "link_rewrites": []
+        }
+      ]
+    },
+    {
+      "name": "break-ui",
+      "selection_name": "break-ui",
+      "category": "ui-testing",
+      "directory": "skills/break-ui",
+      "source": "emil-kowalski",
+      "upstream_directory": "skills/break-ui",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "role": "entrypoint",
+          "upstream_path": "skills/break-ui/SKILL.md",
+          "upstream_git_blob": "091a28d488662d2451131f1aaa60a6dcd2391932",
+          "upstream_sha256": "e7eec1d70ac56a04255e9c0dbe98084ea3d544cc04aaad34f32c95d6fa9dff5e",
+          "sha256": "e7eec1d70ac56a04255e9c0dbe98084ea3d544cc04aaad34f32c95d6fa9dff5e",
+          "link_rewrites": []
+        },
+        {
+          "path": "CATALOG.md",
+          "role": "reference",
+          "upstream_path": "skills/break-ui/CATALOG.md",
+          "upstream_git_blob": "46962bb89445b8526ea94994a79b49508573b5fd",
+          "upstream_sha256": "7358efcc6bb48e35187be1c064cf60022dcb18c72c18fab58b606dfc5f421f15",
+          "sha256": "7358efcc6bb48e35187be1c064cf60022dcb18c72c18fab58b606dfc5f421f15",
+          "link_rewrites": []
+        }
+      ]
+    }
+  ],
+  "notices": [
+    {
+      "path": "third-party-notices.md",
+      "upstream_path": "pstack/LICENSE",
+      "upstream_git_blob": "6b5400237fdf6545be0b8fae370d6f2fcff8fb25",
+      "upstream_sha256": "bc957ca6bee02792566a1a028d105e02e247c6e77cf057061674273da77b200e",
+      "source": "pstack",
+      "section": "pstack"
+    },
+    {
+      "path": "third-party-notices.md",
+      "upstream_path": "LICENSE",
+      "upstream_git_blob": "57b46f1fd11dc62351ea548104a88aa3f659c11b",
+      "upstream_sha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
+      "source": "emil-kowalski",
+      "section": "emil-kowalski"
+    }
+  ]
+}
