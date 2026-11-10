@@ -1,0 +1,38 @@
+# Git and repository hosting
+
+## Repository hosting
+
+- Check the configured Git remotes to identify the hosting provider; do not infer it from a directory name.
+- For GitHub, use `gh` for hosting operations when available. If it is missing, attempt a local, non-privileged installation. If authentication is required, prompt me to log in; If installation or authentication is blocked, explain the blocker.
+
+## Working with changes
+
+- Inspect the working tree and both staged and unstaged changes before committing. Preserve pre-existing and unrelated work, including changes already staged.
+- Commit after each meaningful progression point: a coherent, reviewable unit of the requested work. Use judgment to avoid commits for every minor edit, and follow any task-specific instruction about when to commit. Selectively stage the relevant, reviewed changes, and inspect the final staged diff for unrelated changes, secrets, and accidental artifacts. Do not include secrets in commits.
+- Make coherent commits: group changes by purpose and split independent work when useful. Run checks appropriate to the changes and report their results.
+- Do not push unless asked. A request to create a pull request authorizes pushing the branch needed for it, but does not authorize merging it.
+- Avoid destructive Git operations or rewriting shared history without explicit permission. Ask before discarding anyone's changes.
+
+## Commit subjects
+
+Use a bracketed prefix followed by a concise, imperative description. Approved prefixes and examples:
+
+```text
+[feat] add event eligibility display
+[fix] handle denied geolocation permission
+[test] cover stale location response state
+[docs] document Sprint 1 player journey
+[perf] reduce Battles landing requests
+[ci] enforce API-first Battles releases
+[refactor] isolate event status presentation
+[chore] configure front-end quality checks
+[perf] strengthen api
+```
+
+# Global AGENTS.md
+
+## Personal file and folder naming
+
+- For personal folders directly under the home directory, capitalise each word and separate words with hyphens, for example `Personal-Projects`.
+- For personal subfolders, use lowercase names with hyphens between words, for example `computer-graphics` and `screenshots`. Prefer clear lowercase, hyphen-separated names for personal files too.
+- Preserve names required by operating systems, apps, projects, and existing integrations. Follow repository-specific conventions for project contents. Before renaming existing items, check and maintain dependent paths and avoid overwriting files.

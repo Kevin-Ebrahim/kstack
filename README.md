@@ -10,13 +10,17 @@ Choose a skill below and ask your agent to follow its `SKILL.md`, for example:
 
 For help choosing, use [skill-index](skills/skill-index/SKILL.md). It maps tasks to skills and explains which combinations fit. Once installed, invoke it with `$skill-index`, or let the agent select it when choosing a workflow.
 
-Install all skills into `~/.agents/skills`:
+Install all skills into `~/.agents/skills` and the repository's [global instructions](AGENTS.md) into `~/.codex/AGENTS.md` (or `$CODEX_HOME/AGENTS.md` when set):
 
 ```bash
 ./install.sh
 ```
 
 Use `./install.sh --dry-run` to preview, or `./install.sh /path/to/.agents/skills` for another location. The installer symlinks each skill to this checkout, so updates here are available immediately. Keep the checkout in place. Rerun the installer to link newly added skills; existing matching links are left alone, and conflicting names are skipped with a nonzero exit status.
+
+`./install` is an alias for `./install.sh`. Existing global instructions are saved beside the installed file as `AGENTS.md.kstack-backup` before linking; an existing backup is never overwritten. A second positional argument overrides the instructions destination: `./install.sh /path/to/skills /path/to/AGENTS.md`. Both destinations are included in dry runs.
+
+Remove the installed links with `./uninstall.sh`. Preview with `./uninstall.sh --dry-run`, or pass a custom skills directory as with the installer. Only matching symlinks to this checkout are removed; the source skills and unrelated installed skills are preserved.
 
 Keep each skill's supporting files with it. Some skills link to siblings, so keep the collection together.
 

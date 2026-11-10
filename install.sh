@@ -2,8 +2,9 @@
 set -euo pipefail
 
 usage() {
-  printf 'Usage: %s [--dry-run] [skills-directory]\n' "${0##*/}"
+  printf 'Usage: %s [--dry-run] [skills-directory] [agents-file]\n' "${0##*/}"
   printf 'Symlink kstack skills into ~/.agents/skills (or skills-directory).\n'
+  printf 'Link AGENTS.md into ${CODEX_HOME:-~/.codex}/AGENTS.md (or agents-file).\n'
   printf 'Existing files, directories, and conflicting symlinks are preserved.\n'
 }
 
@@ -12,7 +13,7 @@ case "${1:-}" in
   --help|-h) usage; exit 0 ;;
   --dry-run) dry_run=true; shift ;;
 esac
-if (( $# > 1 )) || [[ ${1:-} == -* ]]; then
+if (( $# > 2 )) || [[ ${1:-} == -* ]]; then
   usage >&2
   exit 2
 fi
@@ -20,6 +21,22 @@ fi
 script_path=$(realpath -- "${BASH_SOURCE[0]}")
 repo_dir=$(dirname -- "$script_path")
 destination=${1:-"$HOME/.agents/skills"}
+agents_file=${2:-"${CODEX_HOME:-$HOME/.codex}/AGENTS.md"}
+agents_backup=$agents_file.kstack-backup
+if [[ ! -f $repo_dir/AGENTS.md ]]; then
+  printf 'Missing source: %s/AGENTS.md\n' "$repo_dir" >&2
+  exit 1
+fi
+if [[ ! -L $agents_file || ! $agents_file -ef $repo_dir/AGENTS.md ]]; then
+  if [[ -d $agents_file && ! -L $agents_file ]]; then
+    printf 'AGENTS.md destination is a directory: %s\n' "$agents_file" >&2
+    exit 1
+  fi
+  if [[ -e $agents_file || -L $agents_file ]] && [[ -e $agents_backup || -L $agents_backup ]]; then
+    printf 'Existing backup would be overwritten: %s\n' "$agents_backup" >&2
+    exit 1
+  fi
+fi
 shopt -s nullglob
 skill_files=("$repo_dir"/skills/*/SKILL.md)
 if (( ${#skill_files[@]} == 0 )); then
@@ -58,6 +75,23 @@ for skill_file in "${skill_files[@]}"; do
     linked=$((linked + 1))
   fi
 done
+
+if [[ -L $agents_file && $agents_file -ef $repo_dir/AGENTS.md ]]; then
+  printf 'Already linked: %s\n' "$agents_file"
+elif "$dry_run"; then
+  if [[ -e $agents_file || -L $agents_file ]]; then
+    printf 'Would back up: %s -> %s\n' "$agents_file" "$agents_backup"
+  fi
+  printf 'Would link: %s -> %s/AGENTS.md\n' "$agents_file" "$repo_dir"
+else
+  mkdir -p -- "$(dirname -- "$agents_file")"
+  if [[ -e $agents_file || -L $agents_file ]]; then
+    mv -T -- "$agents_file" "$agents_backup"
+    printf 'Backed up: %s\n' "$agents_backup"
+  fi
+  ln -sT -- "$repo_dir/AGENTS.md" "$agents_file"
+  printf 'Linked: %s\n' "$agents_file"
+fi
 
 if "$dry_run"; then
   printf 'Dry run: %d to link, %d already linked, %d conflicts.\n' "$linked" "$unchanged" "$conflicts"
