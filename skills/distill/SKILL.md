@@ -16,7 +16,7 @@ Explain the smallest useful simplification. A task can have several legitimate u
 ## Simplify
 
 - Group related information and actions. Use progressive disclosure for infrequent complexity when the entry point remains discoverable.
-- Remove repeated copy and decorative wrappers that add no meaning. Preserve labels, status, warnings, and information needed for decisions.
+- Remove repeated copy and decorative wrappers that add no meaning. Avoid decorative microcopy, filler, vague marketing fluff, and unnecessary interface elements. Do not add text merely to make a screen look complete. Keep labels, instructions, feedback, and other copy that helps someone understand or use the interface. Preserve status, warnings, and information needed for decisions.
 - Consolidate style variants using the existing type, spacing, and color system. Keep semantic colors and pair them with non-color cues.
 - Prefer a straightforward reading path; retain columns, sidebars, and dense structures when they support comparison or frequent work.
 - Remove redundant interaction steps while preserving validation, recovery, and necessary safeguards.
