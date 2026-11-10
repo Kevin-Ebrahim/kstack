@@ -10,7 +10,15 @@ Choose a skill below and ask your agent to follow its `SKILL.md`, for example:
 
 For help choosing, use [skill-index](skills/skill-index/SKILL.md). It maps tasks to skills and explains which combinations fit. Once installed, invoke it with `$skill-index`, or let the agent select it when choosing a workflow.
 
-Keep each skill's supporting files with it. Some skills link to siblings, so keep the collection together. The repository itself does not install or enable skills in your agent.
+Install all skills into `~/.agents/skills`:
+
+```bash
+./install.sh
+```
+
+Use `./install.sh --dry-run` to preview, or `./install.sh /path/to/.agents/skills` for another location. The installer symlinks each skill to this checkout, so updates here are available immediately. Keep the checkout in place. Rerun the installer to link newly added skills; existing matching links are left alone, and conflicting names are skipped with a nonzero exit status.
+
+Keep each skill's supporting files with it. Some skills link to siblings, so keep the collection together.
 
 Runtime requirements for skills with tools:
 
