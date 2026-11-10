@@ -76,7 +76,16 @@ def validate():
             if sha256(raw) != record['sha256']:
                 errors.append(f'Imported checksum mismatch: {path.relative_to(ROOT)}')
             reverse = {change['to']: change['from'] for change in record['link_rewrites']}
-            original = LINK.sub(lambda m: reverse.get(m.group(1), m.group(1)), text).encode()
+            restored = LINK.sub(lambda m: reverse.get(m.group(1), m.group(1)), text)
+            for edit in reversed(record.get('text_edits', [])):
+                if edit['to'] == '':
+                    offset = edit['offset']
+                    restored = restored[:offset] + edit['from'] + restored[offset:]
+                    continue
+                if edit['to'] not in restored:
+                    errors.append(f'Missing recorded adaptation: {path.relative_to(ROOT)}')
+                restored = restored.replace(edit['to'], edit['from'])
+            original = restored.encode()
             if sha256(original) != record['upstream_sha256'] or git_blob(original) != record['upstream_git_blob']:
                 errors.append(f'Upstream reconstruction mismatch: {path.relative_to(ROOT)}')
 

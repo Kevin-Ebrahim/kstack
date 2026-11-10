@@ -13,6 +13,12 @@
       "commit": "715c1807e08c497cfd1dc4feb450a2a3300ef2a9",
       "license": "MIT",
       "license_path": "LICENSE"
+    },
+    "matt-pocock": {
+      "repository": "https://github.com/mattpocock/skills",
+      "commit": "4ae2317ddb22b046e26455e4f9c9b3aaaf62212d",
+      "license": "MIT",
+      "license_path": "LICENSE"
     }
   },
   "skills": [
@@ -244,21 +250,7 @@
           "upstream_path": "pstack/skills/principle-explain-the-number/SKILL.md",
           "upstream_git_blob": "3948ad34092437918f366e2cbb270e9ae31977fb",
           "upstream_sha256": "3c84fbf9a7d9842abcfcd134010782b32092ac3d3fb4aaf9ed5732dca83aa58c",
-          "sha256": "9702064abd300cb520cb69fc2f2107225239c0bef57787ba09ac22d8194e3dfd",
-          "link_rewrites": [
-            {
-              "from": "../benchmark-checklist/SKILL.md",
-              "to": "references/upstream/benchmark-checklist.md"
-            }
-          ]
-        },
-        {
-          "path": "references/upstream/benchmark-checklist.md",
-          "role": "upstream-reference",
-          "upstream_path": "pstack/skills/benchmark-checklist/SKILL.md",
-          "upstream_git_blob": "e901d1fdbc9ffce53e94d6514be7d9a22e771a1a",
-          "upstream_sha256": "ba109e96c8f6c1c391baccf19e5d11e14370df7b3f2605e1572cd565a6c0fca0",
-          "sha256": "ba109e96c8f6c1c391baccf19e5d11e14370df7b3f2605e1572cd565a6c0fca0",
+          "sha256": "3c84fbf9a7d9842abcfcd134010782b32092ac3d3fb4aaf9ed5732dca83aa58c",
           "link_rewrites": []
         }
       ]
@@ -597,6 +589,355 @@
           "link_rewrites": []
         }
       ]
+    },
+    {
+      "name": "ketchup",
+      "selection_name": "ketchup",
+      "category": "communication",
+      "directory": "skills/ketchup",
+      "source": "pstack",
+      "upstream_directory": "pstack/skills/ketchup",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "role": "entrypoint",
+          "upstream_path": "pstack/skills/ketchup/SKILL.md",
+          "upstream_git_blob": "9eef27f92f8029137a7bfa7378305b075df9dc4f",
+          "upstream_sha256": "f2923ffd14f6fc778f75a47aaed1f317fb5fd00b5701ca769d6446c74106dead",
+          "sha256": "60ec7087d43cef221f265999476837e11adc5911df1840ddedd548d96413f38e",
+          "link_rewrites": [],
+          "text_edits": [
+            {
+              "from": "a chart or diagram from `/visualize`",
+              "to": "a chart or diagram from an available visualization tool"
+            },
+            {
+              "from": "a `/visualize` chart for numbers",
+              "to": "a chart from an available tool for numbers, or a concise table when no chart tool is available"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "benchmark-checklist",
+      "selection_name": "benchmark-checklist",
+      "category": "testing",
+      "directory": "skills/benchmark-checklist",
+      "source": "pstack",
+      "upstream_directory": "pstack/skills/benchmark-checklist",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "role": "entrypoint",
+          "upstream_path": "pstack/skills/benchmark-checklist/SKILL.md",
+          "upstream_git_blob": "e901d1fdbc9ffce53e94d6514be7d9a22e771a1a",
+          "upstream_sha256": "ba109e96c8f6c1c391baccf19e5d11e14370df7b3f2605e1572cd565a6c0fca0",
+          "sha256": "c1da516270b23d5622f58a5fa5056fdad6584acada61187b2073c369456b64c9",
+          "link_rewrites": [],
+          "text_edits": [
+            {
+              "from": "- Keep a PR body to one primary number, per the **Opening a PR** playbook. Put the runs, range, and limiter evidence in a linked artifact or notes file.",
+              "to": "- Lead a PR body with the primary measurement. Put supporting runs, spread, and limiter evidence in the response or an artifact appropriate to the task."
+            },
+            {
+              "from": "- Vet the **Perf issue** playbook's baseline before the playbook plans from it, and every number after that.",
+              "to": "- Validate the baseline before planning a performance fix, then apply the same checks to subsequent measurements."
+            },
+            {
+              "from": "- Vet the **Hillclimb** playbook's harness before it is frozen. The frozen harness then prints error and work counts, so each keep-or-revert checks questions 4 and 7 for free.",
+              "to": "- For repeated optimization experiments, validate the measurement harness before fixing its protocol. Have each run report errors and completed work so every keep-or-revert decision checks questions 4 and 7."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "typescript-best-practices",
+      "selection_name": "typescript-best-practices",
+      "category": "typescript",
+      "directory": "skills/typescript-best-practices",
+      "source": "pstack",
+      "upstream_directory": "pstack/skills/typescript-best-practices",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "role": "entrypoint",
+          "upstream_path": "pstack/skills/typescript-best-practices/SKILL.md",
+          "upstream_git_blob": "e1e5aa7c97ed39c425d60d933a96424a3f14539e",
+          "upstream_sha256": "ec1dac086d3708e5940d45d250c30a37dd953b4e3cb2ca0692f5851d7a039e27",
+          "sha256": "c0f2d504e64ed5948ad6aebf3fd1668f34ee487a02d24cfffde6c81b809b6685",
+          "link_rewrites": [],
+          "text_edits": [
+            {
+              "from": "paths: [\"**/*.ts\", \"**/*.tsx\"]\n",
+              "to": "",
+              "offset": 126
+            },
+            {
+              "from": "Apply the **type-system-discipline** principle skill first.",
+              "to": "Apply [type-system-discipline](../principle-type-system-discipline/SKILL.md) first. Use these defaults when reading or editing TypeScript; applicability comes from the task and file type, not a provider-specific path matcher. Follow the repository's established types, schema library, naming, and public API contracts. Avoid unrelated migrations solely to match an example."
+            },
+            {
+              "from": "No optional-field bags.",
+              "to": "Avoid optional-field bags when they permit contradictory states."
+            },
+            {
+              "from": "Brand primitives with `& { readonly __brand: \"X\" }` so they can't be mixed up. Validate once at the boundary. A brand comes from a verifying type guard (`input is AgentId`), never from `as`.",
+              "to": "Use the repository\\'s existing branded or opaque types where confusing primitives is a real risk. Validate at creation; do not introduce a second branding convention."
+            },
+            {
+              "from": "`start` plus `duration` for a range. Not a runtime guard, not a wish for refinement types.",
+              "to": "`start` plus a validated nonnegative duration for a range. Use runtime validation for invariants the type cannot express."
+            },
+            {
+              "from": "Every `as` is a runtime crash waiting. Cast only after validation.",
+              "to": "Prefer narrowing or validation over assertions. Keep justified assertions for compiler limitations narrowly scoped; `as const` is not runtime validation."
+            },
+            {
+              "from": "See the **boundary-discipline** principle skill.",
+              "to": "Validate external data at entry, preserve that invariant internally, and validate again when a new trust boundary is crossed."
+            },
+            {
+              "from": "Pass objects, not positional, so argument order is self-documenting. Skip on hot paths (per-frame render, tokenizers, parsers).",
+              "to": "Prefer named options for easily confused parameters when consistent with the API. Preserve clear positional APIs and hot-path allocation constraints."
+            },
+            {
+              "from": "Examples: `references/patterns.md`.",
+              "to": "Examples: [TypeScript patterns](references/patterns.md)."
+            }
+          ]
+        },
+        {
+          "path": "references/patterns.md",
+          "role": "reference",
+          "upstream_path": "pstack/skills/typescript-best-practices/references/patterns.md",
+          "upstream_git_blob": "f8dd99b63ecb469a090b8fa0a7e235d3239cb9ec",
+          "upstream_sha256": "12e70c9419a8b3f5d6a1ab80e272c1f00a43ac0b3bbf72d68199033570e5de77",
+          "sha256": "c14c3d85d3db037d6fc3002c4d3aa014505280a7807a191e9f271079a5391e88",
+          "link_rewrites": [],
+          "text_edits": [
+            {
+              "from": "See the **type-system-discipline** and **boundary-discipline** principle skills.",
+              "to": "See [type-system-discipline](../../principle-type-system-discipline/SKILL.md). Validate external data at entry and preserve established invariants internally."
+            },
+            {
+              "from": "Match the `readonly __brand: 'X'` shape. Don't invent a new convention.",
+              "to": "This branding shape is an example. Reuse the repository's established branded or opaque type convention."
+            },
+            {
+              "from": "// Do: a negative range can't be written; derive end when needed",
+              "to": "// Derive the end, but validate durationMs >= 0 at construction.\n// A plain number alone does not enforce this invariant."
+            },
+            {
+              "from": "Pick the representation that makes the bad state unconstructable, then expose the reading you need on top",
+              "to": "Use a validated constructor or the repository's nonnegative-duration type to enforce the range invariant, then expose the reading you need on top"
+            },
+            {
+              "from": "Every `as` is a potential runtime crash. Cast only after the type system has verified the claim.",
+              "to": "Prefer narrowing or validation to assertions. Keep justified assertions for compiler limitations narrow; const assertions do not validate runtime input."
+            },
+            {
+              "from": "Validate once where data crosses in. Trust types inside. See the **boundary-discipline** principle skill.",
+              "to": "Validate external data at entry and rely on established invariants internally. Revalidate when a new trust boundary is crossed."
+            },
+            {
+              "from": "- **Wire formats** (proto, JSON-RPC): parse with `ignoreUnknownFields` so forward-compatible changes don't break old clients.",
+              "to": "- **Wire formats** (proto, JSON-RPC): follow the protocol's compatibility rules and the parser's supported options. Do not silently discard security-relevant unknown fields."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "principle-type-system-discipline",
+      "selection_name": "type-system-discipline",
+      "category": "principles",
+      "directory": "skills/principle-type-system-discipline",
+      "source": "pstack",
+      "upstream_directory": "pstack/skills/principle-type-system-discipline",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "role": "entrypoint",
+          "upstream_path": "pstack/skills/principle-type-system-discipline/SKILL.md",
+          "upstream_git_blob": "9fa08b0b17d536ce751fffa90134be8fb03699c7",
+          "upstream_sha256": "5cdaf79785e3c12b2592b9469ee8c272143eb86ab7a18d8382197cea5fd30106",
+          "sha256": "7232e494cf7bd27220a4b525c2a2c17d1e8c23da845bb7becfea66a765f2142d",
+          "link_rewrites": [],
+          "text_edits": [
+            {
+              "from": "For TypeScript syntax, see the `typescript-best-practices` skill.",
+              "to": "For TypeScript syntax, see [typescript-best-practices](../typescript-best-practices/SKILL.md). Follow the language's idioms and the repository's established types and validation system; avoid adding wrappers that solve no demonstrated problem."
+            },
+            {
+              "from": "If two arguments share a primitive type but mean different things, brand them.",
+              "to": "Use distinct types where mixing values is plausible and harmful; preserve established public contracts."
+            },
+            {
+              "from": "The **boundary-discipline** principle skill says where to put validation.",
+              "to": "Validate at external entry points, then rely on established invariants internally; revalidate when data crosses a new trust boundary."
+            },
+            {
+              "from": "See the **encode-lessons-in-structure** principle skill.",
+              "to": "Keep the authoritative schema and its generated types in sync through the repository's existing generation or validation checks."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "animate",
+      "selection_name": "animate",
+      "category": "motion",
+      "directory": "skills/animate",
+      "source": "emil-kowalski",
+      "upstream_directory": "skills/animate",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "role": "entrypoint",
+          "upstream_path": "skills/animate/SKILL.md",
+          "upstream_git_blob": "2d3b63acc5e2afcbf54b5ba59792e69fa51bcb0d",
+          "upstream_sha256": "39138996033e0dbe53e73217514116eaeca774bae84a0687c80d445a4e0cc3a6",
+          "sha256": "4c58ce1143eb3820299bf67d3c34edec4fbfc1102dab94980987a77975015515",
+          "link_rewrites": [],
+          "text_edits": [
+            {
+              "from": "If the task needs a *component* rather than an animation \u2014 a toast, a drawer, a command menu, a dropdown \u2014 stop and invoke `pick-ui-library`. Hand-rolling those is how you end up with a `<div>` dropdown and no focus management.",
+              "to": "If the task needs a component rather than just motion, inspect the project's existing component library and reuse its accessible primitive. Preserve focus management, keyboard handling, and dismissal behavior. If none fits, assess an appropriate solution within the requested scope; no separate library-selection skill is required."
+            }
+          ]
+        },
+        {
+          "path": "RECIPES.md",
+          "role": "reference",
+          "upstream_path": "skills/animate/RECIPES.md",
+          "upstream_git_blob": "6744891261bdf0bb0473d77f2cc706f2d78b574e",
+          "upstream_sha256": "21ff63d84391db8d96ecdf9170095f55a42c836ccc36fd3269c4772bab031ba2",
+          "sha256": "21ff63d84391db8d96ecdf9170095f55a42c836ccc36fd3269c4772bab031ba2",
+          "link_rewrites": [],
+          "text_edits": []
+        }
+      ]
+    },
+    {
+      "name": "remove-animations",
+      "selection_name": "remove-animations",
+      "category": "motion",
+      "directory": "skills/remove-animations",
+      "source": "emil-kowalski",
+      "upstream_directory": "skills/remove-animations",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "role": "entrypoint",
+          "upstream_path": "skills/remove-animations/SKILL.md",
+          "upstream_git_blob": "100b7b7666f7d09c69a75ebb793e30e607058e77",
+          "upstream_sha256": "dea95b7a7ef81cba312c7f70a3c5c67d7e06a287cb16b16d2f90f2b1fb0afff9",
+          "sha256": "fac57cacd22fe48e3fe17a55d6a6aac3fb74e140527d9fdf8a97ced0e5b84411",
+          "link_rewrites": [],
+          "text_edits": [
+            {
+              "from": "3. **Ask before removing a dependency.** Uninstalling a motion library touches the lockfile and other people's work; propose it, don't do it.",
+              "to": "3. **Remove unused dependencies within the authorized cleanup.** First check all consumers in the relevant package or workspace, including configuration and build scripts. If the dependency is now unused and cleanup is part of the request, remove it with the project's package manager and update its lockfile. Ask only when ownership, scope, or continued use is genuinely uncertain."
+            },
+            {
+              "from": "## Workflow\n",
+              "to": "## Workflow\n\nFor an assessment-only request such as \"what should we remove?\", report candidates without editing. A request to remove or reduce motion authorizes the scoped edits and their necessary cleanup.\n"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "animation-performance",
+      "selection_name": "animation-performance",
+      "category": "motion",
+      "directory": "skills/animation-performance",
+      "source": "emil-kowalski",
+      "upstream_directory": "skills/animation-performance",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "role": "entrypoint",
+          "upstream_path": "skills/animation-performance/SKILL.md",
+          "upstream_git_blob": "74c421e4e673cab84490f8b17b89735c30b0f555",
+          "upstream_sha256": "6c60f45ab416ff3f7d7765a5427beead77fab0d82487fe610d2a298397558d0a",
+          "sha256": "f740f3e45aebad4965cd5087b9fb44f5a3ce4029dea0cb3652755a55565ed886",
+          "link_rewrites": [],
+          "text_edits": [
+            {
+              "from": "### Phase 3: Report",
+              "to": "### Phase 3: Report or fix within scope"
+            },
+            {
+              "from": "Order findings by cost: layout before paint, busy-main-thread before idle. Then stop. Apply fixes when asked.",
+              "to": "Order findings by cost: layout before paint, busy-main-thread before idle. For diagnosis or review only, report and stop. When the user already asked to fix or improve the stuttering animation, apply the smallest supported fix without requiring a second request. Repeat the same recording or measurement under comparable conditions, check interruption and reduced motion, and report what changed. Separate code inspection from measured improvement; unavailable device evidence remains unverified."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "gestures",
+      "selection_name": "gestures",
+      "category": "motion",
+      "directory": "skills/gestures",
+      "source": "emil-kowalski",
+      "upstream_directory": "skills/gestures",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "role": "entrypoint",
+          "upstream_path": "skills/gestures/SKILL.md",
+          "upstream_git_blob": "23e6562c43cb60ac496536b540ba29f8dee8eba8",
+          "upstream_sha256": "0835dddc0ce4f4257fdc707ec137d75810f0bdbd8d4eaf69d1de55bfbbf260c2",
+          "sha256": "88c28af24fb7c1c7ca51ff789bcdb792ff4ded07e9c2ac0e6559a9ddc67efed5",
+          "link_rewrites": [],
+          "text_edits": [
+            {
+              "from": "Doing a drawer gesture *right* means momentum-based dragging, overlay opacity matched to drag progress, velocity-aware dismissal, focus trapping, and Escape-to-close. That is weeks of edge cases, not an afternoon. **For a bottom sheet / drawer, default to [Vaul](https://vaul.emilkowal.ski/)** \u2014 it exists precisely because this is hard to hand-roll. Build the gesture yourself only when no library covers the interaction (custom swipe cards, bespoke drag interactions). Use the `pick-ui-library` skill when unsure.",
+              "to": "For sheets and drawers, first inspect the project's existing accessible components and gesture stack. Reuse a suitable primitive with focus trapping, Escape-to-close, velocity-aware dismissal, and interruption support. [Vaul](https://vaul.emilkowal.ski/) is one web option when the stack fits, not a reason to replace an existing solution. Build custom gestures when no existing component fits the requested interaction."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "handoff",
+      "selection_name": "handoff",
+      "category": "communication",
+      "directory": "skills/handoff",
+      "source": "matt-pocock",
+      "upstream_directory": "skills/productivity/handoff",
+      "files": [
+        {
+          "path": "SKILL.md",
+          "role": "entrypoint",
+          "upstream_path": "skills/productivity/handoff/SKILL.md",
+          "upstream_git_blob": "a224edc643a20ddb989f9bca1547440169159810",
+          "upstream_sha256": "4cbb043950dad2ffd3662ff1a5a0b51ae676004b5cae10e3787e8ee7a4ee69d3",
+          "sha256": "f0937a20bd737efb6b3d4b1b3eb9b7cb2e5463689aea51f133450a879d33663c",
+          "link_rewrites": [],
+          "text_edits": [
+            {
+              "from": "naming which skills the next agent should call the Skill tool for.",
+              "to": "naming applicable skills available in the target environment and their paths when known. The next agent should read those instructions using its available skill-loading or file-reading tools. Mark unavailable suggested skills as optional; do not assume a tool named Skill exists."
+            }
+          ]
+        },
+        {
+          "path": "agents/openai.yaml",
+          "role": "metadata",
+          "upstream_path": "skills/productivity/handoff/agents/openai.yaml",
+          "upstream_git_blob": "6e1d8da121beceddc2f9ec7fa8714c1d914dd11a",
+          "upstream_sha256": "5c479fd562c691851690e8b18c8501045bef0943c10743d636b2fae26add1d28",
+          "sha256": "5c479fd562c691851690e8b18c8501045bef0943c10743d636b2fae26add1d28",
+          "link_rewrites": [],
+          "text_edits": []
+        }
+      ]
     }
   ],
   "notices": [
@@ -615,6 +956,14 @@
       "upstream_sha256": "4ff5bdb7887ec1435c9cab0e8d1a7caee704d894d65c2a008ccc68b1cc2f260b",
       "source": "emil-kowalski",
       "section": "emil-kowalski"
+    },
+    {
+      "source": "matt-pocock",
+      "path": "third-party-notices.md",
+      "section": "matt-pocock",
+      "upstream_path": "LICENSE",
+      "upstream_git_blob": "f1dd2c09108dde1a5f56097cee8461b3ea834499",
+      "upstream_sha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5"
     }
   ]
 }
