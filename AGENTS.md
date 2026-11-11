@@ -48,7 +48,8 @@ Use a bracketed prefix followed by a concise, imperative description. Approved p
 
 ## Serena project workflow
 
-- For coding tasks, call `initial_instructions`, activate the repository root and check `get_current_config` when Serena is available.
+- Set up and use Serena only for large codebases. Do not set it up or use it for small or medium-sized codebases.
+- For coding tasks in large codebases, call `initial_instructions`, activate the repository root and check `get_current_config` when Serena is available.
 - If needed, inspect existing settings and create the project with `serena project create`. Configure relevant languages and language servers, preserving existing settings and using local overrides for machine-specific ones. Indexing is optional.
 - Use Serena's symbol, reference and refactoring tools where useful, alongside ordinary search, shell commands and tests.
 - Onboard established projects when useful. Keep project memories concise and grounded; update them when requested or otherwise authorized, including after significant architecture or workflow changes.
