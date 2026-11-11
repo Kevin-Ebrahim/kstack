@@ -1,6 +1,17 @@
-# Git and repository hosting
+# Global AGENTS.md
 
-## Repository hosting
+<!--toc:start-->
+
+- [Global AGENTS.md](#global-agentsmd)
+  - [Git and repository hosting](#git-and-repository-hosting)
+  - [Working with changes](#working-with-changes)
+  - [Commit subjects](#commit-subjects)
+  - [Personal file and folder naming](#personal-file-and-folder-naming)
+  - [Serena project workflow](#serena-project-workflow)
+
+<!--toc:end-->
+
+## Git and repository hosting
 
 - Check the configured Git remotes to identify the hosting provider; do not infer it from a directory name.
 - For GitHub, use `gh` for hosting operations when available. If it is missing, attempt a local, non-privileged installation. If authentication is required, prompt me to log in; If installation or authentication is blocked, explain the blocker.
@@ -29,8 +40,6 @@ Use a bracketed prefix followed by a concise, imperative description. Approved p
 [perf] strengthen api
 ```
 
-# Global AGENTS.md
-
 ## Personal file and folder naming
 
 - For personal folders directly under the home directory, capitalise each word and separate words with hyphens, for example `Personal-Projects`.
@@ -41,6 +50,5 @@ Use a bracketed prefix followed by a concise, imperative description. Approved p
 
 - For coding tasks, call `initial_instructions`, activate the repository root and check `get_current_config` when Serena is available.
 - If needed, inspect existing settings and create the project with `serena project create`. Configure relevant languages and language servers, preserving existing settings and using local overrides for machine-specific ones. Indexing is optional.
-- Verify a real symbol lookup; a `ready` status alone is insufficient. Investigate failures and report remaining dependency, permission or restart blockers.
-- Use Serena's symbol, reference and refactoring tools where useful, alongside ordinary search, shell commands and tests. If unavailable, continue with available tools.
+- Use Serena's symbol, reference and refactoring tools where useful, alongside ordinary search, shell commands and tests.
 - Onboard established projects when useful. Keep project memories concise and grounded; update them when requested or otherwise authorized, including after significant architecture or workflow changes.
