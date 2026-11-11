@@ -18,7 +18,7 @@ Install all skills into `~/.agents/skills` and the repository's [global instruct
 
 Use `./install.sh --dry-run` to preview, or `./install.sh /path/to/.agents/skills` for another location. The installer symlinks each skill to this checkout, so updates here are available immediately. Keep the checkout in place. Rerun the installer to link newly added skills; existing matching links are left alone, and conflicting names are skipped with a nonzero exit status.
 
-`./install` is an alias for `./install.sh`. Existing global instructions are saved beside the installed file as `AGENTS.md.kstack-backup` before linking; an existing backup is never overwritten. A second positional argument overrides the instructions destination: `./install.sh /path/to/skills /path/to/AGENTS.md`. Both destinations are included in dry runs.
+Existing global instructions are saved beside the installed file as `AGENTS.md.kstack-backup` before linking; an existing backup is never overwritten. A second positional argument overrides the instructions destination: `./install.sh /path/to/skills /path/to/AGENTS.md`. Both destinations are included in dry runs.
 
 Remove the installed links with `./uninstall.sh`. Preview with `./uninstall.sh --dry-run`, or pass a custom skills directory as with the installer. Only matching symlinks to this checkout are removed; the source skills and unrelated installed skills are preserved.
 
