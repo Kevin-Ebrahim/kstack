@@ -19,6 +19,7 @@ Do not run every review because the request says “review.” Infer the target 
 ## Distinguish planning, explanation, and execution
 
 - [shape](../../shape/SKILL.md) plans the user experience; [architect](../../architect/SKILL.md) plans the code structure. Use both only when both decisions remain open.
+- [plan-eng-review](../../plan-eng-review/SKILL.md) reviews a proposed engineering plan before implementation.
 - [improve-codebase-architecture](../../improve-codebase-architecture/SKILL.md) finds improvement candidates in existing code. It does not automatically authorize a refactor.
 - [how](../../how/SKILL.md) explains behavior; [why](../../why/SKILL.md) investigates historical reasons; [teach](../../teach/SKILL.md) combines them for learning. Do not load all three for a simple explanation.
 - [init](../../init/SKILL.md) writes product context. [document](../../document/SKILL.md) records an existing visual system. Neither is general project initialization or generic document production.

@@ -100,6 +100,10 @@ These are commands within the Impeccable skill.
 - [init](https://github.com/pbakaus/impeccable/blob/main/skill/reference/init.md) — Establish product context and write PRODUCT.md for the project.
 - [document](https://github.com/pbakaus/impeccable/blob/main/skill/reference/document.md) — Capture the existing visual system in DESIGN.md.
 
+## no-session/pstack
+
+- [plan-eng-review](https://github.com/no-session/pstack/blob/9a24d1408a10a5d0df624ffc128230424e405b82/plan-eng-review/SKILL.md) — Review an engineering plan for architecture, failure modes, testing and performance.
+
 ## Matt Pocock
 
 ### Debugging

@@ -1,6 +1,6 @@
 # kstack
 
-74 skills for communication, engineering, interface design, animation, and security review.
+75 skills for communication, engineering, interface design, animation, and security review.
 
 ## Usage
 
@@ -43,11 +43,12 @@ Runtime requirements for skills with tools:
 | [why](skills/why/SKILL.md) | Investigate the reasons behind a design or decision, using available evidence such as history and issue discussions. |
 | [teach](skills/teach/SKILL.md) | Combine how and why into a plain-language explanation of a system or body of work. |
 
-## Planning and execution · 4
+## Planning and execution · 5
 
 | Skill | Purpose |
 | --- | --- |
 | [architect](skills/architect/SKILL.md) | Sketch the types, interfaces and module structure before implementing a substantial change. |
+| [plan-eng-review](skills/plan-eng-review/SKILL.md) | Review an engineering plan for architecture, failure modes, tests, and performance. |
 | [figure-it-out](skills/figure-it-out/SKILL.md) | Create and follow an auditable approach for a large or unusual task that has no narrower workflow. |
 | [show-me-your-work](skills/show-me-your-work/SKILL.md) | Keep a reviewable decision log for long-running or unattended work. |
 | [improve-codebase-architecture](skills/improve-codebase-architecture/SKILL.md) | Survey the codebase for architectural improvements. |
@@ -167,6 +168,7 @@ Runtime requirements for skills with tools:
 | Source | Notice |
 | --- | --- |
 | [pstack](https://github.com/cursor/plugins/tree/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack) | [MIT](third-party-notices.md#pstack) |
+| [no-session/pstack](https://github.com/no-session/pstack/tree/9a24d1408a10a5d0df624ffc128230424e405b82) | [MIT](third-party-notices.md#no-session-pstack) |
 | [Emil Kowalski](https://github.com/emilkowalski/skills/tree/715c1807e08c497cfd1dc4feb450a2a3300ef2a9) | [MIT](third-party-notices.md#emil-kowalski) |
 | [Matt Pocock](https://github.com/mattpocock/skills/tree/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d) | [MIT](third-party-notices.md#matt-pocock) |
 | [Impeccable](https://github.com/pbakaus/impeccable/tree/ec229b48547f24685ffb22aa51c462c5ae27908c) | [Apache-2.0](third-party-notices.md#impeccable) |

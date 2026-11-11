@@ -32,6 +32,7 @@ Choose by the requested outcome, then read the linked instructions. Names below 
 | --- | --- |
 | [shape](../../shape/SKILL.md) | The user experience, states, interactions, and boundaries need a design brief. |
 | [architect](../../architect/SKILL.md) | A substantial code change needs types, interfaces, and module boundaries worked out. |
+| [plan-eng-review](../../plan-eng-review/SKILL.md) | Review an engineering plan for architecture, failure modes, testing, and performance. |
 | [improve-codebase-architecture](../../improve-codebase-architecture/SKILL.md) | Survey an existing codebase for architectural friction and improvement candidates. |
 | [figure-it-out](../../figure-it-out/SKILL.md) | A substantial unusual task needs an execution approach and no narrower workflow fits. |
 | [show-me-your-work](../../show-me-your-work/SKILL.md) | Long-running work needs a reviewable decision and evidence log. |
