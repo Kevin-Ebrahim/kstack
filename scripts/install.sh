@@ -19,7 +19,7 @@ if (( $# > 2 )) || [[ ${1:-} == -* ]]; then
 fi
 
 script_path=$(realpath -- "${BASH_SOURCE[0]}")
-repo_dir=$(dirname -- "$script_path")
+repo_dir=$(dirname -- "$(dirname -- "$script_path")")
 destination=${1:-"$HOME/.agents/skills"}
 agents_file=${2:-"${CODEX_HOME:-$HOME/.codex}/AGENTS.md"}
 agents_backup=$agents_file.kstack-backup

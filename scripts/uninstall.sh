@@ -18,7 +18,7 @@ if (( $# > 1 )) || [[ ${1:-} == -* ]]; then
 fi
 
 script_path=$(realpath -- "${BASH_SOURCE[0]}")
-repo_dir=$(dirname -- "$script_path")
+repo_dir=$(dirname -- "$(dirname -- "$script_path")")
 destination=${1:-"$HOME/.agents/skills"}
 if [[ -e $destination || -L $destination ]] && [[ ! -d $destination ]]; then
   printf 'Destination is not a directory: %s\n' "$destination" >&2

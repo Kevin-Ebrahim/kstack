@@ -13,18 +13,18 @@ For help choosing, use [skill-index](skills/skill-index/SKILL.md). It maps tasks
 Install all skills into `~/.agents/skills` and the repository's [global instructions](AGENTS.md) into `~/.codex/AGENTS.md` (or `$CODEX_HOME/AGENTS.md` when set):
 
 ```bash
-./install.sh
+./scripts/install.sh
 ```
 
-Use `./install.sh --dry-run` to preview, or `./install.sh /path/to/.agents/skills` for another location. The installer symlinks each skill to this checkout, so updates here are available immediately. Keep the checkout in place. Rerun the installer to link newly added skills; existing matching links are left alone, and conflicting names are skipped with a nonzero exit status.
+Use `./scripts/install.sh --dry-run` to preview, or `./scripts/install.sh /path/to/.agents/skills` for another location. The installer symlinks each skill to this checkout, so updates here are available immediately. Keep the checkout in place. Rerun the installer to link newly added skills; existing matching links are left alone, and conflicting names are skipped with a nonzero exit status.
 
-Existing global instructions are saved beside the installed file as `AGENTS.md.kstack-backup` before linking; an existing backup is never overwritten. A second positional argument overrides the instructions destination: `./install.sh /path/to/skills /path/to/AGENTS.md`. Both destinations are included in dry runs.
+Existing global instructions are saved beside the installed file as `AGENTS.md.kstack-backup` before linking; an existing backup is never overwritten. A second positional argument overrides the instructions destination: `./scripts/install.sh /path/to/skills /path/to/AGENTS.md`. Both destinations are included in dry runs.
 
-Remove the installed links with `./uninstall.sh`. Preview with `./uninstall.sh --dry-run`, or pass a custom skills directory as with the installer. Only matching symlinks to this checkout are removed; the source skills and unrelated installed skills are preserved.
+Remove the installed links with `./scripts/uninstall.sh`. Preview with `./scripts/uninstall.sh --dry-run`, or pass a custom skills directory as with the installer. Only matching symlinks to this checkout are removed; the source skills and unrelated installed skills are preserved.
 
-To set up Serena and Context7 MCP servers for Codex on a new device, run `./setup-mcp.sh` in a terminal. It requires Codex, [uv](https://docs.astral.sh/uv/getting-started/installation/), and Node.js 22.13 or newer (including npx). The script installs Serena if needed, preserves an existing Serena registration, and starts Context7's browser login and Codex setup. Restart Codex and check `/mcp` afterward. Serena project language servers may require additional dependencies.
+To set up Serena and Context7 MCP servers for Codex on a new device, run `./scripts/setup-mcp.sh` in a terminal. It requires Codex, [uv](https://docs.astral.sh/uv/getting-started/installation/), and Node.js 22.13 or newer (including npx). The script installs Serena if needed, preserves an existing Serena registration, and starts Context7's browser login and Codex setup. Restart Codex and check `/mcp` afterward. Serena project language servers may require additional dependencies.
 
-Remove both Codex MCP registrations with `./remove-mcp.sh`, or remove one with `./remove-mcp.sh serena` or `./remove-mcp.sh context7`. This leaves installed tools, skills and login data in place. Restart Codex afterward.
+Remove both Codex MCP registrations with `./scripts/remove-mcp.sh`, or remove one with `./scripts/remove-mcp.sh serena` or `./scripts/remove-mcp.sh context7`. This leaves installed tools, skills and login data in place. Restart Codex afterward.
 
 Keep each skill's supporting files with it. Some skills link to siblings, so keep the collection together.
 
