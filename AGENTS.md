@@ -39,9 +39,8 @@ Use a bracketed prefix followed by a concise, imperative description. Approved p
 
 ## Serena project workflow
 
-- At the start of a coding task, call Serena's `initial_instructions` tool if available, then activate the repository root with `activate_project` and inspect `get_current_config`. Do not assume the active project is the correct one.
-- If the project needs configuration, inspect the repository and existing Serena settings first. Create the project with `serena project create` from its root if necessary; preserve existing configuration, select relevant languages, and use local overrides for machine-specific settings. Do not install dependencies or run full indexing automatically when they are unnecessary.
-- Verify the setup with an actual `find_symbol` or `get_symbols_overview` lookup on a representative source file. If the lookup fails, investigate the language server and report any remaining blocker; a `ready` status alone is not verification.
-- For code exploration, use symbol overviews and lookups to find relevant definitions, then reference or implementation lookups to trace their use. Use Serena's symbol-aware editing and refactoring tools where appropriate, and review changes and run relevant tests.
-- Onboard established projects when useful, keeping project memories concise and grounded in the repository. Update memories when explicitly requested or when otherwise authorized, and keep them current after significant architecture or workflow changes. Avoid recording transient task details.
-- Use ordinary search, shell commands, and tests as appropriate. Full indexing is optional, particularly useful for larger projects. If Serena is unavailable, continue with available tools and report any setup, dependency, permission, or restart blocker.
+- For coding tasks, call `initial_instructions`, activate the repository root and check `get_current_config` when Serena is available.
+- If needed, inspect existing settings and create the project with `serena project create`. Configure relevant languages and language servers, preserving existing settings and using local overrides for machine-specific ones. Indexing is optional.
+- Verify a real symbol lookup; a `ready` status alone is insufficient. Investigate failures and report remaining dependency, permission or restart blockers.
+- Use Serena's symbol, reference and refactoring tools where useful, alongside ordinary search, shell commands and tests. If unavailable, continue with available tools.
+- Onboard established projects when useful. Keep project memories concise and grounded; update them when requested or otherwise authorized, including after significant architecture or workflow changes.
