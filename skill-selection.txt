@@ -109,7 +109,7 @@ These are commands within the Impeccable skill.
 ### Debugging
 
 - [diagnosing-bugs](https://github.com/mattpocock/skills/blob/main/skills/engineering/diagnosing-bugs/SKILL.md) — Structured debugging for difficult bugs and performance regressions.
-- [code-review](https://github.com/mattpocock/skills/blob/main/skills/engineering/code-review/SKILL.md) — Review changes against requirements and standards; work with one agent and prioritize actionable findings.
+- [code-review](https://github.com/mattpocock/skills/blob/main/skills/engineering/code-review/SKILL.md) — Review changes against requirements and standards with independent agents; prioritize actionable findings.
 
 ### Handoffs
 

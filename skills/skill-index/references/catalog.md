@@ -43,7 +43,7 @@ Choose by the requested outcome, then read the linked instructions. Names below 
 
 | Skill | Choose when |
 | --- | --- |
-| [code-review](../../code-review/SKILL.md) | Review a diff against requirements and repository standards for actionable defects. |
+| [code-review](../../code-review/SKILL.md) | Review a diff against requirements and repository standards with independent agents for actionable defects. |
 | [blast-radius](../../blast-radius/SKILL.md) | Investigate consequences beyond the visible diff and verify the change's key safety assumption. |
 | [interrogate](../../interrogate/SKILL.md) | Challenge a design or change adversarially and retain findings that can be demonstrated. |
 | [diagnosing-bugs](../../diagnosing-bugs/SKILL.md) | A difficult or intermittent failure needs evidence, hypotheses, and targeted investigation. |

@@ -64,7 +64,7 @@ Runtime requirements for skills with tools:
 | [interrogate](skills/interrogate/SKILL.md) | Run an adversarial review of a change or design and keep findings that can be demonstrated. |
 | [no-comments](skills/no-comments/SKILL.md) | Review code comments, address accepted findings and consider expressing important constraints in code or checks. |
 | [diagnosing-bugs](skills/diagnosing-bugs/SKILL.md) | Structured debugging for difficult bugs and performance regressions. |
-| [code-review](skills/code-review/SKILL.md) | Review changes against requirements and standards; work with one agent and prioritize actionable findings. |
+| [code-review](skills/code-review/SKILL.md) | Review changes against requirements and standards with independent agents; prioritize actionable findings. |
 
 ## TypeScript · 1
 
