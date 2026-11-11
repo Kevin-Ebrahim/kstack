@@ -2,7 +2,7 @@
 set -euo pipefail
 
 if [[ ${1:-} == --help || ${1:-} == -h ]]; then
-  printf 'Usage: %s\nInstall Serena and configure Serena and Context7 for Codex.\n' "${0##*/}"
+  printf 'Usage: %s\nConfigure Serena, Context7 and optionally Playwright for Codex.\n' "${0##*/}"
   exit 0
 fi
 if (( $# )); then
@@ -42,5 +42,15 @@ printf 'Press Enter to continue, or Ctrl+C to stop. '
 read -r
 npx -y ctx7 setup --codex --mcp --stdio -y
 
-printf '\nSetup complete. Restart Codex and check /mcp for both servers.\n'
+if codex mcp get playwright >/dev/null 2>&1; then
+  printf '\nPlaywright is already registered in Codex; leaving its configuration unchanged.\n'
+else
+  printf '\nAdd Playwright MCP for browser automation? [y/N] '
+  read -r answer
+  if [[ $answer == [yY] || $answer == [yY][eE][sS] ]]; then
+    codex mcp add playwright -- npx -y @playwright/mcp@latest
+  fi
+fi
+
+printf '\nSetup complete. Restart Codex and check /mcp for the configured servers.\n'
 printf 'In the Codex app, ask the agent to activate the current project with Serena if needed.\n'

@@ -2,13 +2,13 @@
 set -euo pipefail
 
 usage() {
-  printf 'Usage: %s [serena|context7|all]\n' "${0##*/}"
+  printf 'Usage: %s [serena|context7|playwright|all]\n' "${0##*/}"
   printf 'Remove Codex MCP registrations (default: all).\n'
 }
 
 case "${1:-all}" in
   -h|--help) usage; exit 0 ;;
-  serena|context7|all) ;;
+  serena|context7|playwright|all) ;;
   *) usage >&2; exit 2 ;;
 esac
 if (( $# > 1 )); then usage >&2; exit 2; fi
@@ -20,9 +20,11 @@ fi
 case "${1:-all}" in
   serena) codex mcp remove serena ;;
   context7) codex mcp remove context7 ;;
+  playwright) codex mcp remove playwright ;;
   all)
     codex mcp remove serena
     codex mcp remove context7
+    codex mcp remove playwright
     ;;
 esac
 printf 'Restart Codex to apply the change. Installed tools, skills and login data remain.\n'

@@ -22,9 +22,9 @@ Existing global instructions are saved beside the installed file as `AGENTS.md.k
 
 Remove the installed links with `./scripts/uninstall.sh`. Preview with `./scripts/uninstall.sh --dry-run`, or pass a custom skills directory as with the installer. Only matching symlinks to this checkout are removed; the source skills and unrelated installed skills are preserved.
 
-To set up Serena and Context7 MCP servers for Codex on a new device, run `./scripts/setup-mcp.sh` in a terminal. It requires Codex, [uv](https://docs.astral.sh/uv/getting-started/installation/), and Node.js 22.13 or newer (including npx). The script installs Serena if needed, preserves an existing Serena registration, and starts Context7's browser login and Codex setup. Restart Codex and check `/mcp` afterward. Serena project language servers may require additional dependencies.
+To set up Serena and Context7 MCP servers for Codex on a new device, run `./scripts/setup-mcp.sh` in a terminal. It requires Codex, [uv](https://docs.astral.sh/uv/getting-started/installation/), and Node.js 22.13 or newer (including npx). The script installs Serena if needed, starts Context7's browser login, and offers to add Playwright for browser automation. Existing Serena and Playwright registrations are preserved. Restart Codex and check `/mcp` afterward. Serena project language servers and Playwright browsers may require additional dependencies.
 
-Remove both Codex MCP registrations with `./scripts/remove-mcp.sh`, or remove one with `./scripts/remove-mcp.sh serena` or `./scripts/remove-mcp.sh context7`. This leaves installed tools, skills and login data in place. Restart Codex afterward.
+Remove these Codex MCP registrations with `./scripts/remove-mcp.sh`, or remove one by passing `serena`, `context7` or `playwright` (for example, `./scripts/remove-mcp.sh playwright`). This leaves installed tools, skills and login data in place. Restart Codex afterward.
 
 Keep each skill's supporting files with it. Some skills link to siblings, so keep the collection together.
 
