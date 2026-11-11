@@ -24,6 +24,8 @@ Remove the installed links with `./uninstall.sh`. Preview with `./uninstall.sh -
 
 To set up Serena and Context7 MCP servers for Codex on a new device, run `./setup-mcp.sh` in a terminal. It requires Codex, [uv](https://docs.astral.sh/uv/getting-started/installation/), and Node.js 22.13 or newer (including npx). The script installs Serena if needed, preserves an existing Serena registration, and starts Context7's browser login and Codex setup. Restart Codex and check `/mcp` afterward. Serena project language servers may require additional dependencies.
 
+Remove both Codex MCP registrations with `./remove-mcp.sh`, or remove one with `./remove-mcp.sh serena` or `./remove-mcp.sh context7`. This leaves installed tools, skills and login data in place. Restart Codex afterward.
+
 Keep each skill's supporting files with it. Some skills link to siblings, so keep the collection together.
 
 Runtime requirements for skills with tools:
