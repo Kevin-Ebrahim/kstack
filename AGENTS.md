@@ -49,6 +49,8 @@ Use a bracketed prefix followed by a concise, imperative description. Approved p
 ## Serena project workflow
 
 - Set up and use Serena only for large codebases. Do not set it up or use it for small or medium-sized codebases.
+- Treat a codebase as large at roughly 50,000 or more lines of source code. This is a practical guideline, not an official Serena benchmark; consider complexity when judging borderline cases.
+- Check the repository from its root with `tokei .` when available, excluding generated, vendored and dependency code from the estimate. `git ls-files | wc -l` gives a quick tracked-file count, but is not a source line count. Do not install tools solely to make this check.
 - For coding tasks in large codebases, call `initial_instructions`, activate the repository root and check `get_current_config` when Serena is available.
 - If needed, inspect existing settings and create the project with `serena project create`. Configure relevant languages and language servers, preserving existing settings and using local overrides for machine-specific ones. Indexing is optional.
 - Use Serena's symbol, reference and refactoring tools where useful, alongside ordinary search, shell commands and tests.
