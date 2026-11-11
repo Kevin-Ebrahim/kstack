@@ -22,6 +22,8 @@ Existing global instructions are saved beside the installed file as `AGENTS.md.k
 
 Remove the installed links with `./uninstall.sh`. Preview with `./uninstall.sh --dry-run`, or pass a custom skills directory as with the installer. Only matching symlinks to this checkout are removed; the source skills and unrelated installed skills are preserved.
 
+To set up Serena and Context7 MCP servers for Codex on a new device, run `./setup-mcp.sh` in a terminal. It requires Codex, [uv](https://docs.astral.sh/uv/getting-started/installation/), and Node.js 22.13 or newer (including npx). The script installs Serena if needed, preserves an existing Serena registration, and starts Context7's browser login and Codex setup. Restart Codex and check `/mcp` afterward. Serena project language servers may require additional dependencies.
+
 Keep each skill's supporting files with it. Some skills link to siblings, so keep the collection together.
 
 Runtime requirements for skills with tools:
