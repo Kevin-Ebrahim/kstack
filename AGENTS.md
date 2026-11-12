@@ -1,16 +1,5 @@
 # Global AGENTS.md
 
-<!--toc:start-->
-
-- [Global AGENTS.md](#global-agentsmd)
-  - [Git and repository hosting](#git-and-repository-hosting)
-  - [Working with changes](#working-with-changes)
-  - [Commit subjects](#commit-subjects)
-  - [Personal file and folder naming](#personal-file-and-folder-naming)
-  - [Serena project workflow](#serena-project-workflow)
-
-<!--toc:end-->
-
 ## Git and repository hosting
 
 - Check the configured Git remotes to identify the hosting provider; do not infer it from a directory name.
@@ -29,16 +18,46 @@
 Use a bracketed prefix followed by a concise, imperative description. Approved prefixes and examples:
 
 ```text
+# Features and functionality
 [feat] add event eligibility display
 [fix] handle denied geolocation permission
-[test] cover stale location response state
-[docs] document Sprint 1 player journey
-[perf] reduce Battles landing requests
-[ci] enforce API-first Battles releases
+[hotfix] restore broken authentication redirect
+
+# Interface and experience
+[ui] redesign battle results screen
+[ux] simplify player onboarding flow
+
+# Code quality and architecture
 [refactor] isolate event status presentation
-[chore] configure front-end quality checks
-[perf] strengthen api
+[perf] reduce unnecessary battle API requests
+[style] normalize component formatting
+
+# Testing and reliability
+[test] cover stale location response state
+[ci] enforce API-first battle releases
+
+# Security
+[security] validate session token expiration
+
+# Dependencies and build
+[build] optimize production bundle splitting
+[config] configure API request timeouts
+
+# Database and infrastructure
+[db] index event eligibility lookups
+[infra] configure staging environment
+
+# Documentation and maintenance
+[docs] document player journey
+[chore] remove unused development scripts
+[cleanup] remove obsolete battle components
+
+# Releases and history
+[release] prepare version 1.2.0
+[revert] revert location caching changes
 ```
+
+When a change needs explanation, add a commit body describing why it was necessary and any important details
 
 ## Personal file and folder naming
 
@@ -48,10 +67,9 @@ Use a bracketed prefix followed by a concise, imperative description. Approved p
 
 ## Serena project workflow
 
-- Set up and use Serena only for large codebases. Do not set it up or use it for small or medium-sized codebases.
-- Treat a codebase as large at roughly 50,000 or more lines of source code. This is a practical guideline, not an official Serena benchmark; consider complexity when judging borderline cases.
-- Check the repository from its root with `tokei .` when available, excluding generated, vendored and dependency code from the estimate. `git ls-files | wc -l` gives a quick tracked-file count, but is not a source line count. Do not install tools solely to make this check.
-- For coding tasks in large codebases, call `initial_instructions`, activate the repository root and check `get_current_config` when Serena is available.
-- If needed, inspect existing settings and create the project with `serena project create`. Configure relevant languages and language servers, preserving existing settings and using local overrides for machine-specific ones. Indexing is optional.
-- Use Serena's symbol, reference and refactoring tools where useful, alongside ordinary search, shell commands and tests.
-- Onboard established projects when useful. Keep project memories concise and grounded; update them when requested or otherwise authorized, including after significant architecture or workflow changes.
+- Use Serena only for large or complex codebases (approximately 50,000+ source lines). Consider architectural complexity, not just size.
+- Estimate size with `tokei .` when available, excluding dependencies and generated code. Do not install tools solely for this check.
+- For qualifying projects, call `initial_instructions`, activate the repository root, and check `get_current_config`.
+- If setup is needed, use `serena project create`. Preserve existing settings and configure relevant languages and language servers.
+- Prefer Serena for symbol navigation, references, and refactoring where useful; supplement with standard search, shell tools, and tests.
+- Onboard established projects when beneficial. Keep memories concise, accurate, and updated after significant changes when authorized.
