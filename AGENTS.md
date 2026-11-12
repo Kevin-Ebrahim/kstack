@@ -16,6 +16,14 @@
 - Never push unless requested. Creating a PR authorizes pushing its branch, not merging.
 - Avoid destructive Git operations or rewriting shared history without explicit permission. Ask before discarding anyone's changes.
 
+## Pull requests
+
+- Reuse existing PRs for the same branch rather than creating duplicates.
+- Check for relevant open issues. Use `Closes #123` when resolved or `Refs #123` when related.
+- Before creating or updating a PR, sync with the latest target branch, resolve conflicts, and rerun relevant checks.
+- Keep PR descriptions concise and proportional to the change.
+- Use draft PRs for incomplete work.
+
 ## Commit messages
 
 Use `[type] concise imperative description`. Choose the most appropriate prefix.
