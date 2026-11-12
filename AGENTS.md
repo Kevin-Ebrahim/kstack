@@ -1,69 +1,56 @@
 # Global AGENTS.md
 
+## General
+
+- Follow applicable project-level `AGENTS.md` instructions and established repository conventions.
+
 ## Git and repository hosting
 
 - Check the configured Git remotes to identify the hosting provider; do not infer it from a directory name.
-- For GitHub, use `gh` for hosting operations when available. If it is missing, attempt a local, non-privileged installation. If authentication is required, prompt me to log in; If installation or authentication is blocked, explain the blocker.
-
-## Working with changes
-
-- Inspect the working tree and both staged and unstaged changes before committing. Preserve pre-existing and unrelated work, including changes already staged.
-- Commit after each meaningful progression point: a coherent, reviewable unit of the requested work. Use judgment to avoid commits for every minor edit, and follow any task-specific instruction about when to commit. Selectively stage the relevant, reviewed changes, and inspect the final staged diff for unrelated changes, secrets, and accidental artifacts. Do not include secrets in commits.
-- Make coherent commits: group changes by purpose and split independent work when useful. Run checks appropriate to the changes and report their results.
-- Do not push unless asked. A request to create a pull request authorizes pushing the branch needed for it, but does not authorize merging it.
+- For GitHub, use `gh` for hosting operations when available. If it is missing, attempt a local, non-privileged installation.
+  - If authentication is required, prompt me to log in; If installation or authentication is blocked, explain the blocker.
+- Inspect the working tree, including staged and unstaged changes, before committing. Preserve unrelated and pre-existing work.
+- Commit at meaningful milestones: coherent, reviewable units of work.
+  - Use judgment to avoid commits for every minor edit, and follow any task-specific instruction about when to commit.
+- Stage changes selectively and review the staged diff for unrelated files, secrets, and accidental artifacts.
+- Never push unless requested. Creating a PR authorizes pushing its branch, not merging.
 - Avoid destructive Git operations or rewriting shared history without explicit permission. Ask before discarding anyone's changes.
 
-## Commit subjects
+## Commit messages
 
-Use a bracketed prefix followed by a concise, imperative description. Approved prefixes and examples:
+Use `[type] concise imperative description`. Choose the most appropriate prefix.
 
 ```text
-# Features and functionality
-[feat] add event eligibility display
-[fix] handle denied geolocation permission
-[hotfix] restore broken authentication redirect
-
-# Interface and experience
-[ui] redesign battle results screen
-[ux] simplify player onboarding flow
-
-# Code quality and architecture
-[refactor] isolate event status presentation
-[perf] reduce unnecessary battle API requests
-[style] normalize component formatting
-
-# Testing and reliability
-[test] cover stale location response state
-[ci] enforce API-first battle releases
-
-# Security
-[security] validate session token expiration
-
-# Dependencies and build
-[build] optimize production bundle splitting
-[config] configure API request timeouts
-
-# Database and infrastructure
-[db] index event eligibility lookups
-[infra] configure staging environment
-
-# Documentation and maintenance
-[docs] document player journey
-[chore] remove unused development scripts
-[cleanup] remove obsolete battle components
-
-# Releases and history
-[release] prepare version 1.2.0
-[revert] revert location caching changes
+[feat]      new functionality
+[fix]       bug fixes
+[hotfix]    urgent production fixes
+[ui]        visual interface changes
+[ux]        interaction improvements
+[refactor]  structural changes without behavior changes
+[perf]      performance improvements
+[style]     formatting-only changes
+[test]      tests and coverage
+[ci]        CI/CD workflows
+[security]  security improvements
+[build]     build system and tooling
+[config]    configuration changes
+[db]        database changes
+[infra]     infrastructure changes
+[docs]      documentation
+[chore]     routine maintenance
+[cleanup]   removal of obsolete code or files
+[release]   version releases
+[revert]    reverted changes
 ```
 
-When a change needs explanation, add a commit body describing why it was necessary and any important details
+Keep subjects specific and concise. Add a commit body when the reasoning, tradeoffs, or implications need explanation.
 
-## Personal file and folder naming
+## File and folder naming
 
-- For personal folders directly under the home directory, capitalise each word and separate words with hyphens, for example `Personal-Projects`.
-- For personal subfolders, use lowercase names with hyphens between words, for example `computer-graphics` and `screenshots`. Prefer clear lowercase, hyphen-separated names for personal files too.
-- Preserve names required by operating systems, apps, projects, and existing integrations. Follow repository-specific conventions for project contents. Before renaming existing items, check and maintain dependent paths and avoid overwriting files.
+- Personal directories directly under `~`: capitalized words separated by hyphens (`Personal-Projects`).
+- Personal subdirectories and files: lowercase, hyphen-separated names (`computer-graphics`).
+- Preserve names required by operating systems, apps, projects, and existing integrations.
+- Follow repository-specific conventions for project contents. Before renaming existing items, check and maintain dependent paths and avoid overwriting files.
 
 ## Serena project workflow
 
