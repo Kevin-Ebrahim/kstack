@@ -68,3 +68,10 @@ Keep subjects specific and concise. Add a commit body when the reasoning, tradeo
 - If setup is needed, use `serena project create`. Preserve existing settings and configure relevant languages and language servers.
 - Prefer Serena for symbol navigation, references, and refactoring where useful; supplement with standard search, shell tools, and tests.
 - Onboard established projects when beneficial. Keep memories concise, accurate, and updated after significant changes when authorized.
+
+## Context7
+Use Context7 for current library, framework, SDK, API, CLI, and cloud service documentation, including setup, configuration, migrations, and API-specific debugging. Prefer it to web search, even for familiar tools. Skip it for general programming concepts and code work unrelated to library or platform APIs.
+
+1. Call `resolve-library-id` with the library and query unless given an exact `/org/project` ID. Choose the best match by relevance, reputation, snippets, and benchmark score; prefer the requested version.
+2. Call `query-docs` with a focused query per concept; combine concepts only when asking how they interact. Answer using the results.
+3. If docs lack an exact answer and `query-code` is available, use a source-enabled ID. Start with `grep` or `definition`, then read the indicated range. Pass a git tag for a version and stop after six calls. If indexing is pending, retry every 30 seconds for up to three minutes, then fall back to docs; retries do not count toward the limit. Cite source file and line.
