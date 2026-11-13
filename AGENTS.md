@@ -6,15 +6,13 @@
 
 ## Git and repository hosting
 
-- Check the configured Git remotes to identify the hosting provider; do not infer it from a directory name.
-- For GitHub, use `gh` for hosting operations when available. If it is missing, attempt a local, non-privileged installation.
-  - If authentication is required, prompt me to log in; If installation or authentication is blocked, explain the blocker.
-- Inspect the working tree, including staged and unstaged changes, before committing. Preserve unrelated and pre-existing work.
-- Commit at meaningful milestones: coherent, reviewable units of work.
-  - Use judgment to avoid commits for every minor edit, and follow any task-specific instruction about when to commit.
-- Stage changes selectively and review the staged diff for unrelated files, secrets, and accidental artifacts.
+- Name branches `<type>/<issue-or-task>` using lowercase, hyphen-separated descriptions; include an issue number when available.
+- Identify the hosting provider from the configured Git remotes.
+- For GitHub operations, use `gh`; if missing, attempt a local, non-privileged installation. Ask me to log in if needed, and explain installation or authentication blockers.
+- Commit coherent, reviewable milestones, following any task-specific timing instructions.
+- Before committing, inspect staged and unstaged changes, preserve unrelated work, and review the selectively staged diff for secrets and accidental artifacts.
 - Never push unless requested. Creating a PR authorizes pushing its branch, not merging.
-- Avoid destructive Git operations or rewriting shared history without explicit permission. Ask before discarding anyone's changes.
+- Ask permission before destructive Git operations, rewriting shared history, or discarding changes.
 
 ## Pull requests
 
