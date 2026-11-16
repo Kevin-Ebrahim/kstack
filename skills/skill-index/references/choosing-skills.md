@@ -18,6 +18,7 @@ Do not run every review because the request says “review.” Infer the target 
 
 ## Distinguish planning, explanation, and execution
 
+- [grill](../../grill/SKILL.md) uncovers unresolved decisions through a requested discovery interview; [interrogate](../../interrogate/SKILL.md) tests a design or change for demonstrable failures.
 - [shape](../../shape/SKILL.md) plans the user experience; [architect](../../architect/SKILL.md) plans the code structure. Use both only when both decisions remain open.
 - [plan-eng-review](../../plan-eng-review/SKILL.md) reviews a proposed engineering plan before implementation.
 - [improve-codebase-architecture](../../improve-codebase-architecture/SKILL.md) finds improvement candidates in existing code. It does not automatically authorize a refactor.

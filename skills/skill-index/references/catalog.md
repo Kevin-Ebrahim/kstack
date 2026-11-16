@@ -5,7 +5,7 @@ Choose by the requested outcome, then read the linked instructions. Names below 
 ## Find the relevant area
 
 - [Communication and understanding](#communication-and-understanding): explain, summarize, rephrase, catch up, hand off.
-- [Planning and architecture](#planning-and-architecture): product context, design brief, module design, architecture survey, long tasks.
+- [Planning and architecture](#planning-and-architecture): discovery interview, product context, design brief, module design, architecture survey, long tasks.
 - [Code review and debugging](#code-review-and-debugging): diff, bug, regression, assumptions, comments, TypeScript.
 - [Interface design and quality](#interface-design-and-quality): critique, accessibility, layout, typography, polish, resilience, performance.
 - [Animation and interaction](#animation-and-interaction): motion, transitions, gestures, sequencing, frame drops.
@@ -30,6 +30,7 @@ Choose by the requested outcome, then read the linked instructions. Names below 
 
 | Skill | Choose when |
 | --- | --- |
+| [grill](../../grill/SKILL.md) | The user wants a structured interview to uncover decisions in a plan, design, or idea. |
 | [shape](../../shape/SKILL.md) | The user experience, states, interactions, and boundaries need a design brief. |
 | [architect](../../architect/SKILL.md) | A substantial code change needs types, interfaces, and module boundaries worked out. |
 | [plan-eng-review](../../plan-eng-review/SKILL.md) | Review an engineering plan for architecture, failure modes, testing, and performance. |

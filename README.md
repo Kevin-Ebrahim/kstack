@@ -1,6 +1,6 @@
 # kstack
 
-75 skills for communication, engineering, interface design, animation, and security review.
+76 skills for communication, engineering, interface design, animation, and security review.
 
 ## Usage
 
@@ -47,10 +47,11 @@ Runtime requirements for skills with tools:
 | [why](skills/why/SKILL.md) | Investigate the reasons behind a design or decision, using available evidence such as history and issue discussions. |
 | [teach](skills/teach/SKILL.md) | Combine how and why into a plain-language explanation of a system or body of work. |
 
-## Planning and execution · 5
+## Planning and execution · 6
 
 | Skill | Purpose |
 | --- | --- |
+| [grill](skills/grill/SKILL.md) | Uncover unresolved decisions through a structured interview with recommendations and focused follow-up questions. |
 | [architect](skills/architect/SKILL.md) | Sketch the types, interfaces and module structure before implementing a substantial change. |
 | [plan-eng-review](skills/plan-eng-review/SKILL.md) | Review an engineering plan for architecture, failure modes, tests, and performance. |
 | [figure-it-out](skills/figure-it-out/SKILL.md) | Create and follow an auditable approach for a large or unusual task that has no narrower workflow. |
@@ -174,6 +175,6 @@ Runtime requirements for skills with tools:
 | [pstack](https://github.com/cursor/plugins/tree/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack) | [MIT](third-party-notices.md#pstack) |
 | [no-session/pstack](https://github.com/no-session/pstack/tree/9a24d1408a10a5d0df624ffc128230424e405b82) | [MIT](third-party-notices.md#no-session-pstack) |
 | [Emil Kowalski](https://github.com/emilkowalski/skills/tree/715c1807e08c497cfd1dc4feb450a2a3300ef2a9) | [MIT](third-party-notices.md#emil-kowalski) |
-| [Matt Pocock](https://github.com/mattpocock/skills/tree/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d) | [MIT](third-party-notices.md#matt-pocock) |
+| [Matt Pocock](https://github.com/mattpocock/skills/tree/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d), [grilling](https://github.com/mattpocock/skills/blob/5863806dd4e15c63174bee4e7515a4256792ecfa/skills/productivity/grilling/SKILL.md) | [MIT](third-party-notices.md#matt-pocock) |
 | [Impeccable](https://github.com/pbakaus/impeccable/tree/ec229b48547f24685ffb22aa51c462c5ae27908c) | [Apache-2.0](third-party-notices.md#impeccable) |
 | [Trail of Bits](https://github.com/trailofbits/skills/tree/e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff) | [CC BY-SA 4.0](third-party-notices.md#trail-of-bits) |
