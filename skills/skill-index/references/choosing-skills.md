@@ -7,6 +7,7 @@ Use this guide to resolve overlap or suggest a sequence. Links point to the actu
 | The user needs | Primary choice | Distinction |
 | --- | --- | --- |
 | Defects in a code diff | [code-review](../../code-review/SKILL.md) | Requirements and repository standards. |
+| Findings pinned to PR lines | [inline-pr-review](../../inline-pr-review/SKILL.md) | Runs code-review first, then saves or updates a pending inline review. |
 | Consequences outside that diff | [blast-radius](../../blast-radius/SKILL.md) | A specific compatibility or safety assumption. |
 | Adversarial scrutiny of a design/change | [interrogate](../../interrogate/SKILL.md) | Demonstrable counterexamples and failure paths. |
 | UX and visual judgment | [critique](../../critique/SKILL.md) | Hierarchy, clarity, composition, and the user journey. |

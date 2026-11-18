@@ -1,6 +1,6 @@
 # kstack
 
-76 skills for communication, engineering, interface design, animation, and security review.
+77 skills for communication, engineering, interface design, animation, and security review.
 
 ## Usage
 
@@ -58,7 +58,7 @@ Runtime requirements for skills with tools:
 | [show-me-your-work](skills/show-me-your-work/SKILL.md) | Keep a reviewable decision log for long-running or unattended work. |
 | [improve-codebase-architecture](skills/improve-codebase-architecture/SKILL.md) | Survey the codebase for architectural improvements. |
 
-## Review, debugging, and measurement · 8
+## Review, debugging, and measurement · 9
 
 | Skill | Purpose |
 | --- | --- |
@@ -70,6 +70,7 @@ Runtime requirements for skills with tools:
 | [no-comments](skills/no-comments/SKILL.md) | Review code comments, address accepted findings and consider expressing important constraints in code or checks. |
 | [diagnosing-bugs](skills/diagnosing-bugs/SKILL.md) | Structured debugging for difficult bugs and performance regressions. |
 | [code-review](skills/code-review/SKILL.md) | Review changes against requirements and standards with independent agents; prioritize actionable findings. |
+| [inline-pr-review](skills/inline-pr-review/SKILL.md) | Run code-review and pin verified findings to diff lines in a pending PR review. |
 
 ## TypeScript · 1
 

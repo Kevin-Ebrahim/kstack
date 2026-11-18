@@ -6,7 +6,7 @@ Choose by the requested outcome, then read the linked instructions. Names below 
 
 - [Communication and understanding](#communication-and-understanding): explain, summarize, rephrase, catch up, hand off.
 - [Planning and architecture](#planning-and-architecture): discovery interview, product context, design brief, module design, architecture survey, long tasks.
-- [Code review and debugging](#code-review-and-debugging): diff, bug, regression, assumptions, comments, TypeScript.
+- [Code review and debugging](#code-review-and-debugging): diff, PR, inline comments, bug, regression, assumptions, TypeScript.
 - [Interface design and quality](#interface-design-and-quality): critique, accessibility, layout, typography, polish, resilience, performance.
 - [Animation and interaction](#animation-and-interaction): motion, transitions, gestures, sequencing, frame drops.
 - [Security and state models](#security-and-state-models): security boundaries, dependencies, state transitions, invariants.
@@ -45,6 +45,7 @@ Choose by the requested outcome, then read the linked instructions. Names below 
 | Skill | Choose when |
 | --- | --- |
 | [code-review](../../code-review/SKILL.md) | Review a diff against requirements and repository standards with independent agents for actionable defects. |
+| [inline-pr-review](../../inline-pr-review/SKILL.md) | Review a PR and save verified findings as comments on specific diff lines. |
 | [blast-radius](../../blast-radius/SKILL.md) | Investigate consequences beyond the visible diff and verify the change's key safety assumption. |
 | [interrogate](../../interrogate/SKILL.md) | Challenge a design or change adversarially and retain findings that can be demonstrated. |
 | [diagnosing-bugs](../../diagnosing-bugs/SKILL.md) | A difficult or intermittent failure needs evidence, hypotheses, and targeted investigation. |
