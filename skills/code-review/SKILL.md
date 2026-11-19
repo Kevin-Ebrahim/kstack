@@ -17,7 +17,7 @@ Read applicable repository instructions and standards. Repository conventions ov
 
 ## Review
 
-When delegation is available and permitted, launch two independent review agents in parallel: one checks the diff against the user's requirements and relevant specs; the other checks it against repository instructions and standards. Request `gpt-6.1-sol` with `xhigh` reasoning for both where supported. Give each the exact comparison, relevant context and instructions to return evidence-backed findings with file locations and concrete consequences. Keep the review read-only and do not share one agent's findings with the other before their independent reviews.
+When delegation is available and permitted, launch two independent review agents in parallel: one checks the diff against the user's requirements and relevant specs; the other checks it against repository instructions and standards. Request `gpt-6.2-sol` with `xhigh` reasoning for both where supported. Give each the exact comparison, relevant context and instructions to return evidence-backed findings with file locations and concrete consequences. Keep the review read-only and do not share one agent's findings with the other before their independent reviews.
 
 If the requested model or reasoning level is unavailable, use the available agent configuration and disclose the substitution. If delegation is unavailable or prohibited, review both perspectives directly and disclose that the review was performed without subagents. Never claim independent review that did not happen.
 
