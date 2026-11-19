@@ -2,6 +2,17 @@
 
 Original notices for the upstream material included in kstack.
 
+## Upstream sources
+
+| Source | Notice |
+| --- | --- |
+| [pstack](https://github.com/cursor/plugins/tree/de8ee15dd1194627d21eb5fcd41cb1873208dabb/pstack) | [MIT](#pstack) |
+| [no-session/pstack](https://github.com/no-session/pstack/tree/9a24d1408a10a5d0df624ffc128230424e405b82) | [MIT](#no-session-pstack) |
+| [Emil Kowalski](https://github.com/emilkowalski/skills/tree/715c1807e08c497cfd1dc4feb450a2a3300ef2a9) | [MIT](#emil-kowalski) |
+| [Matt Pocock](https://github.com/mattpocock/skills/tree/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d), [grilling](https://github.com/mattpocock/skills/blob/5863806dd4e15c63174bee4e7515a4256792ecfa/skills/productivity/grilling/SKILL.md) | [MIT](#matt-pocock) |
+| [Impeccable](https://github.com/pbakaus/impeccable/tree/ec229b48547f24685ffb22aa51c462c5ae27908c) | [Apache-2.0](#impeccable) |
+| [Trail of Bits](https://github.com/trailofbits/skills/tree/e4dd0bb5b15535f7c5a0834187dffba6ac37e4ff) | [CC BY-SA 4.0](#trail-of-bits) |
+
 ## pstack
 
 MIT License
