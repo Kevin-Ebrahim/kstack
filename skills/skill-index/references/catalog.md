@@ -1,6 +1,6 @@
 # Skill catalog
 
-Choose by the requested outcome, then read the linked instructions. Names below are the actual skill identifiers, including the `principle-` prefix. Invocation policy and prerequisites remain in each skill.
+Choose by the requested outcome, then read the skill instructions. Names beginning with `$mattpocock-skills:` belong to [Matt Pocock’s optional plugin](../../../docs/setup.md#matt-pocock). Invocation policy and prerequisites remain in each skill.
 
 ## Find the relevant area
 
@@ -21,7 +21,7 @@ Choose by the requested outcome, then read the linked instructions. Names below 
 | [sharpen](../../sharpen/SKILL.md) | A task or prompt needs clearer thinking and wording within its existing scope. |
 | [unslop](../../unslop/SKILL.md) | Writing needs formulaic AI phrasing removed. |
 | [ketchup](../../ketchup/SKILL.md) | The current user needs a catch-up on progress and pending decisions. |
-| [handoff](../../handoff/SKILL.md) | Another agent or teammate needs a durable account of where to resume. |
+| `$mattpocock-skills:handoff` | Save a temporary handoff document so another agent can resume the task. |
 | [how](../../how/SKILL.md) | Explain code behavior, component relationships, ownership, or where a change belongs. |
 | [why](../../why/SKILL.md) | Investigate the reasons behind a decision using history and available evidence. |
 | [teach](../../teach/SKILL.md) | Build an explanation combining how something works and why, at the user's requested depth. |
@@ -33,7 +33,7 @@ Choose by the requested outcome, then read the linked instructions. Names below 
 | [grill](../../grill/SKILL.md) | The user wants a structured interview to uncover decisions in a plan, design, or idea. |
 | [architect](../../architect/SKILL.md) | A substantial code change needs types, interfaces, and module boundaries worked out. |
 | [plan-eng-review](../../plan-eng-review/SKILL.md) | Review an engineering plan for architecture, failure modes, testing, and performance. |
-| [improve-codebase-architecture](../../improve-codebase-architecture/SKILL.md) | Survey an existing codebase for architectural friction and improvement candidates. |
+| `$mattpocock-skills:improve-codebase-architecture` | Find opportunities to deepen modules and compare the candidates in a visual report. |
 | [figure-it-out](../../figure-it-out/SKILL.md) | A substantial unusual task needs an execution approach and no narrower workflow fits. |
 | [show-me-your-work](../../show-me-your-work/SKILL.md) | Long-running work needs a reviewable decision and evidence log. |
 
@@ -45,7 +45,7 @@ Choose by the requested outcome, then read the linked instructions. Names below 
 | [inline-pr-review](../../inline-pr-review/SKILL.md) | Review a PR and save verified findings as comments on specific diff lines. |
 | [blast-radius](../../blast-radius/SKILL.md) | Investigate consequences beyond the visible diff and verify the change's key safety assumption. |
 | [interrogate](../../interrogate/SKILL.md) | Challenge a design or change adversarially and retain findings that can be demonstrated. |
-| [diagnosing-bugs](../../diagnosing-bugs/SKILL.md) | A difficult or intermittent failure needs evidence, hypotheses, and targeted investigation. |
+| `$mattpocock-skills:diagnosing-bugs` | A difficult or intermittent failure needs a reproducible signal and targeted investigation. |
 | [tdd](../../tdd/SKILL.md) | Test-first work is requested or a bug has a clear, cheap regression target; do not create a broad test setup just to use it. |
 | [correct](../../correct/SKILL.md) | Demonstrated recurring mistakes justify a structural check, type, lint rule, or other prevention. |
 | [no-comments](../../no-comments/SKILL.md) | Review comment accuracy and usefulness, preserving rationale and important constraints. |

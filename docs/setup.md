@@ -17,6 +17,21 @@ If the destination contains another `AGENTS.md`, the installer moves it to `AGEN
 
 Changes to linked skills take effect from the checkout. Rerun your install command after adding skills. The installer reuses matching links, skips conflicting skill entries, and exits with an error if it finds any conflicts.
 
+After updating the checkout that supplies your installed links, preview retired links with `./scripts/uninstall.sh --stale-only --dry-run`, then remove them with `./scripts/uninstall.sh --stale-only`. If you installed to a custom skills directory, pass it to both commands.
+
+## Matt Pocock
+
+Install the published plugin once for your Codex user account.
+
+```bash
+codex plugin marketplace add mattpocock/skills
+codex plugin add mattpocock-skills@mattpocock
+```
+
+Open a new Codex session and try `$mattpocock-skills:ask-matt` to choose a workflow. In a project where you want to use Matt’s engineering workflow, run `$mattpocock-skills:setup-matt-pocock-skills` to configure its issue tracker, triage labels, and documentation paths. [Upstream guide](https://github.com/mattpocock/skills#installation-30-second-setup)
+
+Use `$grill` for kstack’s focused interview and `$code-review` for its two-reviewer workflow. Matt’s versions are available as `$mattpocock-skills:grill-me` and `$mattpocock-skills:code-review`.
+
 ## Impeccable
 
 Install the upstream design skill globally for Codex:
@@ -26,8 +41,6 @@ npx impeccable install --providers=codex --scope=global
 ```
 
 Open a new Codex session and use `$impeccable` to see its commands. Use `$impeccable critique` for a UX review or `$impeccable polish` for a final design pass. [Impeccable documentation](https://impeccable.style/docs)
-
-After updating the checkout that supplies your installed links, preview retired links with `./scripts/uninstall.sh --stale-only --dry-run`, then remove them with `./scripts/uninstall.sh --stale-only`. If you installed to a custom skills directory, pass it to both commands.
 
 ## Uninstall skills
 

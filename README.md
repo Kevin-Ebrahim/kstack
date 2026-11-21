@@ -14,6 +14,6 @@ cd kstack
 
 In Codex, try `$code-review Review my staged changes`. Ask `$skill-index` which skill fits your task. [Browse the skill catalog](skills/skill-index/references/catalog.md)
 
-For upstream design commands such as `$impeccable polish`, [install Impeccable](docs/setup.md#impeccable). You can also use a kstack skill directly by asking your agent to read its `SKILL.md` from this checkout.
+For the full upstream libraries, see the setup guides for [Matt Pocock’s engineering skills](docs/setup.md#matt-pocock) and [Impeccable’s design commands](docs/setup.md#impeccable). You can also use a kstack skill directly by asking your agent to read its `SKILL.md` from this checkout.
 
 [Setup and uninstall](docs/setup.md) · [Third-party notices](third-party-notices.md)

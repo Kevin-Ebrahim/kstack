@@ -22,7 +22,7 @@ Do not run every review because the request says “review.” Infer the target 
 - [grill](../../grill/SKILL.md) uncovers unresolved decisions through a requested discovery interview; [interrogate](../../interrogate/SKILL.md) tests a design or change for demonstrable failures.
 - `$impeccable shape` plans the user experience; [architect](../../architect/SKILL.md) plans the code structure. Use both only when both decisions remain open.
 - [plan-eng-review](../../plan-eng-review/SKILL.md) reviews a proposed engineering plan before implementation.
-- [improve-codebase-architecture](../../improve-codebase-architecture/SKILL.md) finds improvement candidates in existing code. It does not automatically authorize a refactor.
+- `$mattpocock-skills:improve-codebase-architecture` presents candidates for deepening existing modules in an HTML report.
 - [how](../../how/SKILL.md) explains behavior; [why](../../why/SKILL.md) investigates historical reasons; [teach](../../teach/SKILL.md) combines them for learning. Do not load all three for a simple explanation.
 - `$impeccable init` writes product context. `$impeccable document` records an existing visual system. Neither is general project initialization or generic document production.
 - [figure-it-out](../../figure-it-out/SKILL.md) supplies a workflow for substantial work with no narrower match. Task size alone is not a reason to add it to another complete workflow.
@@ -55,12 +55,12 @@ These are conditional sequences, not mandatory pipelines. Omit stages whose deci
 | --- | --- |
 | Build a substantial new feature with unsettled UX and architecture | `$impeccable shape` → `architect` → implementation using relevant platform skills → `code-review` when review is in scope. |
 | Improve an existing interface after a requested assessment | `$impeccable critique` or `$impeccable audit` → the targeted editing skill → `$impeccable polish` if a final pass is needed. |
-| Fix a difficult bug | `diagnosing-bugs` → implementation; use `tdd` if requested or a cheap regression target fits its instructions. |
+| Fix a difficult bug | Use `$mattpocock-skills:diagnosing-bugs` to investigate and verify the fix. |
 | Fix a confirmed recurring class of mistakes | Establish the cause → `correct` for proportionate prevention. A one-off mistake does not establish recurrence. |
 | Implement approved motion improvements | `improve-animations` when a plan is needed → `animate`, `choreograph`, or `gestures` for the relevant change. |
 | Improve measured web performance | `$impeccable optimize` with `benchmark-checklist`; use `animation-performance` when frame rendering is the bottleneck. |
 | Investigate a protocol or flow with difficult state invariants | `statechart` when formal modeling is warranted and its tools are available; validate counterexamples against the real system. |
-| Resume substantial work with another agent | `handoff`; use `ketchup` instead when the current user only needs a progress update. |
+| Resume substantial work with another agent | `$mattpocock-skills:handoff` writes a handoff for the next session. Use `ketchup` for a progress update to the current user. |
 
 ## Keep selection proportional
 

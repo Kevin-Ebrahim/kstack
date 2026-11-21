@@ -26,7 +26,7 @@ Select later-stage skills when the work reaches that stage. Do not preload an en
 
 ## Resolve files
 
-Resolve catalog links from the file containing the link. If this skill was symlinked, use its resolved source location to find sibling skills. For `$impeccable` commands, use the host’s installed `impeccable` skill.
+Resolve catalog links from the file containing the link. If this skill was symlinked, use its resolved source location to find sibling skills. Look up `$mattpocock-skills:…` entries by their full name in the host’s skill list. For `$impeccable` commands, use the host’s installed `impeccable` skill.
 
 If a listed file is missing, check the available skill locations for its exact name. State when it is unavailable and continue with an appropriate available workflow. Do not invent tools, install dependencies, or claim a skill was used without reading it.
 
