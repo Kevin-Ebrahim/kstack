@@ -14,6 +14,6 @@ cd kstack
 
 In Codex, try `$code-review Review my staged changes`. Ask `$skill-index` which skill fits your task. [Browse the skill catalog](skills/skill-index/references/catalog.md)
 
-See the [setup guide](docs/setup.md) for Matt Pocock’s engineering skills, Impeccable’s design commands, and Emil Kowalski’s motion skills. You can also use a kstack skill directly by asking your agent to read its `SKILL.md` from this checkout.
+The installer can also install [optional upstream libraries](docs/setup.md#optional-upstream-libraries) from Matt Pocock, Impeccable, and Emil Kowalski. You can use a kstack skill directly by asking your agent to read its `SKILL.md` from this checkout.
 
 [Setup and uninstall](docs/setup.md) · [Third-party notices](third-party-notices.md)

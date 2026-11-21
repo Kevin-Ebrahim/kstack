@@ -2,20 +2,61 @@
 set -euo pipefail
 
 usage() {
-  printf 'Usage: %s [--dry-run] [skills-directory] [agents-file]\n' "${0##*/}"
+  printf 'Usage: %s [options] [skills-directory] [agents-file]\n' "${0##*/}"
   printf 'Symlink kstack skills into ~/.agents/skills (or skills-directory).\n'
   printf 'Link AGENTS.md into ${CODEX_HOME:-~/.codex}/AGENTS.md (or agents-file).\n'
   printf 'Existing files, directories, and conflicting symlinks are preserved.\n'
+  printf '\nOptions:\n'
+  printf '  --dry-run            Preview links and upstream commands.\n'
+  printf '  --with-impeccable    Install Impeccable globally for Codex.\n'
+  printf '  --with-matt-pocock   Install Matt Pocock’s Codex plugin.\n'
+  printf '  --with-emil DIR      Install Emil Kowalski’s skills in project DIR.\n'
 }
 
 dry_run=false
-case "${1:-}" in
-  --help|-h) usage; exit 0 ;;
-  --dry-run) dry_run=true; shift ;;
-esac
-if (( $# > 2 )) || [[ ${1:-} == -* ]]; then
+with_impeccable=false
+with_matt_pocock=false
+emil_project=
+while [[ ${1:-} == -* ]]; do
+  case "$1" in
+    --help|-h) usage; exit 0 ;;
+    --dry-run) dry_run=true ;;
+    --with-impeccable) with_impeccable=true ;;
+    --with-matt-pocock) with_matt_pocock=true ;;
+    --with-emil)
+      if [[ -z ${2:-} || $2 == -* ]]; then
+        printf 'Pass a project directory after --with-emil.\n' >&2
+        exit 2
+      fi
+      emil_project=$2
+      shift
+      ;;
+    *) usage >&2; exit 2 ;;
+  esac
+  shift
+done
+if (( $# > 2 )); then
   usage >&2
   exit 2
+fi
+
+if [[ -n $emil_project ]]; then
+  if [[ ! -d $emil_project ]]; then
+    printf 'Emil project directory does not exist: %s\n' "$emil_project" >&2
+    exit 1
+  fi
+  emil_project=$(realpath -- "$emil_project")
+fi
+
+if ! "$dry_run"; then
+  if { "$with_impeccable" || [[ -n $emil_project ]]; } && ! command -v npx >/dev/null; then
+    printf 'npx is required to install Impeccable or Emil Kowalski’s skills.\n' >&2
+    exit 1
+  fi
+  if "$with_matt_pocock" && ! command -v codex >/dev/null; then
+    printf 'The Codex CLI is required to install Matt Pocock’s plugin.\n' >&2
+    exit 1
+  fi
 fi
 
 script_path=$(realpath -- "${BASH_SOURCE[0]}")
@@ -98,4 +139,29 @@ if "$dry_run"; then
 else
   printf 'Installed: %d linked, %d already linked, %d conflicts.\n' "$linked" "$unchanged" "$conflicts"
 fi
-(( conflicts == 0 ))
+if (( conflicts != 0 )); then
+  exit 1
+fi
+
+run_upstream() {
+  local directory=$1
+  shift
+  if "$dry_run"; then
+    printf 'Would run in %s:' "$directory"
+    printf ' %q' "$@"
+    printf '\n'
+  else
+    (cd -- "$directory" && "$@")
+  fi
+}
+
+if "$with_impeccable"; then
+  run_upstream "$repo_dir" npx --yes impeccable install --providers=codex --scope=global
+fi
+if "$with_matt_pocock"; then
+  run_upstream "$repo_dir" codex plugin marketplace add mattpocock/skills
+  run_upstream "$repo_dir" codex plugin add mattpocock-skills@mattpocock
+fi
+if [[ -n $emil_project ]]; then
+  run_upstream "$emil_project" npx --yes skills@latest add emilkowalski/skills --agent codex --skill '*' --yes
+fi

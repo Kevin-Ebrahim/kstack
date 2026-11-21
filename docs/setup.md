@@ -19,6 +19,16 @@ Changes to linked skills take effect from the checkout. Rerun your install comma
 
 After updating the checkout that supplies your installed links, preview retired links with `./scripts/uninstall.sh --stale-only --dry-run`, then remove them with `./scripts/uninstall.sh --stale-only`. If you installed to a custom skills directory, pass it to both commands.
 
+## Optional upstream libraries
+
+Pass one or more flags to install upstream libraries alongside kstack. Preview the links, upstream commands, and Emil’s target directory with `--dry-run`. Remove `--dry-run` to apply the install.
+
+```bash
+./scripts/install.sh --dry-run --with-impeccable --with-matt-pocock --with-emil /path/to/ui-project
+```
+
+Impeccable and Matt Pocock’s plugin install globally for Codex. Emil’s skills install in the directory passed to `--with-emil`. The positional paths control kstack’s links.
+
 ## Matt Pocock
 
 Install the published plugin once for your Codex user account.
