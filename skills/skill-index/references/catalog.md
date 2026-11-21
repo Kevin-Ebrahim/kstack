@@ -54,11 +54,10 @@ Choose by the requested outcome, then read the linked instructions. Names below 
 
 ## Interface design and quality
 
-With [Impeccable installed](../../../docs/setup.md#impeccable), use `$impeccable shape` for a UX brief, `$impeccable audit` for technical UI findings, and `$impeccable polish` for a final pass. Run `$impeccable` to browse its other design commands.
+With [Impeccable installed](../../../docs/setup.md#impeccable), use `$impeccable shape` for a UX brief, `$impeccable critique` for a scored design review, `$impeccable audit` for technical UI findings, and `$impeccable polish` for a final pass. Run `$impeccable` to browse its other design commands.
 
 | Skill | Choose when |
 | --- | --- |
-| [critique](../../critique/SKILL.md) | Run kstack’s independent UX review passes and score the findings. |
 | [break-ui](../../break-ui/SKILL.md) | Stress-test a component with realistic difficult data and inspect what breaks; it may add a demo fixture/toggle. |
 
 ## Animation and interaction

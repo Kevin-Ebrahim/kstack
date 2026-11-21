@@ -10,7 +10,7 @@ Use this guide to resolve overlap or suggest a sequence. Links point to the actu
 | Findings pinned to PR lines | [inline-pr-review](../../inline-pr-review/SKILL.md) | Runs code-review first, then saves or updates a pending inline review. |
 | Consequences outside that diff | [blast-radius](../../blast-radius/SKILL.md) | A specific compatibility or safety assumption. |
 | Adversarial scrutiny of a design/change | [interrogate](../../interrogate/SKILL.md) | Demonstrable counterexamples and failure paths. |
-| UX and visual judgment | [critique](../../critique/SKILL.md) | Hierarchy, clarity, composition, and the user journey. |
+| UX and visual judgment | `$impeccable critique` | Hierarchy, clarity, composition, and the user journey. |
 | Technical web UI quality | `$impeccable audit` | Accessibility, responsive behavior, performance, and implementation evidence. |
 | Security boundaries or dependencies | [security-review](../../security-review/SKILL.md) | Attacker control, enforcement, exposure, and measured dependency risk. |
 | Motion quality | [review-animations](../../review-animations/SKILL.md) | Timing, easing, purpose, and interaction feel. |
@@ -29,7 +29,7 @@ Do not run every review because the request says “review.” Infer the target 
 
 ## Choose a UI workflow
 
-Use the [Impeccable skill](../../../docs/setup.md#impeccable) when installed. For example, `$impeccable harden` fixes fragile UI states. Use [break-ui](../../break-ui/SKILL.md) to find those states by exercising the interface with difficult data. For a scored review, choose [critique](../../critique/SKILL.md) for kstack’s independent reviewers or `$impeccable critique` for the upstream workflow.
+Use the [Impeccable skill](../../../docs/setup.md#impeccable) when installed. For example, `$impeccable harden` fixes fragile UI states. Use [break-ui](../../break-ui/SKILL.md) to find those states by exercising the interface with difficult data.
 
 ## Distinguish motion tasks
 
@@ -54,7 +54,7 @@ These are conditional sequences, not mandatory pipelines. Omit stages whose deci
 | Task | Useful sequence |
 | --- | --- |
 | Build a substantial new feature with unsettled UX and architecture | `$impeccable shape` → `architect` → implementation using relevant platform skills → `code-review` when review is in scope. |
-| Improve an existing interface after a requested assessment | `critique` or `$impeccable audit` → the targeted editing skill → `$impeccable polish` if a final pass is needed. |
+| Improve an existing interface after a requested assessment | `$impeccable critique` or `$impeccable audit` → the targeted editing skill → `$impeccable polish` if a final pass is needed. |
 | Fix a difficult bug | `diagnosing-bugs` → implementation; use `tdd` if requested or a cheap regression target fits its instructions. |
 | Fix a confirmed recurring class of mistakes | Establish the cause → `correct` for proportionate prevention. A one-off mistake does not establish recurrence. |
 | Implement approved motion improvements | `improve-animations` when a plan is needed → `animate`, `choreograph`, or `gestures` for the relevant change. |

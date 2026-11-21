@@ -25,7 +25,7 @@ Install the upstream design skill globally for Codex:
 npx impeccable install --providers=codex --scope=global
 ```
 
-Open a new Codex session and use `$impeccable` to see its commands. For example, the former `$polish` is now `$impeccable polish`. Use `$critique` for kstack’s independent reviewers or `$impeccable critique` for the upstream review. [Impeccable documentation](https://impeccable.style/docs)
+Open a new Codex session and use `$impeccable` to see its commands. Use `$impeccable critique` for a UX review or `$impeccable polish` for a final design pass. [Impeccable documentation](https://impeccable.style/docs)
 
 After updating the checkout that supplies your installed links, preview retired links with `./scripts/uninstall.sh --stale-only --dry-run`, then remove them with `./scripts/uninstall.sh --stale-only`. If you installed to a custom skills directory, pass it to both commands.
 
