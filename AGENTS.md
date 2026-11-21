@@ -4,6 +4,10 @@
 
 - Follow applicable project-level `AGENTS.md` instructions and established repository conventions.
 
+## Skill defaults
+
+Follow the skill the user names or the active workflow calls. Otherwise, when available, use `$inline-pr-review` for inline PR comments, `$code-review` for code reviews, and `$grill` when asked to grill the user or run a short discovery interview.
+
 ## Git and repository hosting
 
 - Name branches `<type>/<issue-or-task>` using lowercase, hyphen-separated descriptions; include an issue number when available.

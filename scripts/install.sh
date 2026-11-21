@@ -7,13 +7,15 @@ usage() {
   printf 'Link AGENTS.md into ${CODEX_HOME:-~/.codex}/AGENTS.md (or agents-file).\n'
   printf 'Skill name conflicts stop the install before it writes any links.\n'
   printf '\nOptions:\n'
-  printf '  --dry-run            Preview links and upstream commands.\n'
+  printf '  --dry-run            Preview link changes and upstream commands.\n'
+  printf '  --upgrade            Also remove retired skill links from this checkout.\n'
   printf '  --with-impeccable    Install Impeccable globally for Codex.\n'
   printf '  --with-matt-pocock   Install Matt Pocock’s Codex plugin.\n'
   printf '  --with-emil DIR      Install Emil Kowalski’s skills in project DIR.\n'
 }
 
 dry_run=false
+upgrade=false
 with_impeccable=false
 with_matt_pocock=false
 emil_project=
@@ -21,6 +23,7 @@ while [[ ${1:-} == -* ]]; do
   case "$1" in
     --help|-h) usage; exit 0 ;;
     --dry-run) dry_run=true ;;
+    --upgrade) upgrade=true ;;
     --with-impeccable) with_impeccable=true ;;
     --with-matt-pocock) with_matt_pocock=true ;;
     --with-emil)
@@ -144,6 +147,14 @@ if "$dry_run"; then
   printf 'Dry run: %d kstack skills to link, %d already linked.\n' "${#new_skills[@]}" "$unchanged"
 else
   printf 'Installed %d kstack skill links. %d already linked.\n' "${#new_skills[@]}" "$unchanged"
+fi
+
+if "$upgrade"; then
+  cleanup_args=(--stale-only)
+  if "$dry_run"; then
+    cleanup_args+=(--dry-run)
+  fi
+  "$repo_dir/scripts/uninstall.sh" "${cleanup_args[@]}" "$destination"
 fi
 
 run_upstream() {

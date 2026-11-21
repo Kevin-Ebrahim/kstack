@@ -16,20 +16,19 @@ You can also ask Codex to read a skill's `SKILL.md` directly from the checkout.
 
 ## Upgrade an existing install
 
-Update the kstack checkout your symlinks point to. From that checkout, preview which links the upgrade will retire.
+Update the kstack checkout your symlinks point to. From that checkout, preview the links the upgrade will add and remove.
 
 ```bash
-./scripts/uninstall.sh --stale-only --dry-run
+./scripts/install.sh --upgrade --dry-run
 ```
 
-After checking the list, remove the retired links and run the installer to link any new skills.
+After checking the list, run the upgrade.
 
 ```bash
-./scripts/uninstall.sh --stale-only
-./scripts/install.sh
+./scripts/install.sh --upgrade
 ```
 
-If you used custom install paths, pass the same paths as before. The uninstall commands take just the skills directory.
+The upgrade links new skills and removes retired skill symlinks that belong to this checkout. If you used custom install paths, pass the same paths after `--upgrade`.
 
 ## Optional upstream libraries
 
