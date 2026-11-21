@@ -56,24 +56,11 @@ Choose by the requested outcome, then read the skill instructions. Names beginni
 
 With [Impeccable installed](../../../docs/setup.md#impeccable), use `$impeccable shape` for a UX brief, `$impeccable critique` for a scored design review, `$impeccable audit` for technical UI findings, and `$impeccable polish` for a final pass. Run `$impeccable` to browse its other design commands.
 
-| Skill | Choose when |
-| --- | --- |
-| [break-ui](../../break-ui/SKILL.md) | Stress-test a component with realistic difficult data and inspect what breaks; it may add a demo fixture/toggle. |
+With [Emil Kowalski’s library installed](../../../docs/setup.md#emil-kowalski), use `$break-ui` to stress-test a component with difficult data.
 
 ## Animation and interaction
 
-| Skill | Choose when |
-| --- | --- |
-| [animate](../../animate/SKILL.md) | Implement or retune a web animation, including purpose, timing, easing, and interruption. |
-| [animate-expo](../../animate-expo/SKILL.md) | Implement motion or gestures in React Native/Expo using the native animation stack. |
-| [review-animations](../../review-animations/SKILL.md) | Critique existing motion against the library's motion standards. |
-| [improve-animations](../../improve-animations/SKILL.md) | Audit motion across a codebase and produce implementation plans; this skill does not apply them. |
-| [find-animation-opportunities](../../find-animation-opportunities/SKILL.md) | Propose where motion would help or should be avoided, without implementing it. |
-| [remove-animations](../../remove-animations/SKILL.md) | Remove unnecessary motion and clean up its implementation. |
-| [animation-performance](../../animation-performance/SKILL.md) | Diagnose stutter, dropped frames, rendering cost, or unsuitable animation properties on the web. |
-| [animation-vocabulary](../../animation-vocabulary/SKILL.md) | Find the name of an effect the user can describe but cannot name. |
-| [choreograph](../../choreograph/SKILL.md) | Coordinate the order, overlap, and rhythm of several moving elements. |
-| [gestures](../../gestures/SKILL.md) | Build or fix web drag, swipe, sheet, and other direct-manipulation interactions. |
+Use [Emil Kowalski’s library](../../../docs/setup.md#emil-kowalski) for web and native motion. Run `$ask-emil` to choose a workflow or check the [motion task examples](choosing-skills.md#distinguish-motion-tasks).
 
 ## Security and state models
 

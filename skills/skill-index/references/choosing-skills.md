@@ -13,7 +13,7 @@ Use this guide to resolve overlap or suggest a sequence. Links point to the actu
 | UX and visual judgment | `$impeccable critique` | Hierarchy, clarity, composition, and the user journey. |
 | Technical web UI quality | `$impeccable audit` | Accessibility, responsive behavior, performance, and implementation evidence. |
 | Security boundaries or dependencies | [security-review](../../security-review/SKILL.md) | Attacker control, enforcement, exposure, and measured dependency risk. |
-| Motion quality | [review-animations](../../review-animations/SKILL.md) | Timing, easing, purpose, and interaction feel. |
+| Motion quality | `$review-animations` (Emil) | Timing, easing, purpose, and interaction feel. |
 
 Do not run every review because the request says “review.” Infer the target and desired evidence from context. Resolve material ambiguity with a focused question; do not invent a broad audit assignment.
 
@@ -29,21 +29,23 @@ Do not run every review because the request says “review.” Infer the target 
 
 ## Choose a UI workflow
 
-Use the [Impeccable skill](../../../docs/setup.md#impeccable) when installed. For example, `$impeccable harden` fixes fragile UI states. Use [break-ui](../../break-ui/SKILL.md) to find those states by exercising the interface with difficult data.
+Use `$impeccable harden` to fix fragile UI states. Use Emil’s `$break-ui` to find those states by exercising the interface with difficult data. [Impeccable setup](../../../docs/setup.md#impeccable) · [Emil’s library setup](../../../docs/setup.md#emil-kowalski)
 
 ## Distinguish motion tasks
 
+These skills are available with [Emil Kowalski’s library installed](../../../docs/setup.md#emil-kowalski).
+
 | Request | Selection |
 | --- | --- |
-| “What is this effect called?” | [animation-vocabulary](../../animation-vocabulary/SKILL.md) |
-| “Where would motion help?” | [find-animation-opportunities](../../find-animation-opportunities/SKILL.md); proposals only. |
-| “Plan improvements to motion across the app.” | [improve-animations](../../improve-animations/SKILL.md); plans only. |
-| “Build this web transition.” | [animate](../../animate/SKILL.md) |
-| “Coordinate the panel, icon, and list entrances.” | [choreograph](../../choreograph/SKILL.md) |
-| “Make this web sheet track my finger.” | [gestures](../../gestures/SKILL.md) |
-| “Build this transition in Expo.” | [animate-expo](../../animate-expo/SKILL.md) |
-| “This animation stutters.” | [animation-performance](../../animation-performance/SKILL.md) for web; inspect the native workflow for Expo. |
-| “Remove the motion that gets in the way.” | [remove-animations](../../remove-animations/SKILL.md) |
+| “What is this effect called?” | `$animation-vocabulary` |
+| “Where would motion help?” | `$find-animation-opportunities` |
+| “Plan improvements to motion across the app.” | `$improve-animations` |
+| “Build this web transition.” | `$animate` |
+| “Coordinate the panel, icon, and list entrances.” | `$choreograph` |
+| “Make this web sheet track my finger.” | `$gestures` |
+| “Build this transition in Expo.” | `$animate-expo` |
+| “This web animation stutters.” | `$animation-performance` |
+| “Remove the motion that gets in the way.” | `$remove-animations` |
 
 “Feels slow” may mean unnecessary delay, dropped frames, or slow data/loading. Inspect the symptom before choosing removal, animation performance, or `$impeccable optimize`. [benchmark-checklist](../../benchmark-checklist/SKILL.md) supports a measured performance claim; it does not implement the optimization.
 
@@ -57,7 +59,7 @@ These are conditional sequences, not mandatory pipelines. Omit stages whose deci
 | Improve an existing interface after a requested assessment | `$impeccable critique` or `$impeccable audit` → the targeted editing skill → `$impeccable polish` if a final pass is needed. |
 | Fix a difficult bug | Use `$mattpocock-skills:diagnosing-bugs` to investigate and verify the fix. |
 | Fix a confirmed recurring class of mistakes | Establish the cause → `correct` for proportionate prevention. A one-off mistake does not establish recurrence. |
-| Implement approved motion improvements | `improve-animations` when a plan is needed → `animate`, `choreograph`, or `gestures` for the relevant change. |
+| Implement approved motion improvements | Emil’s `$improve-animations` when a plan is needed → `$animate`, `$choreograph`, or `$gestures` for the relevant change. |
 | Improve measured web performance | `$impeccable optimize` with `benchmark-checklist`; use `animation-performance` when frame rendering is the bottleneck. |
 | Investigate a protocol or flow with difficult state invariants | `statechart` when formal modeling is warranted and its tools are available; validate counterexamples against the real system. |
 | Resume substantial work with another agent | `$mattpocock-skills:handoff` writes a handoff for the next session. Use `ketchup` for a progress update to the current user. |

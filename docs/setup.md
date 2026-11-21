@@ -42,6 +42,16 @@ npx impeccable install --providers=codex --scope=global
 
 Open a new Codex session and use `$impeccable` to see its commands. Use `$impeccable critique` for a UX review or `$impeccable polish` for a final design pass. [Impeccable documentation](https://impeccable.style/docs)
 
+## Emil Kowalski
+
+Run this from the root of a UI project to install the full library at project scope.
+
+```bash
+npx skills@latest add emilkowalski/skills --agent codex --skill '*' --yes
+```
+
+Open a new Codex session and use `$ask-emil` to choose a motion or UI workflow. Use `$prototype` for Emil’s UI variants and `$mattpocock-skills:prototype` for Matt’s engineering prototypes. [Emil’s skill guide](https://aiforui.dev/skills)
+
 ## Uninstall skills
 
 Preview removal with `./scripts/uninstall.sh --dry-run`, then run `./scripts/uninstall.sh`. If you installed to a custom skills directory, pass that directory to both commands.

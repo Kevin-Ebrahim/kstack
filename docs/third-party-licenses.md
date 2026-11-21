@@ -7,7 +7,6 @@ MIT License
 
 Copyright (c) 2026 Lauren Tan
 Copyright (c) 2026 Garry Tan
-Copyright (c) 2026 Emil Kowalski
 Copyright (c) 2026 Matt Pocock
 
 Permission is hereby granted, free of charge, to any person obtaining a copy

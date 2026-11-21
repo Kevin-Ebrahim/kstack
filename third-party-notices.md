@@ -10,10 +10,6 @@ Copyright (c) 2026 Lauren Tan. [Source](https://github.com/cursor/plugins/tree/d
 
 Copyright (c) 2026 Garry Tan. [Source](https://github.com/no-session/pstack/tree/9a24d1408a10a5d0df624ffc128230424e405b82) · [MIT license](docs/third-party-licenses.md#mit)
 
-### Emil Kowalski
-
-Copyright (c) 2026 Emil Kowalski. [Source](https://github.com/emilkowalski/skills/tree/715c1807e08c497cfd1dc4feb450a2a3300ef2a9) · [MIT license](docs/third-party-licenses.md#mit)
-
 ### Matt Pocock
 
 Copyright (c) 2026 Matt Pocock. [Source](https://github.com/mattpocock/skills/tree/4ae2317ddb22b046e26455e4f9c9b3aaaf62212d) · [Grilling source](https://github.com/mattpocock/skills/blob/5863806dd4e15c63174bee4e7515a4256792ecfa/skills/productivity/grilling/SKILL.md) · [MIT license](docs/third-party-licenses.md#mit)
