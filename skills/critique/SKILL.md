@@ -26,6 +26,6 @@ Read the [heuristic scoring guide](references/heuristics.md) to score applicable
 - For each finding give location/state, observed problem, user consequence, and a concrete improvement. Separate taste preferences and hypotheses from defects.
 - Recommend the most useful next action. Ask only when a material unresolved choice changes that recommendation.
 
-Keep the application unchanged. Deliver in chat unless the user or project workflow requests an artifact; no automatic `.impeccable` snapshot or trend database. Stop any temporary server you started solely for the review. Use [audit](../audit/SKILL.md) for a technical quality assessment and [polish](../polish/SKILL.md) for authorized fixes.
+Keep the application unchanged. Deliver in chat unless the user or project workflow requests an artifact; no automatic `.impeccable` snapshot or trend database. Stop any temporary server you started solely for the review. If Impeccable is installed, `$impeccable audit` provides a technical quality assessment and `$impeccable polish` applies authorized fixes.
 
 > Adapted by kstack from [Impeccable upstream](https://github.com/pbakaus/impeccable/blob/ec229b48547f24685ffb22aa51c462c5ae27908c/skill/reference/critique.md) (Paul Bakaus, Apache-2.0).

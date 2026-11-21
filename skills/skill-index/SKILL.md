@@ -26,7 +26,7 @@ Select later-stage skills when the work reaches that stage. Do not preload an en
 
 ## Resolve files
 
-Catalog links are relative to this skill's `references` directory and point to sibling skill folders. Resolve them from the file containing the link, not from the current project directory. If this skill was symlinked, use its resolved source location when necessary to find the rest of the library.
+Resolve catalog links from the file containing the link. If this skill was symlinked, use its resolved source location to find sibling skills. For `$impeccable` commands, use the host’s installed `impeccable` skill.
 
 If a listed file is missing, check the available skill locations for its exact name. State when it is unavailable and continue with an appropriate available workflow. Do not invent tools, install dependencies, or claim a skill was used without reading it.
 

@@ -5,7 +5,7 @@ Choose by the requested outcome, then read the linked instructions. Names below 
 ## Find the relevant area
 
 - [Communication and understanding](#communication-and-understanding): explain, summarize, rephrase, catch up, hand off.
-- [Planning and architecture](#planning-and-architecture): discovery interview, product context, design brief, module design, architecture survey, long tasks.
+- [Planning and architecture](#planning-and-architecture): discovery interview, module design, architecture survey, long tasks.
 - [Code review and debugging](#code-review-and-debugging): diff, PR, inline comments, bug, regression, assumptions, TypeScript.
 - [Interface design and quality](#interface-design-and-quality): critique, accessibility, layout, typography, polish, resilience, performance.
 - [Animation and interaction](#animation-and-interaction): motion, transitions, gestures, sequencing, frame drops.
@@ -31,14 +31,11 @@ Choose by the requested outcome, then read the linked instructions. Names below 
 | Skill | Choose when |
 | --- | --- |
 | [grill](../../grill/SKILL.md) | The user wants a structured interview to uncover decisions in a plan, design, or idea. |
-| [shape](../../shape/SKILL.md) | The user experience, states, interactions, and boundaries need a design brief. |
 | [architect](../../architect/SKILL.md) | A substantial code change needs types, interfaces, and module boundaries worked out. |
 | [plan-eng-review](../../plan-eng-review/SKILL.md) | Review an engineering plan for architecture, failure modes, testing, and performance. |
 | [improve-codebase-architecture](../../improve-codebase-architecture/SKILL.md) | Survey an existing codebase for architectural friction and improvement candidates. |
 | [figure-it-out](../../figure-it-out/SKILL.md) | A substantial unusual task needs an execution approach and no narrower workflow fits. |
 | [show-me-your-work](../../show-me-your-work/SKILL.md) | Long-running work needs a reviewable decision and evidence log. |
-| [init](../../init/SKILL.md) | Establish or refresh durable product facts in PRODUCT.md; this does not scaffold a project. |
-| [document](../../document/SKILL.md) | Capture an existing visual system in DESIGN.md; this is not general document writing. |
 
 ## Code review and debugging
 
@@ -57,22 +54,11 @@ Choose by the requested outcome, then read the linked instructions. Names below 
 
 ## Interface design and quality
 
+With [Impeccable installed](../../../docs/setup.md#impeccable), use `$impeccable shape` for a UX brief, `$impeccable audit` for technical UI findings, and `$impeccable polish` for a final pass. Run `$impeccable` to browse its other design commands.
+
 | Skill | Choose when |
 | --- | --- |
-| [critique](../../critique/SKILL.md) | Assess UX, hierarchy, visual direction, and usability; deliver a scored review. |
-| [audit](../../audit/SKILL.md) | Report technical web UI issues in accessibility, responsiveness, theming, performance, and implementation. |
-| [polish](../../polish/SKILL.md) | Apply a final scoped quality pass to an existing feature and its interaction states. |
-| [bolder](../../bolder/SKILL.md) | An existing section needs stronger expression within its established identity. |
-| [quieter](../../quieter/SKILL.md) | Competing emphasis, effects, or motion need restraint while preserving character and readability. |
-| [distill](../../distill/SKILL.md) | Redundant presentation, choices, or steps make an interface unnecessarily complex. |
-| [colorize](../../colorize/SKILL.md) | A muted interface needs purposeful color roles and verified contrast. |
-| [typeset](../../typeset/SKILL.md) | Improve type hierarchy, readability, wrapping, or font delivery. |
-| [layout](../../layout/SKILL.md) | Improve grouping, spacing, density, reading order, or responsive structure. |
-| [overdrive](../../overdrive/SKILL.md) | The user explicitly wants ambitious browser effects or unusually responsive interactions. |
-| [harden](../../harden/SKILL.md) | Improve resilience to failures, localization, content extremes, and interrupted interactions. |
-| [adapt](../../adapt/SKILL.md) | Fit an existing interface to another screen, input method, container, or output medium. |
-| [optimize](../../optimize/SKILL.md) | Measure and improve a web loading, rendering, interaction, or resource bottleneck. |
-| [onboard](../../onboard/SKILL.md) | Improve first use, contextual guidance, or empty states so users reach a meaningful result. |
+| [critique](../../critique/SKILL.md) | Run kstack’s independent UX review passes and score the findings. |
 | [break-ui](../../break-ui/SKILL.md) | Stress-test a component with realistic difficult data and inspect what breaks; it may add a demo fixture/toggle. |
 
 ## Animation and interaction
