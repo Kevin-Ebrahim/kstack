@@ -1,72 +1,83 @@
 # Setup
 
-Run the commands from the kstack checkout.
+## Install kstack
 
-## Install and update
+Run `./scripts/install.sh --dry-run` from the kstack checkout to preview the install. Run `./scripts/install.sh` to apply it.
 
-Preview both install destinations with `./scripts/install.sh --dry-run`.
-The installer links skills into `~/.agents/skills` and links `AGENTS.md` into `~/.codex/AGENTS.md`. If you set `CODEX_HOME`, it uses `$CODEX_HOME/AGENTS.md`.
-
-Pass a skills directory to change the first destination. Pass a second path to change where the installer links `AGENTS.md`.
+The installer links skills into `~/.agents/skills` and links `AGENTS.md` into `~/.codex/AGENTS.md`. If you set `CODEX_HOME`, it uses `$CODEX_HOME/AGENTS.md`. To override either default, pass the skills directory first and the instructions file second.
 
 ```bash
 ./scripts/install.sh /path/to/skills /path/to/AGENTS.md
 ```
 
-If the destination contains another `AGENTS.md`, the installer moves it to `AGENTS.md.kstack-backup` before creating the link. If it would overwrite a backup, it stops before creating any links.
+The installer reuses matching symlinks. A conflicting skill name or backup stops the install before it writes any links. The installer moves any prior instructions file to `AGENTS.md.kstack-backup` before linking kstack's copy.
 
-Changes to linked skills take effect from the checkout. Rerun your install command after adding skills. The installer reuses matching links, skips conflicting skill entries, and exits with an error if it finds any conflicts.
+You can also ask Codex to read a skill's `SKILL.md` directly from the checkout.
 
-After updating the checkout that supplies your installed links, preview retired links with `./scripts/uninstall.sh --stale-only --dry-run`, then remove them with `./scripts/uninstall.sh --stale-only`. If you installed to a custom skills directory, pass it to both commands.
+## Upgrade an existing install
+
+Update the kstack checkout your symlinks point to. From that checkout, preview which links the upgrade will retire.
+
+```bash
+./scripts/uninstall.sh --stale-only --dry-run
+```
+
+After checking the list, remove the retired links and run the installer to link any new skills.
+
+```bash
+./scripts/uninstall.sh --stale-only
+./scripts/install.sh
+```
+
+If you used custom install paths, pass the same paths as before. The uninstall commands take just the skills directory.
 
 ## Optional upstream libraries
 
-Pass one or more flags to install upstream libraries alongside kstack. Preview the links, upstream commands, and Emil’s target directory with `--dry-run`. Remove `--dry-run` to apply the install.
+Add the flags for the libraries you want. This example previews all three. Replace the sample path with the root of your UI project.
 
 ```bash
-./scripts/install.sh --dry-run --with-impeccable --with-matt-pocock --with-emil /path/to/ui-project
+./scripts/install.sh --dry-run --with-matt-pocock --with-impeccable \
+  --with-emil /path/to/ui-project
 ```
 
-Impeccable and Matt Pocock’s plugin install globally for Codex. Emil’s skills install in the directory passed to `--with-emil`. The positional paths control kstack’s links.
+Review the commands and destinations, then drop `--dry-run` to install. Impeccable and Matt's plugin install globally. Emil's skills go into the project you passed to `--with-emil`. Open a new Codex session after installation.
+
+Use the commands below to install each library on its own.
 
 ## Matt Pocock
-
-Install the published plugin once for your Codex user account.
 
 ```bash
 codex plugin marketplace add mattpocock/skills
 codex plugin add mattpocock-skills@mattpocock
 ```
 
-Open a new Codex session and try `$mattpocock-skills:ask-matt` to choose a workflow. In a project where you want to use Matt’s engineering workflow, run `$mattpocock-skills:setup-matt-pocock-skills` to configure its issue tracker, triage labels, and documentation paths. [Upstream guide](https://github.com/mattpocock/skills#installation-30-second-setup)
+Try `$mattpocock-skills:ask-matt` to choose a workflow. To set up ticketing and project docs, run `$mattpocock-skills:setup-matt-pocock-skills` in the project. [Matt's setup guide](https://github.com/mattpocock/skills#installation-30-second-setup)
 
-Use `$grill` for kstack’s focused interview and `$code-review` for its two-reviewer workflow. Matt’s versions are available as `$mattpocock-skills:grill-me` and `$mattpocock-skills:code-review`.
+Use `$grill` and `$code-review` for kstack's versions. Use `$mattpocock-skills:grill-me` and `$mattpocock-skills:code-review` for Matt's.
 
 ## Impeccable
-
-Install the upstream design skill globally for Codex:
 
 ```bash
 npx impeccable install --providers=codex --scope=global
 ```
 
-Open a new Codex session and use `$impeccable` to see its commands. Use `$impeccable critique` for a UX review or `$impeccable polish` for a final design pass. [Impeccable documentation](https://impeccable.style/docs)
+Use `$impeccable` to see its commands or `$impeccable critique` to review an interface. [Impeccable documentation](https://impeccable.style/docs)
 
 ## Emil Kowalski
 
-Run this from the root of a UI project to install the full library at project scope.
+Run this from the root of your UI project.
 
 ```bash
 npx skills@latest add emilkowalski/skills --agent codex --skill '*' --yes
 ```
 
-Open a new Codex session and use `$ask-emil` to choose a motion or UI workflow. Use `$prototype` for Emil’s UI variants and `$mattpocock-skills:prototype` for Matt’s engineering prototypes. [Emil’s skill guide](https://aiforui.dev/skills)
+Use `$ask-emil` to choose a workflow. Use `$prototype` for Emil's UI variants and `$mattpocock-skills:prototype` for Matt's engineering prototypes. [Emil's skill guide](https://aiforui.dev/skills)
 
 ## Uninstall skills
 
-Preview removal with `./scripts/uninstall.sh --dry-run`, then run `./scripts/uninstall.sh`. If you installed to a custom skills directory, pass that directory to both commands.
+Run `./scripts/uninstall.sh --dry-run` to see which kstack links the script will remove. Run `./scripts/uninstall.sh` to remove them. Pass the skills directory if you installed to a custom path.
 
-The uninstaller removes only skill symlinks that point into this checkout. To remove the global instructions, check that the destination `AGENTS.md` points to this checkout before removing the link. If you have an `AGENTS.md.kstack-backup`, move it back to `AGENTS.md`.
+To remove kstack's global instructions, first check that the destination `AGENTS.md` links to this checkout. Remove the symlink and, if you have an `AGENTS.md.kstack-backup`, move the backup back to `AGENTS.md`. Use each upstream library's own tools to manage its installation.
 
 ## Set up optional MCP servers
 

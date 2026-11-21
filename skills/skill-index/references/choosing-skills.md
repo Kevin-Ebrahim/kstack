@@ -1,6 +1,6 @@
 # Choosing skills
 
-Use this guide to resolve overlap or suggest a sequence. Links point to the actual workflows; read those before applying them. Respect their invocation policies and the user's requested scope.
+Use this guide when several skills fit. Read the selected skill before applying it.
 
 ## Pick the right kind of review
 
@@ -15,57 +15,57 @@ Use this guide to resolve overlap or suggest a sequence. Links point to the actu
 | Security boundaries or dependencies | [security-review](../../security-review/SKILL.md) | Attacker control, enforcement, exposure, and measured dependency risk. |
 | Motion quality | `$review-animations` (Emil) | Timing, easing, purpose, and interaction feel. |
 
-Do not run every review because the request says “review.” Infer the target and desired evidence from context. Resolve material ambiguity with a focused question; do not invent a broad audit assignment.
+Choose the review that fits the target and the evidence the user needs. Ask a focused question if the answer would change which review to run.
 
 ## Distinguish planning, explanation, and execution
 
-- [grill](../../grill/SKILL.md) uncovers unresolved decisions through a requested discovery interview; [interrogate](../../interrogate/SKILL.md) tests a design or change for demonstrable failures.
-- `$impeccable shape` plans the user experience; [architect](../../architect/SKILL.md) plans the code structure. Use both only when both decisions remain open.
+- [grill](../../grill/SKILL.md) interviews the user about open decisions. [interrogate](../../interrogate/SKILL.md) looks for failures it can demonstrate in an existing plan or change.
+- `$impeccable shape` plans the user experience. [architect](../../architect/SKILL.md) plans the code structure. Use both only when both decisions remain open.
 - [plan-eng-review](../../plan-eng-review/SKILL.md) reviews a proposed engineering plan before implementation.
 - `$mattpocock-skills:improve-codebase-architecture` presents candidates for deepening existing modules in an HTML report.
-- [how](../../how/SKILL.md) explains behavior; [why](../../why/SKILL.md) investigates historical reasons; [teach](../../teach/SKILL.md) combines them for learning. Do not load all three for a simple explanation.
-- `$impeccable init` writes product context. `$impeccable document` records an existing visual system. Neither is general project initialization or generic document production.
+- [how](../../how/SKILL.md) explains behavior. [why](../../why/SKILL.md) investigates the reasons behind a decision. [teach](../../teach/SKILL.md) combines the two when an explanation needs both.
+- `$impeccable init` writes `PRODUCT.md`. `$impeccable document` records the project's design system in `DESIGN.md`.
 - [figure-it-out](../../figure-it-out/SKILL.md) supplies a workflow for substantial work with no narrower match. Task size alone is not a reason to add it to another complete workflow.
 
 ## Choose a UI workflow
 
-Use `$impeccable harden` to fix fragile UI states. Use Emil’s `$break-ui` to find those states by exercising the interface with difficult data. [Impeccable setup](../../../docs/setup.md#impeccable) · [Emil’s library setup](../../../docs/setup.md#emil-kowalski)
+Use `$impeccable harden` to fix fragile UI states. Use Emil's `$break-ui` to find states that break with realistic data. [Impeccable setup](../../../docs/setup.md#impeccable) · [Emil's library setup](../../../docs/setup.md#emil-kowalski)
 
 ## Distinguish motion tasks
 
-These skills are available with [Emil Kowalski’s library installed](../../../docs/setup.md#emil-kowalski).
+These skills come from Emil Kowalski's library. [Install the library](../../../docs/setup.md#emil-kowalski)
 
 | Request | Selection |
 | --- | --- |
-| “What is this effect called?” | `$animation-vocabulary` |
-| “Where would motion help?” | `$find-animation-opportunities` |
-| “Plan improvements to motion across the app.” | `$improve-animations` |
-| “Build this web transition.” | `$animate` |
-| “Coordinate the panel, icon, and list entrances.” | `$choreograph` |
-| “Make this web sheet track my finger.” | `$gestures` |
-| “Build this transition in Expo.” | `$animate-expo` |
-| “This web animation stutters.” | `$animation-performance` |
-| “Remove the motion that gets in the way.” | `$remove-animations` |
+| Name an effect. | `$animation-vocabulary` |
+| Find places where motion would help. | `$find-animation-opportunities` |
+| Plan motion improvements across the app. | `$improve-animations` |
+| Build a web transition. | `$animate` |
+| Coordinate the panel, icon, and list entrances. | `$choreograph` |
+| Make a web sheet track the user's finger. | `$gestures` |
+| Build a transition in Expo. | `$animate-expo` |
+| Fix a web animation that stutters. | `$animation-performance` |
+| Remove motion that slows down an interaction. | `$remove-animations` |
 
-“Feels slow” may mean unnecessary delay, dropped frames, or slow data/loading. Inspect the symptom before choosing removal, animation performance, or `$impeccable optimize`. [benchmark-checklist](../../benchmark-checklist/SKILL.md) supports a measured performance claim; it does not implement the optimization.
+Check where the delay comes from. An unnecessary wait calls for `$remove-animations`. Dropped frames call for `$animation-performance`. Slow page loading calls for `$impeccable optimize`. Use [benchmark-checklist](../../benchmark-checklist/SKILL.md) to check the measurement.
 
 ## Useful combinations
 
-These are conditional sequences, not mandatory pipelines. Omit stages whose decisions are already settled. A transition from advice to edits requires an implementation request; invoke only skills allowed by their policy.
+Use the steps that fit the request. Start editing when the user asks for implementation.
 
 | Task | Useful sequence |
 | --- | --- |
-| Build a substantial new feature with unsettled UX and architecture | `$impeccable shape` → `architect` → implementation using relevant platform skills → `code-review` when review is in scope. |
-| Improve an existing interface after a requested assessment | `$impeccable critique` or `$impeccable audit` → the targeted editing skill → `$impeccable polish` if a final pass is needed. |
+| Build a feature with open design and architecture decisions | Use `$impeccable shape` for the interface and `$architect` for the code. Use `$code-review` after implementation if the user requests a review. |
+| Improve an interface after a requested assessment | Start with `$impeccable critique` or `$impeccable audit`. Choose an editing command that fits the findings. Use `$impeccable polish` for a final pass if needed. |
 | Fix a difficult bug | Use `$mattpocock-skills:diagnosing-bugs` to investigate and verify the fix. |
-| Fix a confirmed recurring class of mistakes | Establish the cause → `correct` for proportionate prevention. A one-off mistake does not establish recurrence. |
-| Implement approved motion improvements | Emil’s `$improve-animations` when a plan is needed → `$animate`, `$choreograph`, or `$gestures` for the relevant change. |
-| Improve measured web performance | `$impeccable optimize` with `benchmark-checklist`; use `animation-performance` when frame rendering is the bottleneck. |
-| Investigate a protocol or flow with difficult state invariants | `statechart` when formal modeling is warranted and its tools are available; validate counterexamples against the real system. |
-| Resume substantial work with another agent | `$mattpocock-skills:handoff` writes a handoff for the next session. Use `ketchup` for a progress update to the current user. |
+| Prevent a recurring mistake | Confirm the cause, then use `$correct` to add a check or change the code so the mistake is harder to repeat. |
+| Implement approved motion improvements | Use `$improve-animations` if you need a plan. Then choose `$animate`, `$choreograph`, or `$gestures` for the change. |
+| Improve measured web performance | Use `$benchmark-checklist` to check the measurement. Then choose `$impeccable optimize` or, for dropped frames, `$animation-performance`. |
+| Investigate a protocol or flow with difficult state invariants | Use `$statechart` when formal modeling fits and its tools are available. Check any counterexamples against the real system. |
+| Resume substantial work with another agent | Use `$mattpocock-skills:handoff` to write a handoff for the next session. Use `$ketchup` to bring the current user up to date. |
 
 ## Keep selection proportional
 
-A one-line copy correction, known command, or straightforward local edit usually needs no routing workflow. Select a supporting principle only for a concrete decision: retry behavior suggests `principle-make-operations-idempotent`; uncertain input boundaries suggest `principle-boundary-discipline`; repeated failed fixes suggest `principle-attack-the-premise`.
+For a straightforward edit or a known command, proceed directly. Add a supporting principle when it helps with a concrete decision. For example, use `$principle-make-operations-idempotent` when you need to decide how an operation should behave on retry.
 
-When recommending, make the fit specific: “Use `$impeccable audit` to check keyboard access and narrow-screen overflow; use `$impeccable harden` afterward if you want the confirmed failures fixed.” Avoid listing adjacent skills merely because they share keywords.
+Name the job each skill will do. For example, use `$impeccable audit` to check keyboard access, then use `$impeccable harden` to fix confirmed problems if requested.

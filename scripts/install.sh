@@ -5,7 +5,7 @@ usage() {
   printf 'Usage: %s [options] [skills-directory] [agents-file]\n' "${0##*/}"
   printf 'Symlink kstack skills into ~/.agents/skills (or skills-directory).\n'
   printf 'Link AGENTS.md into ${CODEX_HOME:-~/.codex}/AGENTS.md (or agents-file).\n'
-  printf 'Existing files, directories, and conflicting symlinks are preserved.\n'
+  printf 'Skill name conflicts stop the install before it writes any links.\n'
   printf '\nOptions:\n'
   printf '  --dry-run            Preview links and upstream commands.\n'
   printf '  --with-impeccable    Install Impeccable globally for Codex.\n'
@@ -89,13 +89,9 @@ if [[ -e $destination || -L $destination ]] && [[ ! -d $destination ]]; then
   printf 'Destination is not a directory: %s\n' "$destination" >&2
   exit 1
 fi
-if ! "$dry_run"; then
-  mkdir -p -- "$destination"
-fi
-
-linked=0
+new_skills=()
 unchanged=0
-conflicts=0
+has_conflicts=false
 for skill_file in "${skill_files[@]}"; do
   source_dir=${skill_file%/SKILL.md}
   name=${source_dir##*/}
@@ -104,16 +100,26 @@ for skill_file in "${skill_files[@]}"; do
   if [[ -L $target && $target -ef $source_dir ]]; then
     unchanged=$((unchanged + 1))
   elif [[ -e $target || -L $target ]]; then
-    printf 'Skipped conflict: %s\n' "$target" >&2
-    conflicts=$((conflicts + 1))
+    printf 'Skill name conflict: %s\n' "$target" >&2
+    has_conflicts=true
   else
-    if "$dry_run"; then
-      printf 'Would link: %s -> %s\n' "$target" "$source_dir"
-    else
-      ln -sT -- "$source_dir" "$target"
-      printf 'Linked: %s\n' "$target"
-    fi
-    linked=$((linked + 1))
+    new_skills+=("$source_dir")
+  fi
+done
+if "$has_conflicts"; then
+  exit 1
+fi
+
+if ! "$dry_run"; then
+  mkdir -p -- "$destination"
+fi
+for source_dir in "${new_skills[@]}"; do
+  target=$destination/${source_dir##*/}
+  if "$dry_run"; then
+    printf 'Would link: %s -> %s\n' "$target" "$source_dir"
+  else
+    ln -sT -- "$source_dir" "$target"
+    printf 'Linked: %s\n' "$target"
   fi
 done
 
@@ -135,12 +141,9 @@ else
 fi
 
 if "$dry_run"; then
-  printf 'Dry run: %d to link, %d already linked, %d conflicts.\n' "$linked" "$unchanged" "$conflicts"
+  printf 'Dry run: %d kstack skills to link, %d already linked.\n' "${#new_skills[@]}" "$unchanged"
 else
-  printf 'Installed: %d linked, %d already linked, %d conflicts.\n' "$linked" "$unchanged" "$conflicts"
-fi
-if (( conflicts != 0 )); then
-  exit 1
+  printf 'Installed %d kstack skill links. %d already linked.\n' "${#new_skills[@]}" "$unchanged"
 fi
 
 run_upstream() {

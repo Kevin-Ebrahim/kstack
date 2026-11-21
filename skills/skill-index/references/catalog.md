@@ -1,16 +1,16 @@
 # Skill catalog
 
-Choose by the requested outcome, then read the skill instructions. Names beginning with `$mattpocock-skills:` belong to [Matt Pocock’s optional plugin](../../../docs/setup.md#matt-pocock). Invocation policy and prerequisites remain in each skill.
+Pick a skill for the task and read its instructions. Skills with the `$mattpocock-skills:` prefix come from Matt Pocock's plugin. [Plugin setup](../../../docs/setup.md#matt-pocock)
 
 ## Find the relevant area
 
-- [Communication and understanding](#communication-and-understanding): explain, summarize, rephrase, catch up, hand off.
-- [Planning and architecture](#planning-and-architecture): discovery interview, module design, architecture survey, long tasks.
-- [Code review and debugging](#code-review-and-debugging): diff, PR, inline comments, bug, regression, assumptions, TypeScript.
-- [Interface design and quality](#interface-design-and-quality): critique, accessibility, layout, typography, polish, resilience, performance.
-- [Animation and interaction](#animation-and-interaction): motion, transitions, gestures, sequencing, frame drops.
-- [Security and state models](#security-and-state-models): security boundaries, dependencies, state transitions, invariants.
-- [Engineering principles](#engineering-principles): specific implementation and reasoning decisions.
+- [Communication and understanding](#communication-and-understanding)
+- [Planning and architecture](#planning-and-architecture)
+- [Code review and debugging](#code-review-and-debugging)
+- [Interface design and quality](#interface-design-and-quality)
+- [Animation and interaction](#animation-and-interaction)
+- [Security and state models](#security-and-state-models)
+- [Engineering principles](#engineering-principles)
 
 ## Communication and understanding
 
@@ -33,7 +33,7 @@ Choose by the requested outcome, then read the skill instructions. Names beginni
 | [grill](../../grill/SKILL.md) | The user wants a structured interview to uncover decisions in a plan, design, or idea. |
 | [architect](../../architect/SKILL.md) | A substantial code change needs types, interfaces, and module boundaries worked out. |
 | [plan-eng-review](../../plan-eng-review/SKILL.md) | Review an engineering plan for architecture, failure modes, testing, and performance. |
-| `$mattpocock-skills:improve-codebase-architecture` | Find opportunities to deepen modules and compare the candidates in a visual report. |
+| `$mattpocock-skills:improve-codebase-architecture` | Find ways to put more behavior behind simpler module interfaces. Compare the proposals in an HTML report. |
 | [figure-it-out](../../figure-it-out/SKILL.md) | A substantial unusual task needs an execution approach and no narrower workflow fits. |
 | [show-me-your-work](../../show-me-your-work/SKILL.md) | Long-running work needs a reviewable decision and evidence log. |
 
@@ -45,7 +45,7 @@ Choose by the requested outcome, then read the skill instructions. Names beginni
 | [inline-pr-review](../../inline-pr-review/SKILL.md) | Review a PR and save verified findings as comments on specific diff lines. |
 | [blast-radius](../../blast-radius/SKILL.md) | Investigate consequences beyond the visible diff and verify the change's key safety assumption. |
 | [interrogate](../../interrogate/SKILL.md) | Challenge a design or change adversarially and retain findings that can be demonstrated. |
-| `$mattpocock-skills:diagnosing-bugs` | A difficult or intermittent failure needs a reproducible signal and targeted investigation. |
+| `$mattpocock-skills:diagnosing-bugs` | Reproduce a difficult bug and use that check to test fixes. |
 | [tdd](../../tdd/SKILL.md) | Test-first work is requested or a bug has a clear, cheap regression target; do not create a broad test setup just to use it. |
 | [correct](../../correct/SKILL.md) | Demonstrated recurring mistakes justify a structural check, type, lint rule, or other prevention. |
 | [no-comments](../../no-comments/SKILL.md) | Review comment accuracy and usefulness, preserving rationale and important constraints. |
@@ -54,13 +54,13 @@ Choose by the requested outcome, then read the skill instructions. Names beginni
 
 ## Interface design and quality
 
-With [Impeccable installed](../../../docs/setup.md#impeccable), use `$impeccable shape` for a UX brief, `$impeccable critique` for a scored design review, `$impeccable audit` for technical UI findings, and `$impeccable polish` for a final pass. Run `$impeccable` to browse its other design commands.
+Use `$impeccable shape` to plan an interface, `$impeccable critique` to review the design, or `$impeccable audit` to check accessibility and other technical issues. Run `$impeccable` for the full command list. [Impeccable setup](../../../docs/setup.md#impeccable)
 
-With [Emil Kowalski’s library installed](../../../docs/setup.md#emil-kowalski), use `$break-ui` to stress-test a component with difficult data.
+Use Emil Kowalski's `$break-ui` to test how a component handles data such as long labels or empty lists. [Emil's library setup](../../../docs/setup.md#emil-kowalski)
 
 ## Animation and interaction
 
-Use [Emil Kowalski’s library](../../../docs/setup.md#emil-kowalski) for web and native motion. Run `$ask-emil` to choose a workflow or check the [motion task examples](choosing-skills.md#distinguish-motion-tasks).
+Use `$ask-emil` to choose a skill for web or native motion. [Emil's library setup](../../../docs/setup.md#emil-kowalski) · [Motion task examples](choosing-skills.md#distinguish-motion-tasks)
 
 ## Security and state models
 
